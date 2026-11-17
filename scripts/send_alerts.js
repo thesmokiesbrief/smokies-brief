@@ -40,7 +40,7 @@ const block = a => `
 const subject = due.length === 1 ? `Big weekend in 30 days: ${lead.short} (${lead.dates})` : `${due.length} big weekends are 30 days out`;
 const preview = 'Check your rate and minimum stay for those dates before they book up.';
 const content = `
-<div style="${s}max-width:600px">
+<div style="${s}max-width:600px;padding-top:18px">
   <a href="${SITE}" style="text-decoration:none"><img src="${SITE}/img/email-header.png" width="600" alt="The Smokies Brief" style="display:block;width:100%;max-width:600px;height:auto;border:0;border-radius:12px;margin:0 0 22px"></a>
   <p style="${s}margin:0 0 6px;font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#3E6B57">Big weekend alert</p>
   <p style="${s}margin:0 0 16px;font-size:26px;line-height:1.2;font-family:Georgia,serif">${due.length === 1 ? `${esc(lead.short)} is 30 days out` : 'These big weekends are 30 days out'}</p>

@@ -56,11 +56,11 @@ if (N.week) N.week = ageDays > 10 ? [] : N.week.filter(w => !past(w[0]));
 const subject = `The Monday Brief: ${fmt(today)}`;
 const preview = [...(N.week || []).map(w => w[1]), ...heads.map(h => h.t)].slice(0, 2).join(' \u00b7 ') || 'This week in the Smokies for cabin owners and hosts.';
 const content = `
-<div style="${s}max-width:600px">
+<div style="${s}max-width:600px;padding-top:18px">
   <a href="${SITE}" style="text-decoration:none"><img src="${SITE}/img/email-header.png" width="600" alt="The Smokies Brief" style="display:block;width:100%;max-width:600px;height:auto;border:0;border-radius:12px;margin:0 0 22px"></a>
   <p style="${s}margin:0 0 4px;font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#B9572B">The Monday Brief &middot; ${fmt(today)}</p>
   <p style="${s}margin:0 0 10px;font-size:26px;line-height:1.2;font-family:Georgia,serif">This week in the Smokies</p>
-  ${(N.week || []).length ? `<table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:separate;border-spacing:0 8px">${N.week.map(w => `<tr><td style="${s}width:92px;padding:10px 12px;background:#1F3329;color:#F2C9A8;font-family:Georgia,serif;font-size:20px;border-radius:10px 0 0 10px;white-space:nowrap">${esc(w[0])}</td><td style="${s}padding:10px 14px;background:#FBF8F2;border:1px solid #DCD3C3;border-left:0;border-radius:0 10px 10px 0;font-size:15px">${esc(w[1])}</td></tr>`).join('')}</table>` : ''}
+  ${(N.week || []).length ? `<table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:separate;border-spacing:0 8px">${N.week.map(w => `<tr><td style="${s}width:92px;padding:10px 12px;background:#1F3329;color:#F2C9A8;font-family:Georgia,serif;font-size:20px;border-radius:10px 0 0 10px;white-space:nowrap">${esc(w[0]).replace(/^([A-Z][a-z])([a-z]) /, '$1&zwnj;$2&nbsp;')}</td><td style="${s}padding:10px 14px;background:#FBF8F2;border:1px solid #DCD3C3;border-left:0;border-radius:0 10px 10px 0;font-size:15px">${esc(w[1])}</td></tr>`).join('')}</table>` : ''}
   ${heads.length ? h2('Top headlines') + ul(heads.map(h => li(`<a href="${esc(h.u)}" style="color:#9A4521">${esc(h.t)}</a> <span style="color:#7A817B">(${esc(h.src)})</span>`))) : ''}
   ${thisWeek.length ? h2('On the calendar this week') + ul(thisWeek.map(e => li(`<b>${esc(range(e.d, e.e))}</b> &middot; ${e.u ? `<a href="${esc(e.u)}" style="color:#9A4521">${esc(e.t)}</a>` : esc(e.t)}${e.p ? ` <span style="color:#7A817B">(${esc(e.p)})</span>` : ''}`))) : ''}
   ${bigAhead.length ? h2('Big weekends to price now') + ul(bigAhead.map(e => li(`<b>${esc(range(e.d, e.e))}</b> &middot; ${esc(e.t)}`))) : ''}
