@@ -34,6 +34,12 @@ jobs:
           node scripts/build_events_feed.js
           node scripts/build_attractions_feed.js
           node scripts/build_alerts.js
+      - name: Tag new sign-ups in Kit
+        env:
+          KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
+          KIT_TAG_ID: ${{ vars.KIT_TAG_ID }}
+          KIT_WEEKLY_TAG_ID: ${{ vars.KIT_WEEKLY_TAG_ID }}
+        run: node scripts/kit_sync.js
       - name: Send big weekend alerts (skips until Kit is connected)
         env:
           KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
