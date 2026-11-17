@@ -45,7 +45,7 @@ jobs:
         run: |
           git config user.name "smokies-brief-bot"
           git config user.email "bot@thesmokiesbrief.com"
-          git add posts/latest data/events.json data/attractions.json data/weekly-sent.json 2>/dev/null || git add posts/latest data/events.json data/attractions.json
+          git add posts/latest data/events.json data/attractions.json data/weekly-sent.json data/unsub-done.json
           git commit -m "Weekly posts for $(date +%F)" || echo "No changes"
           git pull --rebase -X theirs origin main
           git push

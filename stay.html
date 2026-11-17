@@ -132,15 +132,16 @@
   const run = K.spans.filter(s => day(s.s) <= d && day(s.e) >= a);
   document.getElementById('run').innerHTML = run.length ? '<b>Running during your stay</b>' + run.map(s=> esc(s.t)).join(' · ') : ''; if (!run.length) document.getElementById('run').hidden = true;
   // weather when the stay is within the forecast window
-  const wxDays = [['Today',0],['Tomorrow',1],['Thursday',2]]; const W = N.weather; const byDay = [W[0], W[2], W[4]];
-  const inWin = []; for (let i=0;i<3;i++){ const x = new Date(today); x.setDate(x.getDate()+i); if (x >= a && x <= d) inWin.push([i===0?'Today':WD[x.getDay()], byDay[i]]); }
+  const wxDays = [['Today',0],['Tomorrow',1],['Thursday',2]]; const W = N.weather; const isoD = x => `${x.getFullYear()}-${String(x.getMonth()+1).padStart(2,'0')}-${String(x.getDate()).padStart(2,'0')}`;
+  const byDay = [0,1,2].map(i => { const x = new Date(today); x.setDate(x.getDate()+i); return W[0].length > 4 ? (W.find(w => w[4] === isoD(x) && w[3]) || W.find(w => w[4] === isoD(x))) : W[i*2]; });
+  const inWin = []; for (let i=0;i<3;i++){ const x = new Date(today); x.setDate(x.getDate()+i); if (x >= a && x <= d && byDay[i]) inWin.push([i===0?'Today':WD[x.getDay()], byDay[i]]); }
   const wc = document.getElementById('wxCard'); wc.hidden = false;
   if (inWin.length){ document.getElementById('wx').innerHTML = inWin.map(([n,w])=>`<div><b>${n}</b><strong>${w[1]}°</strong><span>${w[2]}</span></div>`).join(''); document.getElementById('wxNote').textContent = 'Gatlinburg forecast from the National Weather Service.'; }
   else { document.getElementById('wx').hidden = true; document.getElementById('wxNote').textContent = 'The forecast for your dates shows up here about a week before you arrive. Check back before you head up.'; }
   // park
   const busy = N.busyDays; const park = N.roads.slice(0,2).map(r=>`<li class="warn">${esc(r)}</li>`);
-  if (N.roadsSoon && day('2026-11-29') <= d) park.push(`<li class="warn">${esc(N.roadsSoon)}</li>`);
-  park.push(`<li>Busiest park days ahead: ${esc(busy)}. Go early or try a quieter area.</li>`);
+  if (N.roadsSoon && day(N.roadsSoonUntil || K.today) <= d) park.push(`<li class="warn">${esc(N.roadsSoon)}</li>`);
+  if (busy) park.push(`<li>Busiest park days ahead: ${esc(busy)}. Go early or try a quieter area.</li>`);
   document.getElementById('park').innerHTML = park.join('');
   document.getElementById('shareBtn').addEventListener('click', async ()=>{ const u = location.href; try { if (navigator.share) await navigator.share({title:document.title, url:u}); else { await navigator.clipboard.writeText(u); document.getElementById('shareBtn').textContent = 'Link copied'; } } catch(_){} });
 })();

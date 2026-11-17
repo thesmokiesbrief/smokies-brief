@@ -1,4 +1,5 @@
 # Rebuilds the public feeds every morning at 5:30 a.m. Eastern. No AI.
+#   content.js             – "Right now" snapshot: forecast, weather alerts, park closures, today's date
 #   data/events.json       – Smokies events for partner sites
 #   data/attractions.json  – guest-facing Dollywood seasons, deals, tips and attraction cards
 #   data/big-weekends.*    – alert dates 30 days before each big weekend, plus a calendar feed
@@ -29,6 +30,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+      - name: Refresh the Right now snapshot (weather, park alerts, date)
+        env:
+          NPS_API_KEY: ${{ secrets.NPS_API_KEY }}
+        run: node scripts/build_now.js || echo "Right now refresh failed; keeping the last snapshot."
       - name: Build feeds
         run: |
           node scripts/build_events_feed.js
@@ -49,7 +54,7 @@ jobs:
         run: |
           git config user.name "smokies-brief-bot"
           git config user.email "bot@thesmokiesbrief.com"
-          git add data/events.json data/attractions.json data/big-weekends.json data/big-weekends.ics data/alerts-sent.json 2>/dev/null || git add data/events.json data/attractions.json data/big-weekends.json data/big-weekends.ics
+          git add content.js data/events.json data/attractions.json data/big-weekends.json data/big-weekends.ics data/alerts-sent.json data/unsub-done.json
           git commit -m "Daily feeds for $(date +%F)" || echo "No changes"
           git pull --rebase -X theirs origin main
           git push

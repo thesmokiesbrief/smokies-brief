@@ -1,4 +1,5 @@
 # Refreshes Sevier County Electric outage data every 15 minutes and redeploys the site.
+# Once an hour it also refreshes the forecast, weather alerts and park alerts (scripts/build_now.js).
 # Free on public repos. No API keys, no AI. GitHub may delay scheduled runs by a few minutes at busy times.
 name: Power outages (every 15 min)
 
@@ -29,6 +30,13 @@ jobs:
           python-version: "3.12"
       - name: Fetch SCES outage feed
         run: python scripts/fetch_power.py
+      - name: Hourly weather and park alerts (published only; the morning job saves them)
+        env:
+          NPS_API_KEY: ${{ secrets.NPS_API_KEY }}
+        run: |
+          if [ "$(date -u +%M)" -lt 22 ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            node scripts/build_now.js || echo "Right now refresh failed; publishing the morning snapshot."
+          fi
       - name: Package site
         run: |
           mkdir -p _site

@@ -267,3 +267,78 @@
   const ss = document.getElementById('seasonStrip');
   if (ss) ss.innerHTML = R.season.map(s=>`<span class="s-${s}" data-s="${s[0]}"><i>${s}</i></span>`).join('');
 })();
+
+/* ===== right now: weather, park and dates from the hourly/morning refresh (scripts/build_now.js) ===== */
+(function(){
+  const K = window.CONTENT; if (!K || !K.now) return;
+  const N = K.now, $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const MONTH = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const WD = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const day = s => new Date(s + 'T12:00:00'), today = day(K.today);
+  const md = s => { const x = day(s); return MON[x.getMonth()] + ' ' + x.getDate(); };
+  const clock = iso => { const x = new Date(iso); if (isNaN(x)) return ''; const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', {timeZone:'America/New_York', hour:'numeric', minute:'2-digit', hour12:true}).formatToParts(x).map(q => [q.type, q.value])); return `${p.hour}:${p.minute} ${p.dayPeriod === 'AM' ? 'a.m.' : 'p.m.'}`; };
+  const clip = (s, n) => { s = String(s || ''); return s.length <= n ? s : s.slice(0, s.lastIndexOf(' ', n)) + '…'; };
+  const set = (id, v, html) => { const e = $(id); if (e && v != null && v !== '') e[html ? 'innerHTML' : 'textContent'] = v; };
+
+  // issue and dates
+  const mon = new Date(today); mon.setDate(mon.getDate() - ((mon.getDay() + 6) % 7));
+  const issue = Math.max(1, Math.floor((mon - day('2026-11-16')) / 6048e5) + 1);
+  set('issueDate', `Issue ${String(issue).padStart(2,'0')} · Week of ${MONTH[mon.getMonth()]} ${mon.getDate()}, ${mon.getFullYear()}`);
+  set('updTime', K.updated);
+  const pill = $('newPill'); if (pill && /^0 /.test(pill.textContent)) pill.hidden = true;
+
+  // weather
+  const W = N.weather || [];
+  const rel = n => /^(today|tonight|this|overnight|late)/i.test(n) ? n.toLowerCase() : n;
+  if (W.length > 1){
+    set('tWxVal', `${W[0][1]}°`);
+    set('tWxSub', `${W[0][2]} ${rel(W[0][0])} · ${W[1][1]}° ${rel(W[1][0])}`);
+    set('wxList', W.slice(0,5).map(w => `<li><span class="wx-n">${esc(w[0])}</span><span class="wx-t">${esc(w[1])}°</span><span class="wx-f">${esc(w[2])}</span></li>`).join(''), true);
+  }
+  const wa = $('wxAlert');
+  if (wa){
+    const nws = 'https://forecast.weather.gov/MapClick.php?lat=35.7143&lon=-83.5102';
+    if (N.wxAlerts === null){ wa.className = 'wx-ok wx-unk'; wa.innerHTML = `Couldn't reach the weather service for alerts just now. <a href="${nws}" target="_blank" rel="noopener">Check NWS →</a>`; }
+    else if (N.wxAlerts && N.wxAlerts.length){ wa.className = 'wx-ok wx-warn'; wa.innerHTML = N.wxAlerts.map(a => `<a href="${nws}" target="_blank" rel="noopener"><b>${esc(a.event)}</b> ${esc(a.text)}</a>`).join(''); }
+  }
+
+  // park
+  const P = N.park;
+  if (P && P.length){
+    const lbl = {'Danger':'Danger','Park Closure':'Closed','Caution':'Caution','Information':'Info'};
+    const cls = {'Danger':'al-closed','Park Closure':'al-closed','Caution':'al-caution','Information':'al-info'};
+    set('parkAlerts', P.map(a => {
+      const recent = a.date && (today - day(a.date)) / 864e5 <= 30, ad = a.date && day(a.date);
+      const since = ad && (ad.getFullYear() === today.getFullYear() ? md(a.date) : `${MON[ad.getMonth()]} ${ad.getFullYear()}`);
+      return `<a class="alert-row ${cls[a.cat] || 'al-info'}" href="${esc(a.url)}" target="_blank" rel="noopener"><span class="al-cat">${lbl[a.cat] || esc(a.cat)}</span><span class="al-txt"><b>${esc(a.title)}</b>${a.text ? `<small>${esc(a.text)}</small>` : ''}</span><span class="al-d">${a.date ? (recent ? md(a.date) : 'Since ' + since) : ''}</span></a>`;
+    }).join(''), true);
+    const C = P.filter(a => a.cat === 'Park Closure' || a.cat === 'Danger'), tile = $('tPark');
+    if (C.length){
+      const t = C[0].title, m = t.match(/^(.*?)\s+(?:is\s+|are\s+)?closed/i), why = t.match(/due to (.+)$/i);
+      set('tParkVal', clip(m ? m[1] + ' closed' : t, 40));
+      const why2 = why ? why[1].toLowerCase().replace(/^./, c => c.toUpperCase()) : '';
+      set('tParkSub', [why2, C.length > 1 ? `${C.length - 1} other closure${C.length > 2 ? 's' : ''}` : ''].filter(Boolean).join(' · ') || 'See the park alerts');
+    } else if (tile){ tile.classList.remove('tile-warn'); set('tParkVal', 'No road closures'); set('tParkSub', 'Per the park\u2019s official alerts'); }
+  }
+
+  // Dollywood season
+  const D = K.attractions && K.attractions.dollywood;
+  if (D && D.seasons){
+    const live = D.seasons.find(x => day(x.from) <= today && day(x.until) >= today);
+    const next = D.seasons.filter(x => day(x.from) > today).sort((a,b) => a.from.localeCompare(b.from))[0];
+    if (live){ set('tDwVal', live.name); set('tDwSub', `Through ${md(live.until)}`); }
+    else if (next){ set('tDwVal', next.name); set('tDwSub', `Opens ${md(next.from)}`); }
+  }
+
+  // next big draw
+  const E = (K.events || []).filter(e => (e.c === 'big' || e.c === 'fest') && day(e.d) >= today).sort((a,b) => a.d.localeCompare(b.d))[0];
+  if (E){ const x = day(E.d); set('tNxVal', `${WD[x.getDay()]}, ${MON[x.getMonth()]} ${x.getDate()}`); set('tNxSub', clip(E.t.replace(/\s*\([^)]*\)/g, ''), 58)); }
+
+  // honest timestamps
+  const wt = N.weatherChecked && clock(N.weatherChecked), pt = N.parkChecked && clock(N.parkChecked);
+  const bk = N.weatherSrc && N.weatherSrc !== 'NWS' ? ' (backup forecast)' : '';
+  const line = wt && wt === pt ? `Weather${bk} and park alerts checked ${wt}` : [wt && `Weather${bk} checked ${wt}`, pt && `park alerts checked ${pt}`].filter(Boolean).join(', ');
+  if (line) set('boardNote', `${line.replace(/\.$/, '')}. Power refreshes every 15 minutes.`);
+})();

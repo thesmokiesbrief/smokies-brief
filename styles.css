@@ -906,3 +906,18 @@ button,input,select{font:inherit;color:inherit}
 .emb-wm span{display:block;font-size:.62em}
 .emb-bar{height:2px;background:#C9733F;margin-top:12px}
 .emb-tag{font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#C9D1CB;margin-top:10px;text-align:center}
+
+/* right now: alert states */
+.al-caution .al-cat{background:rgba(201,166,90,.18);color:#8A6A1F}
+.wx-ok.wx-warn{color:var(--neg);background:rgba(176,74,42,.1)}
+.wx-ok.wx-warn a{display:block;color:inherit;text-decoration:none}
+.wx-ok.wx-warn a+a{margin-top:6px}
+.wx-ok.wx-unk{color:var(--ink-2);background:rgba(29,36,32,.06)}
+.wx-ok a{color:inherit}
+
+/* footer: publisher services */
+.foot-links{list-style:none;display:flex;flex-direction:column;gap:var(--s2);margin-top:var(--s3)}
+.foot-links a{display:flex;flex-direction:column;gap:2px;padding:var(--s3) var(--s4);border:1px solid rgba(244,239,230,.16);border-radius:var(--r);text-decoration:none;transition:border-color .2s,background .2s}
+.foot-links a:hover{border-color:#C9733F;background:rgba(244,239,230,.04)}
+.foot-links b{color:var(--paper);font-size:var(--text-sm);font-weight:600}
+.foot-links span{color:#F2C9A8;font-size:var(--text-xs);font-weight:500}

@@ -1,10 +1,13 @@
 // Makes sure everyone who signed up through a site form has the matching Kit tag,
 // so the alert and Monday Brief emails reach them. Kit's free plan can't add tags from a form,
 // so this runs before each send. No AI. Does nothing if Kit isn't connected.
+// Also handles the Unsubscribe form on privacy.html: anyone who submits it is unsubscribed from
+// everything. Each request is handled once (data/unsub-done.json keeps hashed IDs, no emails),
+// so someone who later signs up again isn't removed a second time.
 //
 // Needs: GitHub secret KIT_API_KEY, variables KIT_TAG_ID (alerts) and KIT_WEEKLY_TAG_ID (Monday Brief).
 // Form IDs come from site-config.js, the same place the site reads them.
-const fs = require('fs'), path = require('path'), vm = require('vm');
+const fs = require('fs'), path = require('path'), vm = require('vm'), crypto = require('crypto');
 const root = path.join(__dirname, '..');
 const KEY = process.env.KIT_API_KEY;
 const ctx = { window: {} };
@@ -15,7 +18,7 @@ const pairs = [
   [cfg.kitWeeklyFormId, process.env.KIT_WEEKLY_TAG_ID, 'Monday Brief']
 ].filter(([f, t]) => f && t);
 
-if (!KEY || !pairs.length) { console.log("Kit isn't connected yet. Nothing to sync."); process.exit(0); }
+if (!KEY || (!pairs.length && !cfg.kitUnsubFormId)) { console.log("Kit isn't connected yet. Nothing to sync."); process.exit(0); }
 
 const api = async (p, opts = {}) => {
   const r = await fetch('https://api.kit.com/v4' + p, { ...opts, headers: { 'X-Kit-Api-Key': KEY, 'Content-Type': 'application/json', Accept: 'application/json' } });
@@ -34,6 +37,21 @@ const all = async p => {
 };
 
 (async () => {
+  if (cfg.kitUnsubFormId) try {
+    const donePath = path.join(root, 'data', 'unsub-done.json');
+    const done = fs.existsSync(donePath) ? JSON.parse(fs.readFileSync(donePath, 'utf8')) : { done: [] };
+    const seen = new Set(done.done);
+    const asked = await all(`/forms/${cfg.kitUnsubFormId}/subscribers`); // active only; already-unsubscribed people drop off
+    let n = 0;
+    for (const s of asked) {
+      const h = crypto.createHash('sha256').update(`${s.id}:${s.added_at || s.created_at || ''}`).digest('hex').slice(0, 20);
+      if (seen.has(h)) continue;
+      await api(`/subscribers/${s.id}/unsubscribe`, { method: 'POST', body: '{}' });
+      done.done.push(h); seen.add(h); n++;
+    }
+    if (n) { done.updated = new Date().toISOString(); fs.writeFileSync(donePath, JSON.stringify(done, null, 1) + '\n'); }
+    console.log(`Unsubscribe requests: ${n} handled.`);
+  } catch (e) { console.log('Unsubscribe step problem (will retry tomorrow): ' + e.message); }
   for (const [form, tag, label] of pairs) {
     const signed = await all(`/forms/${form}/subscribers`);
     const tagged = new Set((await all(`/tags/${tag}/subscribers`)).map(s => s.id));
