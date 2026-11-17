@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://api.fontshare.com">
 <link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
-<link rel="stylesheet" href="styles.css?v=20261117c">
+<link rel="stylesheet" href="styles.css?v=20261117d">
 </head>
 <body>
 
@@ -52,12 +52,12 @@
 <div class="fresh" role="status">
   <div class="wrap fresh-in">
     <span class="live"><i></i>Live</span>
-    <p class="fresh-main"><b>Updated every morning.</b> Last update <time id="updTime">Tue, Nov 17, 5:30 a.m.</time></p>
+    <p class="fresh-main"><b>Updated all day.</b> Last update <time id="updTime">Tue, Nov 17, 5:30 a.m.</time></p>
     <ul class="fresh-sched" aria-label="Update schedule">
-      <li><b>Live</b> power, park, cams</li>
-      <li><b>Daily</b> news, events</li>
+      <li><b>All day</b> power, park alerts, cams</li>
+      <li><b>Every 2 hours</b> news</li>
+      <li><b>Every morning</b> events, rules</li>
       <li><b>Mondays</b> new issue</li>
-      <li><b>Monthly</b> market</li>
     </ul>
     <a href="#latest" class="new-pill" id="newPill">12 new today</a>
   </div>
@@ -83,6 +83,7 @@
     </div>
   </div>
   <div class="wrap board-wrap">
+    <p class="board-head">Today at a glance. Tap any box for details.</p>
     <div class="board" aria-label="Right now in the Smokies">
       <a class="tile" href="#now">
         <span class="t-lbl">Gatlinburg weather</span>
@@ -113,7 +114,7 @@
       <a class="tile" href="#market">
         <span class="t-lbl">Market gauge</span>
         <span class="t-val" id="tMkVal">25<small>/100</small></span>
-        <span class="t-sub" id="tMkSub">Buyer's market · 9.1 months of supply</span>
+        <span class="t-sub" id="tMkSub">Buyer's market · under 50 favors buyers</span>
       </a>
     </div>
     <p class="board-note"><span class="live"><i></i>Live</span> <span id="boardNote">Power refreshes every 15 minutes, park alerts and weather every hour.</span></p>
@@ -125,10 +126,11 @@
   <div class="wrap week-in">
     <!-- LEAD:START -->
     <article class="week-lead">
-      <p class="kicker">This week's lead · Issue 01</p>
+      <p class="kicker">Top story for cabin owners · Issue 01</p>
       <h2>Homeowners threatened with eviction from English Mountain POA over voluntary dues</h2>
       <p>Homeowners in the English Mountain community are disputing a threat of liens from their property owners association over whether annual dues are voluntary or mandatory under the neighborhood's original covenants.</p>
       <a class="btn" href="https://www.wate.com/investigations/english-mountian-poa-dispute/" target="_blank" rel="noopener">Read it at WATE</a>
+      <p class="lead-note">Picked from Sevier County news and updated through the day. The full issue goes out every Monday.</p>
     </article>
     <!-- LEAD:END -->
     <aside class="brief60" aria-label="The 60-second Brief">
@@ -182,6 +184,7 @@
       </a>
     </div>
     <!-- RULES:END -->
+    <p class="sec-help"><span class="key"><i class="k-ok"></i>Green: nothing about rentals on upcoming agendas.</span> <span class="key"><i class="k-watch"></i>Gold: a rental item is on an agenda, so read it.</span> Permit, fee and occupancy changes usually show up on these agendas before they take effect.</p>
     <p class="sec-more"><a href="rules/">Permits, fees and inspections for each area →</a></p>
   </div>
 </section>
@@ -219,7 +222,7 @@
     </div>
     <!-- TOPSTORIES:END -->
     <div class="latest" id="latest">
-      <div class="latest-head"><h3>Latest headlines</h3><p>From WATE, WVLT, WBIR, Smokies.LIVE and the national park, filtered for Sevier County</p></div>
+      <div class="latest-head"><h3>Latest headlines</h3><p>From WATE, WVLT, WBIR, Smokies.LIVE and the national park, filtered for Sevier County. <span class="new-key">New</span> posted today or yesterday.</p></div>
       <ol class="hl-list">
         <!-- HEADLINES:START -->
         <li><a href="https://www.wbir.com/article/news/local/sevierville-sevier/tiny-home-community-adds-guided-cave-tours-guest-experience/51-af4568b1-b6dd-40c7-aa73-cf1061b85c2e" target="_blank" rel="noopener" data-date="2026-11-17"><span class="hl-meta"><span class="hl-tag">Sevierville</span><time datetime="2026-11-17">Nov 17</time></span><span class="hl-t">Tiny home community in Sevierville adds guided cave tours to guest experience</span><span class="hl-src">WBIR</span></a></li>
@@ -246,7 +249,7 @@
     <!-- NOISE:START -->
     <div class="sec-head sec-head-light">
       <h2 class="sec-title">Most covered this week</h2>
-      <p class="sec-note"><span class="upd upd-light">Every 2 hours</span> The stories local outlets are reporting the most</p>
+      <p class="sec-note"><span class="upd upd-light">Every 2 hours</span> Stories several outlets are covering. These are the ones guests will bring up.</p>
     </div>
     <div class="noise-grid">
       <a class="noise-item" href="https://smokies.live/2026/11/16/pigeon-forge-kicks-off-winterfest-season-with-holiday-market-lights-and-family-fun/" target="_blank" rel="noopener">
@@ -370,7 +373,8 @@
       <div class="cam-side"><article class="cam"><button class="yt yt-live" data-id="YUlS-JhGZ8U" aria-label="Play live cam: Pigeon Forge Parkway"><img src="https://i.ytimg.com/vi/YUlS-JhGZ8U/hqdefault_live.jpg" alt="" loading="lazy"><span class="live-badge"><i></i>Live</span><span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button><div class="cam-body"><h3>Pigeon Forge Parkway</h3><p>WVLT News</p></div></article><article class="cam"><button class="yt yt-live" data-id="Exaxsl-pg84" aria-label="Play live cam: Clayton's Landing at SkyPark"><img src="https://i.ytimg.com/vi/Exaxsl-pg84/hqdefault_live.jpg" alt="" loading="lazy"><span class="live-badge"><i></i>Live</span><span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button><div class="cam-body"><h3>Clayton's Landing at SkyPark</h3><p>Gatlinburg SkyPark</p></div></article><article class="cam"><button class="yt yt-live" data-id="J-TJECRGI18" aria-label="Play live cam: Bluff Mountain"><img src="https://i.ytimg.com/vi/J-TJECRGI18/hqdefault_live.jpg" alt="" loading="lazy"><span class="live-badge"><i></i>Live</span><span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button><div class="cam-body"><h3>Bluff Mountain</h3><p>Mountain Valley Winery</p></div></article><article class="cam"><button class="yt yt-live" data-channel="UCEGt67zzSCWsMklhjEpNYNg" aria-label="Play live cam: Mountain view from Gatlinburg Landing"><img src="https://i.ytimg.com/vi/how60qY6PXk/hqdefault_live.jpg" alt="" loading="lazy"><span class="live-badge"><i></i>Live</span><span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button><div class="cam-body"><h3>Mountain view from Gatlinburg Landing</h3><p>Gatlinburg Landing</p></div></article></div>
     </div>
     <h3 class="cams-sub">Inside the national park</h3>
-    <div class="nps-grid"><a class="npscam" href="https://home.nps.gov/grsm/learn/photosmultimedia/webcams.htm" target="_blank" rel="noopener"><span class="np-img"><img src="https://www.nps.gov/featurecontent/ard/webcams/images/grsm.jpg" alt="Current view from the Look Rock park webcam" loading="lazy" onerror="this.parentElement.classList.add('np-off')"><span class="live-badge live-badge-sm">Every 15 min</span></span><b>Look Rock</b><small>Foothills Parkway West</small></a><a class="npscam" href="https://home.nps.gov/grsm/learn/photosmultimedia/webcams.htm" target="_blank" rel="noopener"><span class="np-img"><img src="https://www.nps.gov/featurecontent/ard/webcams/images/gsng.jpg" alt="Current view from the Newfound Gap park webcam" loading="lazy" onerror="this.parentElement.classList.add('np-off')"><span class="live-badge live-badge-sm">Every 15 min</span></span><b>Newfound Gap</b><small>US 441 at the Tennessee–North Carolina line</small></a><a class="npscam" href="https://home.nps.gov/grsm/learn/photosmultimedia/webcams.htm" target="_blank" rel="noopener"><span class="np-img"><img src="https://www.nps.gov/featurecontent/ard/webcams/images/grpk.jpg" alt="Current view from the Purchase Knob park webcam" loading="lazy" onerror="this.parentElement.classList.add('np-off')"><span class="live-badge live-badge-sm">Every 15 min</span></span><b>Purchase Knob</b><small>High-elevation view, North Carolina side</small></a><div class="npscam np-note"><b>Kuwohi</b><small>The Kuwohi cam is inactive for the season. It will show here again when the park turns it back on.</small></div></div>
+    <p class="cams-note">Still photos from the park's own cameras, refreshed every 15 minutes. Not video.</p>
+    <div class="nps-grid"><a class="npscam" href="https://home.nps.gov/grsm/learn/photosmultimedia/webcams.htm" target="_blank" rel="noopener"><span class="np-img"><img src="https://www.nps.gov/featurecontent/ard/webcams/images/grsm.jpg" alt="Current view from the Look Rock park webcam" loading="lazy" onerror="this.parentElement.classList.add('np-off')"><span class="live-badge live-badge-sm">Photo · every 15 min</span></span><b>Look Rock</b><small>Foothills Parkway West</small></a><a class="npscam" href="https://home.nps.gov/grsm/learn/photosmultimedia/webcams.htm" target="_blank" rel="noopener"><span class="np-img"><img src="https://www.nps.gov/featurecontent/ard/webcams/images/gsng.jpg" alt="Current view from the Newfound Gap park webcam" loading="lazy" onerror="this.parentElement.classList.add('np-off')"><span class="live-badge live-badge-sm">Photo · every 15 min</span></span><b>Newfound Gap</b><small>US 441 at the Tennessee–North Carolina line</small></a><a class="npscam" href="https://home.nps.gov/grsm/learn/photosmultimedia/webcams.htm" target="_blank" rel="noopener"><span class="np-img"><img src="https://www.nps.gov/featurecontent/ard/webcams/images/grpk.jpg" alt="Current view from the Purchase Knob park webcam" loading="lazy" onerror="this.parentElement.classList.add('np-off')"><span class="live-badge live-badge-sm">Photo · every 15 min</span></span><b>Purchase Knob</b><small>High-elevation view, North Carolina side</small></a><div class="npscam np-note"><b>Kuwohi</b><small>The Kuwohi cam is inactive for the season. It will show here again when the park turns it back on.</small></div></div>
     <div class="more-cams"><span>More cams</span><a href="https://anakeesta.com/live-cameras-at-anakeesta/" target="_blank" rel="noopener">Anakeesta 360° tower cam ↗</a><a href="https://www.gatlinburgspaceneedle.com/webcam/" target="_blank" rel="noopener">Gatlinburg Space Needle ↗</a><a href="https://www.obergatlinburg.com/webcams" target="_blank" rel="noopener">Ober Mountain base ↗</a><a href="https://www.moonshinemountaincoaster.com/live-feed/" target="_blank" rel="noopener">Moonshine Mountain Coaster ↗</a><a href="https://www.elkspringsresort.com/live-gatlinburg-webcam/" target="_blank" rel="noopener">Elk Springs, Gatlinburg ↗</a></div>
   </div>
 </section>
@@ -386,13 +390,13 @@
       <article class="dolly">
         <div class="dolly-head">
           <div><p class="tag tag-light">Dollywood · Pigeon Forge</p><h3>Smoky Mountain Christmas</h3><p class="dolly-sub">Now through Jan 3, 2027</p></div>
-          <span class="dolly-status"><i></i>Live waits during park hours</span>
+          <span class="dolly-status"><i></i>Typical ride waits</span>
         </div>
         <div class="dolly-cols">
           <div>
             <h4>Ride waits</h4>
-            <p class="dw-note">All-time average waits. Live waits fill in during park hours.</p>
-            <ul class="rides"><li><span>NightFlight Expedition</span><span class="rw-bar"><i style="width:59%"></i></span><b>47 min</b><small>usual daily max 79</small><em class="rw-now">live: —</em></li><li><span>FireChaser Express</span><span class="rw-bar"><i style="width:38%"></i></span><b>30 min</b><small>usual daily max 53</small><em class="rw-now">live: —</em></li><li><span>Lightning Rod</span><span class="rw-bar"><i style="width:38%"></i></span><b>30 min</b><small>usual daily max 61</small><em class="rw-now">live: —</em></li><li><span>Big Bear Mountain</span><span class="rw-bar"><i style="width:31%"></i></span><b>25 min</b><small>usual daily max 45</small><em class="rw-now">live: —</em></li><li><span>Dragonflier</span><span class="rw-bar"><i style="width:30%"></i></span><b>24 min</b><small>usual daily max 43</small><em class="rw-now">live: —</em></li><li><span>Mystery Mine</span><span class="rw-bar"><i style="width:28%"></i></span><b>22 min</b><small>usual daily max 41</small><em class="rw-now">live: —</em></li></ul>
+            <p class="dw-note">Average waits over time, so guests know which rides run long. For today's live waits, use the Dollywood app.</p>
+            <ul class="rides"><li><span>NightFlight Expedition</span><span class="rw-bar"><i style="width:59%"></i></span><b>47 min</b><small>usual daily max 79</small></li><li><span>FireChaser Express</span><span class="rw-bar"><i style="width:38%"></i></span><b>30 min</b><small>usual daily max 53</small></li><li><span>Lightning Rod</span><span class="rw-bar"><i style="width:38%"></i></span><b>30 min</b><small>usual daily max 61</small></li><li><span>Big Bear Mountain</span><span class="rw-bar"><i style="width:31%"></i></span><b>25 min</b><small>usual daily max 45</small></li><li><span>Dragonflier</span><span class="rw-bar"><i style="width:30%"></i></span><b>24 min</b><small>usual daily max 43</small></li><li><span>Mystery Mine</span><span class="rw-bar"><i style="width:28%"></i></span><b>22 min</b><small>usual daily max 41</small></li></ul>
             <p class="qt">Wait times powered by <a href="https://queue-times.com/" target="_blank" rel="noopener">Queue-Times.com</a></p>
           </div>
           <div>
@@ -462,6 +466,7 @@
       <div class="ev-cal-card">
         <div id="evCal"></div>
         <div class="ev-legend"><span><i class="c-big"></i>Big draw</span><span><i class="c-fest"></i>Festival</span><span><i class="c-conv"></i>Convention</span><span><i class="c-meet"></i>Meeting</span><span><i class="c-park"></i>Park</span><span><i class="lg-wk"></i>Fri &amp; Sat nights</span></div>
+        <p class="ev-help">Tap a date to see what's on. Shaded days are Friday and Saturday nights, when rates matter most.</p>
         <div class="ev-busy"><b>Busiest park days ahead</b><span>Nov 22, 25, 27–28, Dec 1–2 and Dec 26. Expect full lots and slow traffic.</span></div>
         <div class="ev-ics">
           <button class="btn btn-sm" id="icsBtn" type="button">Add every date to my calendar</button>
@@ -549,6 +554,7 @@
       </div>
       <p class="market-sub"><span class="upd">Updated monthly</span> <span id="mrNext">Next update mid-December</span></p>
     </div>
+    <p class="mr-sum" id="mrSum"><b>In plain terms:</b> buyer's market. Higher-priced homes are down 23% from their July 2022 peak, while lower-priced homes are up 4.4% over the past year. Homes are taking longer to sell, with 9.1 months of supply (6 is balanced).</p>
 
     <div class="mr-grid">
       <!-- Gauge -->
@@ -569,6 +575,7 @@
         </div>
         <p class="panel-note" id="mrHeatNote">Peaked at 82 in Sept 2020. Zillow's market heat index; 50 is balanced.</p>
         <div class="chart-sm"><canvas id="heatChart" aria-label="Market heat index since 2019"></canvas></div>
+        <p class="mr-mean" id="mrHeatMean"><b>What it means:</b> more homes than buyers. A good time to buy and negotiate; slower to sell.</p>
       </article>
 
       <!-- Gap -->
@@ -582,6 +589,7 @@
           <div class="callout"><span class="c-num pos" id="mrBotNum">+4.4%</span><span class="c-txt" id="mrBotTxt">Bottom third, past 12 months ($266K)</span></div>
         </div>
         <div class="chart-lg"><canvas id="gapChart" aria-label="Typical values, top third versus bottom third of Sevier County homes since 2019"></canvas></div>
+        <p class="mr-mean" id="mrGapMean"><b>What it means:</b> higher-priced homes have lost the most ground. Lower-priced homes are holding their value better.</p>
       </article>
 
       <!-- Months of supply -->
@@ -590,6 +598,7 @@
         <p class="big-stat" id="mrMos">9.1 <span>months</span></p>
         <p class="panel-note" id="mrMosNote">Homes for sale ÷ monthly sales. Under 6 favors sellers, over 6 favors buyers. Was 2.1 in Oct 2021.</p>
         <div class="chart-md"><canvas id="mosChart" aria-label="Months of supply since 2019 with 6-month balanced line"></canvas></div>
+        <p class="mr-mean" id="mrMosMean"><b>What it means:</b> if you list now, expect a longer wait and more room for buyers to negotiate.</p>
       </article>
 
       <!-- Ladder -->
@@ -604,6 +613,7 @@
         </div>
         <div id="ladder" class="ladder"></div>
         <p class="panel-note" id="mrLadNote">Typical home value by bedroom count, change vs. October 2025.</p>
+        <p class="mr-mean"><b>What it means:</b> a quick check on what a home your size is typically worth in each town. Covers all homes, not only rentals.</p>
       </article>
     </div>
     <p class="credit">Data Provided by Zillow Group. Months of supply calculated from Zillow inventory and sales counts.</p>
@@ -618,7 +628,7 @@
       <div class="rates-intro">
         <p class="kicker">Nightly rate rhythm</p>
         <h2 class="sec-title">Is your rate drop normal?</h2>
-        <p>Smokies cabin rates rise and fall on the same calendar every year. If your price slides after July or in January, nearly every cabin's does too.</p>
+        <p>Smokies cabin rates rise and fall on the same calendar every year. If your price slides after July or in January, nearly every cabin's does too. Use this to tell a normal seasonal dip from a problem with your listing.</p>
         <div class="rate-calls">
           <div class="rc rc-up"><span>+16%</span><p>Typical jump from November to December. Holiday weeks are coming.</p></div>
           <div class="rc rc-dn"><span>−22%</span><p>Typical drop from December to January. Normal, not a warning sign.</p></div>
@@ -632,6 +642,7 @@
         </div>
         <div class="chart-rates"><canvas id="ratesChart" aria-label="Average nightly rate and occupancy by month in Sevier County"></canvas></div>
         <div class="season" id="seasonStrip" aria-label="Season by month"></div>
+        <p class="season-key">L = low season · S = shoulder · H = high season</p>
         <div class="bed-adr">
           <p>By bedrooms</p>
           <span><b>2 BR</b>$313</span><span><b>3 BR</b>$415</span><span><b>4 BR</b>$557</span><span><b>5+ BR</b>$938</span>
@@ -647,7 +658,7 @@
   <div class="wrap">
     <div class="sec-head">
       <div><p class="kicker">Free for hosts</p><h2 class="sec-title">Free tools that make hosting easier</h2></div>
-      <p class="sec-note"><span class="upd">Free</span> Most need no sign-up. The ones that update themselves say so.</p>
+      <p class="sec-note"><span class="upd">Free</span> Most need no sign-up. Start here: most hosts use the guest stay link and the check-in message.</p>
     </div>
     <div class="free-grid">
       <a class="fr" href="#staylink"><span class="fr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z M14 2v6h6 M9 13h8 M9 17h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><span class="fr-tag fr-auto">Free · updates daily</span><h3>Guest stay link</h3><p>A page for each booking with the events, weather and park updates for your guests’ exact dates. Text it, or print the QR code.</p><span class="fr-cta">Make a stay link →</span></a>
@@ -660,7 +671,7 @@
       <a class="fr" href="downloads/smokies-winter-guest-guide.pdf" target="_blank" rel="noopener" download><span class="fr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2v20 M4 6l16 12 M20 6L4 18" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span><span class="fr-tag">Free download</span><h3>Winter-ready guest guide</h3><p>What guests need to know about snow and ice, mountain roads, power outages and park closures. Print it or send it before arrival.</p><span class="fr-cta">Download (PDF) →</span></a>
     </div>
 
-    <div class="season" id="checklists">
+    <div class="season-box" id="checklists">
       <div class="season-txt">
         <span class="fr-tag">Free · Check off, print or add reminders</span>
         <h3>Seasonal checklists for your cabin</h3>
@@ -736,9 +747,9 @@
       <div class="row3">
         <label>Down payment %<input id="cDown" type="number" value="20" step="1"></label>
         <label>Mortgage rate %<input id="cMort" type="number" step="0.01"></label>
-        <label>Booking costs %<input id="cVar" type="number" value="30" step="1" title="Cleaning, platform fees, supplies, management"></label>
+        <label>Booking costs %<input id="cVar" type="number" value="30" step="1"><small class="hint">Cleaning, platform fees, supplies, management</small></label>
       </div>
-      <label>Monthly fixed costs (tax, insurance, utilities, upkeep)<input id="cFixed" type="number" value="950" step="25"></label>
+      <label>Monthly fixed costs (tax, insurance, utilities, upkeep)<input id="cFixed" type="number" value="950" step="25"><small class="hint">$950 is an example. Enter your own.</small></label>
 
       <div class="result" aria-live="polite">
         <div class="res-main"><span id="rNights" class="res-num">—</span><span class="res-lbl">booked nights a month to break even</span></div>
@@ -748,39 +759,31 @@
           <div><span id="rPay">—</span><small>mortgage payment</small></div>
           <div><span id="rCost">—</span><small>total monthly cost</small></div>
         </div>
+        <p class="res-cmp" id="rCmp"></p>
       </div>
       <p class="fine">Estimate only. Price from Zillow typical values; rate is Freddie Mac's 30-year average (<span id="mrRate">7.11%, Nov 12, 2026</span>). Nightly rate is an example until you enter yours.</p>
     </form>
   </div>
 </section>
 
-<!-- POLL + CALENDAR + BEST OF -->
+<!-- NEWEST FROM HOST PODCASTS -->
 <section class="trio">
-  <div class="wrap trio-grid trio-2">
-    <article class="poll" id="poll">
-      <p class="kicker">Owner Poll</p>
-      <h3>Are your December bookings ahead of last year?</h3>
-      <div class="poll-opts">
-        <button data-v="Ahead">Ahead</button><button data-v="About the same">About the same</button><button data-v="Behind">Behind</button>
+  <div class="wrap">
+    <article class="best best-wide">
+      <div class="best-head"><p class="kicker">Newest from host podcasts</p><p class="best-note"><span class="upd">Every morning</span> The latest episode from three short-term rental shows</p></div>
+      <div class="best-list">
+      <!-- PODCASTS:START -->
+      <a class="media" href="https://thanksforvisiting.com/podcasts/577" target="_blank" rel="noopener">
+        <span class="m-ico">▶</span><span><b>Thanks For Visiting</b>5 Things I'd NEVER Put In My Airbnb (even if we lose money)<small>Nov 12</small></span>
+      </a>
+      <a class="media" href="https://shorttermshow.castos.com/episodes/dave-spooner" target="_blank" rel="noopener">
+        <span class="m-ico">▶</span><span><b>The Short Term Show</b>Free Property Management Software for DIY Landlords with Dave Spooner<small>Nov 11</small></span>
+      </a>
+      <a class="media" href="https://podcasters.spotify.com/pod/show/vacation-rental-scale-up/episodes/Late-Bookings--OTA-Growth-and-2027-Planning-With-Sally-Henry-of-KeyData-e3rbu11" target="_blank" rel="noopener">
+        <span class="m-ico">▶</span><span><b>Vacation Rental Scale-Up</b>Late Bookings, OTA Growth and 2027 Planning With Sally Henry of KeyData<small>Oct 29</small></span>
+      </a>
+      <!-- PODCASTS:END -->
       </div>
-      <div class="poll-res" hidden>
-        <div class="pr"><span>Ahead</span><b style="--w:34%"></b><em>34%</em></div>
-        <div class="pr"><span>Same</span><b style="--w:27%"></b><em>27%</em></div>
-        <div class="pr"><span>Behind</span><b style="--w:39%"></b><em>39%</em></div>
-        <p class="fine">Sample results for the mockup. Real results run in next week's issue.</p>
-      </div>
-    </article>
-    <article class="best">
-      <p class="kicker">Best of the Week</p>
-      <a class="media" href="https://podcasts.apple.com/es/podcast/podcast/id1451872835/episodes" target="_blank" rel="noopener">
-        <span class="m-ico">▶</span><span><b>Thanks For Visiting</b>The two new Airbnb policies for bookings from Nov 20</span>
-      </a>
-      <a class="media" href="https://podimo.com/dk/shows/vacation-rental-scale-up/episode/c07ca975-1d8a-5107-912a-fcaab4f8ec80" target="_blank" rel="noopener">
-        <span class="m-ico">▶</span><span><b>Vacation Rental Scale-Up</b>Late Bookings, OTA Growth and 2027 Planning With Sally Henry of KeyData</span>
-      </a>
-      <a class="media" href="https://podcasts.apple.com/us/podcast/the-short-term-show/id1576433178" target="_blank" rel="noopener">
-        <span class="m-ico">▶</span><span><b>The Short Term Show</b>Avery Carl on buying, financing and markets</span>
-      </a>
     </article>
   </div>
 </section>
@@ -791,7 +794,7 @@
   <div class="sub-shade"></div>
   <div class="wrap sub-in">
     <h2>Get the Brief every Monday.</h2>
-    <p>Rules, numbers and news for your cabin, in five minutes. Free. Plus the 2027 Sevier County STR rules guide, town by town.</p>
+    <p>Rules, numbers and news for your cabin, in five minutes. Free. Plus <a href="rules/">town-by-town STR rules</a> for Gatlinburg, Pigeon Forge, Sevierville and the county.</p>
     <form class="sub-form" data-kit="weekly" novalidate>
       <label class="sr" for="em">Email address</label>
       <input id="em" type="email" placeholder="you@email.com" required>
@@ -827,7 +830,7 @@
 <script src="content.js"></script>
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" defer></script>
 <script src="power.js" defer></script>
-<script src="app.js"></script>
+<script src="app.js?v=20261117d"></script>
 <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
 <script src="free.js"></script>
 <script src="site-config.js"></script>

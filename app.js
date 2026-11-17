@@ -109,6 +109,8 @@
     $('rOcc').textContent = isFinite(nights) ? Math.min(100, nights/30.4*100).toFixed(0)+'%' : '—';
     $('rPay').textContent = fmt$(pay);
     $('rCost').textContent = fmt$(total);
+    const KR = window.CONTENT && window.CONTENT.rates;
+    if (KR && KR.occ && KR.occ.length){ const avg = Math.round(KR.occ.reduce((a,b)=>a+b,0)/KR.occ.length); const cmp = $('rCmp'); if (cmp) cmp.textContent = `For comparison, Sevier County Airbnb listings averaged ${avg}% occupancy over the past 12 months (AirROI).`; }
     const on = isFinite(nights) ? Math.min(30, Math.ceil(nights)) : 0;
     bar.querySelectorAll('span').forEach((s,i)=> s.classList.toggle('on', i < on));
   }
@@ -157,7 +159,16 @@
     set('mrMosNote', `Homes for sale \u00f7 monthly sales. Under 6 favors sellers, over 6 favors buyers. Was ${mmin} in ${nice(D.mos.dates[mi])}.`);
     if (D.ladderAsof){ const l = ym(D.ladderAsof); set('mrLadNote', `Typical home value by bedroom count, change vs. ${FULL[l.m]} ${l.y - 1}.`); }
     set('tMkVal', `${h}<small>/100</small>`, true);
-    set('tMkSub', `${lbl} \u00b7 ${mos} months of supply`);
+    set('tMkSub', `${lbl} \u00b7 under 50 favors buyers`);
+    // plain-language lines, written from the numbers (no AI)
+    const up = v => (v >= 0 ? 'up ' : 'down ') + Math.abs(v).toFixed(Math.abs(v) < 10 ? 1 : 0) + '%';
+    const topLine = ti < n - 1 ? `Higher-priced homes are ${up(tch)} from their ${FULL[ym(G.dates[ti]).m]} ${ym(G.dates[ti]).y} peak` : `Higher-priced homes are at a new high`;
+    const mosLine = mos > 6 ? `Homes are taking longer to sell, with ${mos} months of supply (6 is balanced).` : `Homes are selling quickly, with ${mos} months of supply (6 is balanced).`;
+    set('mrSum', `<b>In plain terms:</b> ${lbl.toLowerCase()}. ${topLine}, while lower-priced homes are ${up(bch)} over the past year. ${mosLine}`, true);
+    set('mrHeatMean', '<b>What it means:</b> ' + (h < 45 ? 'more homes than buyers. A good time to buy and negotiate; slower to sell.' : h > 55 ? 'more buyers than homes. Sellers have the upper hand; buyers should move quickly.' : 'neither buyers nor sellers have a clear edge right now.'), true);
+    const topNow = ti < n - 1 ? tch : (G.top[n] / G.top[n-12] - 1) * 100;
+    set('mrGapMean', '<b>What it means:</b> ' + (topNow < bch ? 'higher-priced homes have lost the most ground. Lower-priced homes are holding their value better.' : 'higher-priced homes are gaining faster than lower-priced ones.'), true);
+    set('mrMosMean', '<b>What it means:</b> ' + (mos > 6 ? 'if you list now, expect a longer wait and more room for buyers to negotiate.' : 'listings are moving fast. Sellers have the edge.'), true);
     if (D.rate_date){ const r = new Date(D.rate_date + 'T12:00:00'); set('mrRate', `${D.rate}%, ${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][r.getMonth()]} ${r.getDate()}, ${r.getFullYear()}`); }
   }
 

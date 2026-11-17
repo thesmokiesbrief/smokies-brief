@@ -156,7 +156,7 @@ ${side.map(x => `        <a class="ts" ${A(x)}><p class="tag">${esc(x.tag)}</p><
   const and = a => a.length < 3 ? a.join(' and ') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1];
   const noiseHtml = `    <div class="sec-head sec-head-light">
       <h2 class="sec-title">Most covered this week</h2>
-      <p class="sec-note"><span class="upd upd-light">Every 2 hours</span> The stories local outlets are reporting the most</p>
+      <p class="sec-note"><span class="upd upd-light">Every 2 hours</span> Stories several outlets are covering. These are the ones guests will bring up.</p>
     </div>
     <div class="noise-grid">
 ${covered.map(g => { const h = Math.min(3, g.n); return `      <a class="noise-item" ${A(g.x)}>
@@ -170,10 +170,11 @@ ${covered.map(g => { const h = Math.min(3, g.n); return `      <a class="noise-i
 
   const issue = Math.max(1, Math.floor((dayN(today) - dayN('2026-11-16')) / 7) + 1); // issue 1 = week of Mon, Nov 16, 2026
   const leadHtml = lead ? `    <article class="week-lead">
-      <p class="kicker">This week's lead · Issue ${String(issue).padStart(2, '0')}</p>
+      <p class="kicker">Top story for cabin owners · Issue ${String(issue).padStart(2, '0')}</p>
       <h2>${esc(lead.t)}</h2>
       <p>${esc(lead.dek)}</p>
       <a class="btn" ${A(lead)}>Read it at ${esc(lead.src)}</a>
+      <p class="lead-note">Picked from Sevier County news and updated through the day. The full issue goes out every Monday.</p>
     </article>` : '';
   const briefHtml = brief.map(x => `        <li><p><a ${A(x)}><strong>${esc(x.tag)}.</strong> ${esc(x.t)}</a></p></li>`).join('\n');
 

@@ -47,6 +47,8 @@ jobs:
           node scripts/build_events_feed.js
           node scripts/build_attractions_feed.js
           node scripts/build_alerts.js
+      - name: Newest from host podcasts (public RSS feeds)
+        run: node scripts/build_podcasts.js || echo "Podcast list failed; keeping yesterday's episodes."
       - name: Guide pages and sitemap (rules, market report, big weekends, weekly archive)
         run: node scripts/build_pages.js || echo "Guide pages failed; keeping yesterday's pages."
       - name: Tag new sign-ups in Kit
