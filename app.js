@@ -384,3 +384,11 @@
   const line = wt && wt === pt ? `Weather${bk} and park alerts checked ${wt}` : [wt && `Weather${bk} checked ${wt}`, pt && `park alerts checked ${pt}`].filter(Boolean).join(', ');
   if (line) set('boardNote', `${line.replace(/\.$/, '')}. Power refreshes every 15 minutes.`);
 })();
+
+// Monday Brief phone preview: load and play only when on screen; respect reduced motion.
+(function(){
+  const v = document.querySelector('.phone-vid'); if (!v) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) { v.preload = 'auto'; v.play().catch(()=>{}); return; }
+  new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) v.play().catch(()=>{}); else v.pause(); }), { rootMargin: '200px 0px' }).observe(v);
+})();
