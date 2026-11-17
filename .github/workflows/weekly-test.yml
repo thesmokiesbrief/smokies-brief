@@ -1,0 +1,25 @@
+# Saves this week's Monday Brief as an unsent Kit draft named "TEST: ..." so a test can be sent from Kit.
+# Run by hand only. Nothing is sent to subscribers, and nothing is committed.
+name: Monday Brief test draft
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Save test draft in Kit
+        env:
+          KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
+          KIT_WEEKLY_TAG_ID: ${{ vars.KIT_WEEKLY_TAG_ID }}
+          TEST_DRAFT: "1"
+        run: node scripts/send_weekly.js

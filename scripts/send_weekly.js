@@ -12,6 +12,8 @@ const K = ctx.window.CONTENT;
 const SITE = process.env.SITE_URL || 'https://thesmokiesbrief.com';
 const KEY = process.env.KIT_API_KEY, TAG = parseInt(process.env.KIT_WEEKLY_TAG_ID || '', 10);
 const DRY = process.env.DRY_RUN === '1';
+// TEST_DRAFT=1 saves the email as an unsent Kit draft (no tag, no schedule, not public) so a test can be sent from Kit.
+const TEST = process.env.TEST_DRAFT === '1';
 const iso = d => d.toISOString().slice(0, 10);
 const today = process.env.TODAY || iso(new Date());
 const addDays = (s, n) => { const d = new Date(s + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return iso(d); };
@@ -22,7 +24,7 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;',
 
 const sentPath = path.join(root, 'data', 'weekly-sent.json');
 const sent = fs.existsSync(sentPath) ? JSON.parse(fs.readFileSync(sentPath, 'utf8')) : { sent: [] };
-if (!DRY && sent.sent.includes(today)) { console.log('Already sent today.'); process.exit(0); }
+if (!DRY && !TEST && sent.sent.includes(today)) { console.log('Already sent today.'); process.exit(0); }
 if (!DRY && (!KEY || !TAG)) { console.log("Kit isn't connected yet. Skipping the Monday Brief."); process.exit(0); }
 
 // Only use the daily snapshot (week tiles, roads, busy days) if it's fresh; otherwise leave those parts out.
@@ -83,7 +85,7 @@ const content = `
   const res = await fetch('https://api.kit.com/v4/broadcasts', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'X-Kit-Api-Key': KEY },
-    body: JSON.stringify({
+    body: JSON.stringify(TEST ? { subject: 'TEST: ' + subject, preview_text: preview, description: 'Test draft. Delete after sending a test.', content, public: false } : {
       subject, preview_text: preview, description: subject, content, public: true,
       published_at: new Date().toISOString(), send_at: new Date(Date.now() + 10 * 60 * 1000).toISOString(),
       subscriber_filter: [{ all: [{ type: 'tag', ids: [TAG] }] }]
@@ -91,6 +93,7 @@ const content = `
   });
   const body = await res.text();
   if (!res.ok) { console.error('Kit error', res.status, body.slice(0, 300)); process.exit(1); }
+  if (TEST) { console.log('Test draft saved:', JSON.parse(body).broadcast?.id); return; }
   sent.sent.push(today); sent.sent = sent.sent.slice(-60);
   fs.writeFileSync(sentPath, JSON.stringify(sent, null, 1));
   console.log('Scheduled:', subject);
