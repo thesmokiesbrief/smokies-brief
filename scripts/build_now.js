@@ -16,10 +16,10 @@ const src = fs.readFileSync(file, 'utf8'), K = load(src), N = K.now;
 async function get(url) {
   for (let i = 0; i < 3; i++) {
     try {
-      const r = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'application/geo+json, application/json' }, signal: AbortSignal.timeout(15000) });
+      const r = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'application/geo+json, application/json' }, signal: AbortSignal.timeout(20000) });
       if (r.ok) return await r.json();
       console.log(`${r.status} from ${url.split('?')[0]}`);
-    } catch (e) { console.log(`${e.name} from ${url.split('?')[0]}`); }
+    } catch (e) { console.log(`${e.name} ${(e.cause && e.cause.code) || e.message} from ${url.split('?')[0]}`); }
     await new Promise(r => setTimeout(r, 3000 * (i + 1)));
   }
   return null;
@@ -46,8 +46,9 @@ const clip = (s, n) => { s = String(s || '').replace(/\s+/g, ' ').trim(); return
   const set = {};
 
   // weather: forecast periods, each [name, temp, short forecast, daytime 1/0, date]
-  const pt = await get(`https://api.weather.gov/points/${LAT},${LON}`);
-  const fc = pt && await get(pt.properties.forecast);
+  // Gatlinburg's NWS grid square (from /points/35.7143,-83.5102); looked up again only if it ever moves
+  let fc = await get('https://api.weather.gov/gridpoints/MRX/86,41/forecast');
+  if (!fc) { const pt = await get(`https://api.weather.gov/points/${LAT},${LON}`); fc = pt && pt.properties && await get(pt.properties.forecast); }
   if (fc && fc.properties && fc.properties.periods && fc.properties.periods.length) {
     set.weather = fc.properties.periods.slice(0, 8).map(p => [p.name, p.temperature, p.shortForecast, p.isDaytime ? 1 : 0, p.startTime.slice(0, 10)]);
     set.weatherSrc = 'NWS'; set.weatherChecked = now.toISOString();
