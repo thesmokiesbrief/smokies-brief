@@ -130,7 +130,38 @@
   // live NPS stills: refresh every 15 minutes without a page reload
   setInterval(()=>document.querySelectorAll('.np-img img').forEach(im=>{ im.src = im.src.split('?')[0] + '?t=' + Date.now(); }), 9e5);
 
-  charts(); gauge(); ladder('Gatlinburg'); fill();
+  // market report text, all from data.js (rebuilt every morning by scripts/build_market.js)
+  function words(){
+    const MON = ['Jan','Feb','Mar','Apr','May','June','July','Aug','Sept','Oct','Nov','Dec'];
+    const FULL = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const ym = s => ({y:+s.slice(0,4), m:+s.slice(5,7)-1});
+    const nice = s => { const d = ym(s); return MON[d.m] + ' ' + d.y; };
+    const set = (id, v, html) => { const e = document.getElementById(id); if (e) e[html ? 'innerHTML' : 'textContent'] = v; };
+    const pct = v => (v >= 0 ? '+' : '\u2212') + Math.abs(v).toFixed(Math.abs(v) < 10 ? 1 : 0) + '%';
+    const a = ym(D.asof);
+    set('mrKicker', `Market Report \u00b7 ${FULL[a.m]} ${a.y}`);
+    set('mrNext', `Next update mid-${FULL[(a.m + 2) % 12]}`);
+    const hv = D.heat.values, h = hv[hv.length-1], lbl = h < 45 ? "Buyer's market" : h > 55 ? "Seller's market" : 'Balanced market';
+    const hmax = Math.max(...hv), hi = hv.indexOf(hmax);
+    set('mrHeat', h); set('mrHeatLbl', lbl);
+    const g = document.getElementById('mrGauge'); if (g) g.setAttribute('aria-label', `Market gauge at ${h} out of 100, ${h < 45 ? 'favoring buyers' : h > 55 ? 'favoring sellers' : 'balanced'}`);
+    set('mrHeatNote', `Peaked at ${hmax} in ${nice(D.heat.dates[hi])}. Zillow's market heat index; 50 is balanced.`);
+    const G = D.gap, n = G.top.length - 1, tmax = Math.max(...G.top), ti = G.top.indexOf(tmax);
+    const tch = (G.top[n] / tmax - 1) * 100, bch = (G.bottom[n] / G.bottom[n-12] - 1) * 100;
+    const tnum = document.getElementById('mrTopNum'), bnum = document.getElementById('mrBotNum');
+    if (ti < n - 1){ set('mrTopNum', pct(tch)); set('mrTopTxt', `Top third since its ${nice(G.dates[ti])} peak (${fmtK(tmax)} \u2192 ${fmtK(G.top[n])})`); if (tnum) tnum.className = 'c-num ' + (tch < 0 ? 'neg' : 'pos'); }
+    else { const t12 = (G.top[n] / G.top[n-12] - 1) * 100; set('mrTopNum', pct(t12)); set('mrTopTxt', `Top third, past 12 months (${fmtK(G.top[n])}), a new high`); if (tnum) tnum.className = 'c-num ' + (t12 < 0 ? 'neg' : 'pos'); }
+    set('mrBotNum', pct(bch)); set('mrBotTxt', `Bottom third, past 12 months (${fmtK(G.bottom[n])})`); if (bnum) bnum.className = 'c-num ' + (bch < 0 ? 'neg' : 'pos');
+    const mv = D.mos.values, mos = mv[mv.length-1], mmin = Math.min(...mv), mi = mv.indexOf(mmin);
+    set('mrMos', `${mos} <span>months</span>`, true);
+    set('mrMosNote', `Homes for sale \u00f7 monthly sales. Under 6 favors sellers, over 6 favors buyers. Was ${mmin} in ${nice(D.mos.dates[mi])}.`);
+    if (D.ladderAsof){ const l = ym(D.ladderAsof); set('mrLadNote', `Typical home value by bedroom count, change vs. ${FULL[l.m]} ${l.y - 1}.`); }
+    set('tMkVal', `${h}<small>/100</small>`, true);
+    set('tMkSub', `${lbl} \u00b7 ${mos} months of supply`);
+    if (D.rate_date){ const r = new Date(D.rate_date + 'T12:00:00'); set('mrRate', `${D.rate}%, ${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][r.getMonth()]} ${r.getDate()}, ${r.getFullYear()}`); }
+  }
+
+  words(); charts(); gauge(); ladder('Gatlinburg'); fill();
 })();
 
 /* ===== freshness, videos, events, nightly rates ===== */

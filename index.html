@@ -99,8 +99,8 @@
       </a>
       <a class="tile" href="#market">
         <span class="t-lbl">Market gauge</span>
-        <span class="t-val">25<small>/100</small></span>
-        <span class="t-sub">Buyer's market · 9.1 months of supply</span>
+        <span class="t-val" id="tMkVal">25<small>/100</small></span>
+        <span class="t-sub" id="tMkSub">Buyer's market · 9.1 months of supply</span>
       </a>
     </div>
     <p class="board-note"><span class="live"><i></i>Live</span> <span id="boardNote">Power refreshes every 15 minutes, park alerts and weather every hour.</span></p>
@@ -307,8 +307,8 @@
       </article>
       <article class="panel accts">
         <div class="panel-top"><h3 class="panel-title">Official accounts on X</h3></div>
-        <div class="acct-list"><a class="acct" href="https://x.com/GreatSmokyNPS" target="_blank" rel="noopener"><span class="acct-x" aria-hidden="true">𝕏</span><span><b>@GreatSmokyNPS</b><em>Great Smoky Mountains NP</em><small>Road closures, trail and weather updates. The park's road-status account retired, so updates post here now.</small></span></a><a class="acct" href="https://x.com/SevierSheriff" target="_blank" rel="noopener"><span class="acct-x" aria-hidden="true">𝕏</span><span><b>@SevierSheriff</b><em>Sevier County Sheriff's Office</em><small>Crashes, road blockages and public-safety notices.</small></span></a><a class="acct" href="https://x.com/SevierCounty" target="_blank" rel="noopener"><span class="acct-x" aria-hidden="true">𝕏</span><span><b>@SevierCounty</b><em>Sevier County Government</em><small>Office closures, county events and announcements.</small></span></a><a class="acct" href="https://x.com/GatlinburgCity" target="_blank" rel="noopener"><span class="acct-x" aria-hidden="true">𝕏</span><span><b>@GatlinburgCity</b><em>City of Gatlinburg</em><small>City notices, police and fire department events.</small></span></a><a class="acct" href="https://x.com/NWSMorristown" target="_blank" rel="noopener"><span class="acct-x" aria-hidden="true">𝕏</span><span><b>@NWSMorristown</b><em>National Weather Service</em><small>Winter storms, wind and flood warnings for East Tennessee.</small></span></a></div>
-        <p class="panel-note">In production, new posts from these accounts appear here with a link to the original.</p>
+        <div class="acct-list"><a class="acct" href="https://x.com/GreatSmokyNPS" target="_blank" rel="noopener"><span class="acct-x" aria-hidden="true">𝕏</span><span><b>@GreatSmokyNPS</b><em>Great Smoky Mountains NP</em><small>Road closures, trail and weather updates. The park's road-status account retired, so updates post here now.</small></span></a><a class="acct" href="https://x.com/SevierSheriff" target="_blank" rel="noopener"><span class="acct-x" aria-hidden="true">𝕏</span><span><b>@SevierSheriff</b><em>Sevier County Sheriff's Office</em><small>Crashes, road blockages and public-safety notices.</small></span></a><a class="acct" href="https://x.com/SevierCounty" target="_blank" rel="noopener"><span class="acct-x" aria-hidden="true">𝕏</span><span><b>@SevierCounty</b><em>Sevier County Government</em><small>Office closures, county events and announcements.</small></span></a><a class="acct" href="https://x.com/GatlinburgCity" target="_blank" rel="noopener"><span class="acct-x" aria-hidden="true">𝕏</span><span><b>@GatlinburgCity</b><em>City of Gatlinburg</em><small>City notices, police and fire department events.</small></span></a></div>
+        <p class="panel-note">Follow these for real-time notices. Each link opens the account on X.</p>
       </article>
     </div>
   </div>
@@ -529,10 +529,10 @@
   <div class="wrap">
     <div class="market-head">
       <div>
-        <p class="kicker">Market Report · October 2026</p>
+        <p class="kicker" id="mrKicker">Market Report · October 2026</p>
         <h2 class="market-title">Sevier County cabin market</h2>
       </div>
-      <p class="market-sub"><span class="upd">Updated monthly</span> Next update Dec 16</p>
+      <p class="market-sub"><span class="upd">Updated monthly</span> <span id="mrNext">Next update mid-December</span></p>
     </div>
 
     <div class="mr-grid">
@@ -540,7 +540,7 @@
       <article class="panel panel-gauge">
         <h3 class="panel-title">Buyer's or seller's market?</h3>
         <div class="gauge-wrap">
-          <svg viewBox="0 0 240 140" class="gauge" role="img" aria-label="Market gauge at 25 out of 100, favoring buyers">
+          <svg viewBox="0 0 240 140" class="gauge" id="mrGauge" role="img" aria-label="Market gauge at 25 out of 100, favoring buyers">
             <defs>
               <linearGradient id="g" x1="0" x2="1">
                 <stop offset="0" stop-color="#3E6B57"/><stop offset=".5" stop-color="#C9A65A"/><stop offset="1" stop-color="#B9572B"/>
@@ -550,9 +550,9 @@
             <g id="needle"><line x1="120" y1="120" x2="120" y2="36" stroke="#1D2420" stroke-width="4" stroke-linecap="round"/><circle cx="120" cy="120" r="9" fill="#1D2420"/></g>
           </svg>
           <div class="gauge-ends"><span>Favors buyers</span><span>Favors sellers</span></div>
-          <div class="gauge-read"><span class="gauge-num">25</span><span class="gauge-lbl">Buyer's market</span></div>
+          <div class="gauge-read"><span class="gauge-num" id="mrHeat">25</span><span class="gauge-lbl" id="mrHeatLbl">Buyer's market</span></div>
         </div>
-        <p class="panel-note">Peaked at 82 in Sept 2020. Zillow's market heat index; 50 is balanced.</p>
+        <p class="panel-note" id="mrHeatNote">Peaked at 82 in Sept 2020. Zillow's market heat index; 50 is balanced.</p>
         <div class="chart-sm"><canvas id="heatChart" aria-label="Market heat index since 2019"></canvas></div>
       </article>
 
@@ -563,8 +563,8 @@
           <div class="legend"><span class="lg lg-top">Top third of homes</span><span class="lg lg-bot">Bottom third</span></div>
         </div>
         <div class="callouts">
-          <div class="callout"><span class="c-num neg">−23%</span><span class="c-txt">Top third since its July 2022 peak ($881K → $680K)</span></div>
-          <div class="callout"><span class="c-num pos">+4.4%</span><span class="c-txt">Bottom third, past 12 months ($266K)</span></div>
+          <div class="callout"><span class="c-num neg" id="mrTopNum">−23%</span><span class="c-txt" id="mrTopTxt">Top third since its July 2022 peak ($881K → $680K)</span></div>
+          <div class="callout"><span class="c-num pos" id="mrBotNum">+4.4%</span><span class="c-txt" id="mrBotTxt">Bottom third, past 12 months ($266K)</span></div>
         </div>
         <div class="chart-lg"><canvas id="gapChart" aria-label="Typical values, top third versus bottom third of Sevier County homes since 2019"></canvas></div>
       </article>
@@ -572,8 +572,8 @@
       <!-- Months of supply -->
       <article class="panel panel-mos">
         <h3 class="panel-title">Months of supply</h3>
-        <p class="big-stat">9.1 <span>months</span></p>
-        <p class="panel-note">Homes for sale ÷ monthly sales. Under 6 favors sellers, over 6 favors buyers. Was 2.1 in Oct 2021.</p>
+        <p class="big-stat" id="mrMos">9.1 <span>months</span></p>
+        <p class="panel-note" id="mrMosNote">Homes for sale ÷ monthly sales. Under 6 favors sellers, over 6 favors buyers. Was 2.1 in Oct 2021.</p>
         <div class="chart-md"><canvas id="mosChart" aria-label="Months of supply since 2019 with 6-month balanced line"></canvas></div>
       </article>
 
@@ -588,7 +588,7 @@
           </div>
         </div>
         <div id="ladder" class="ladder"></div>
-        <p class="panel-note">Typical home value by bedroom count, change vs. October 2025.</p>
+        <p class="panel-note" id="mrLadNote">Typical home value by bedroom count, change vs. October 2025.</p>
       </article>
     </div>
     <p class="credit">Data Provided by Zillow Group. Months of supply calculated from Zillow inventory and sales counts.</p>
@@ -733,7 +733,7 @@
           <div><span id="rCost">—</span><small>total monthly cost</small></div>
         </div>
       </div>
-      <p class="fine">Estimate only. Price from Zillow typical values; rate is Freddie Mac's 30-year average (7.11%, Nov 12, 2026). Nightly rate is an example until you enter yours.</p>
+      <p class="fine">Estimate only. Price from Zillow typical values; rate is Freddie Mac's 30-year average (<span id="mrRate">7.11%, Nov 12, 2026</span>). Nightly rate is an example until you enter yours.</p>
     </form>
   </div>
 </section>
