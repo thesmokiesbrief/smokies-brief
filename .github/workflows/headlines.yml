@@ -1,0 +1,35 @@
+# Pulls Smokies headlines from local news RSS feeds every two hours and updates the News section.
+# No AI, no keys. Saves index.html and data/headlines.json; the 15-minute power job publishes them.
+name: Headlines (every 2 hours)
+
+on:
+  schedule:
+    - cron: "44 */2 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-writes
+  cancel-in-progress: false
+
+jobs:
+  headlines:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Build headlines
+        run: node scripts/build_headlines.js
+      - name: Save headlines
+        run: |
+          git config user.name "smokies-brief-bot"
+          git config user.email "bot@thesmokiesbrief.com"
+          git add index.html data/headlines.json
+          git commit -m "Headlines $(date -u +%FT%H:%MZ)" || { echo "No new headlines"; exit 0; }
+          git pull --rebase -X theirs origin main
+          git push

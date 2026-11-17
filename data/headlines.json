@@ -1,0 +1,428 @@
+{
+ "updated": "2026-11-17T16:51:58.805Z",
+ "sources": [
+  "WATE",
+  "WVLT",
+  "WBIR",
+  "Smokies.LIVE",
+  "National Park Service"
+ ],
+ "top": [
+  "https://www.wate.com/investigations/english-mountian-poa-dispute/",
+  "https://fox17.com/news/local/dollywood-fans-fly-from-florida-to-smoky-mountain-christmas-on-themed-allegiant-trips",
+  "https://www.wvlt.tv/2026/11/17/ground-stop-sparks-thanksgiving-travel-concerns/",
+  "https://smokies.live/2026/11/16/pigeon-forge-kicks-off-winterfest-season-with-holiday-market-lights-and-family-fun/"
+ ],
+ "items": [
+  {
+   "t": "Dollywood fans fly from Florida to Smoky Mountain Christmas on themed Allegiant trips",
+   "u": "https://fox17.com/news/local/dollywood-fans-fly-from-florida-to-smoky-mountain-christmas-on-themed-allegiant-trips",
+   "d": "2026-11-17",
+   "at": "2026-11-17T12:00:00.000Z",
+   "src": "FOX 17",
+   "tag": "Tourism",
+   "w": 7,
+   "dek": ""
+  },
+  {
+   "t": "Gatlinburg builds new emergency operations center 10 years after wildfires",
+   "u": "https://www.wvlt.tv/2026/11/17/gatlinburg-builds-new-emergency-operations-center-10-years-after-wildfires/",
+   "d": "2026-11-16",
+   "at": "2026-11-16T12:00:00.000Z",
+   "src": "WVLT",
+   "tag": "Gatlinburg",
+   "w": 2,
+   "dek": ""
+  },
+  {
+   "t": "Ground stop sparks Thanksgiving travel concerns",
+   "u": "https://www.wvlt.tv/2026/11/17/ground-stop-sparks-thanksgiving-travel-concerns/",
+   "d": "2026-11-16",
+   "at": "2026-11-16T12:00:00.000Z",
+   "src": "WVLT",
+   "tag": "Guests",
+   "w": 7,
+   "dek": ""
+  },
+  {
+   "t": "Pigeon Forge kicks off Winterfest season with holiday market, lights and family fun",
+   "u": "https://smokies.live/2026/11/16/pigeon-forge-kicks-off-winterfest-season-with-holiday-market-lights-and-family-fun/",
+   "d": "2026-11-16",
+   "at": "2026-11-16T12:00:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Events",
+   "w": 4,
+   "dek": ""
+  },
+  {
+   "t": "Wilderness at the Smokies brings back outdoor ice skating for the holidays",
+   "u": "https://smokies.live/2026/11/16/wilderness-at-the-smokies-brings-back-outdoor-ice-skating-for-the-holidays/",
+   "d": "2026-11-16",
+   "at": "2026-11-16T12:00:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Attractions",
+   "w": 3,
+   "dek": ""
+  },
+  {
+   "t": "Ripley's Aquarium of the Smokies brings back Sea of Trees holiday display",
+   "u": "https://smokies.live/2026/11/16/ripleys-aquarium-of-the-smokies-brings-back-sea-of-trees-holiday-display/",
+   "d": "2026-11-16",
+   "at": "2026-11-16T12:00:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Attractions",
+   "w": 3,
+   "dek": ""
+  },
+  {
+   "t": "Smoky Mountains inspire East Tennessee author's Christmas story",
+   "u": "https://www.wbir.com/article/life/heartwarming/smoky-mountains-inspire-east-tennessee-authors-christmas-story/51-7d1200ee-79fc-4914-89a1-fd0f34d01336",
+   "d": "2026-11-15",
+   "at": "2026-11-15T23:03:49.000Z",
+   "src": "WBIR",
+   "tag": "Events",
+   "w": 4,
+   "dek": "A snowy night outside his cabin gave Joe McMakin the idea for a Christmas adventure rooted in the beauty of the Smokies."
+  },
+  {
+   "t": "Pigeon Forge Winterfest walking trail offers free holiday light experience",
+   "u": "https://smokies.live/2026/11/15/pigeon-forge-winterfest-walking-trail-offers-free-holiday-light-experience/",
+   "d": "2026-11-15",
+   "at": "2026-11-15T18:10:41.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Events",
+   "w": 4,
+   "dek": "The 1.5-mile Wonders of Light Walking Trail features holiday displays, free parking and […] The post Pigeon Forge Winterfest walking trail offers free holiday light experience appeared first on Smokies Live ."
+  },
+  {
+   "t": "Smokies forecast: Warmer weather returns next week as high pressure takes over",
+   "u": "https://smokies.live/2026/11/15/smokies-forecast-warmer-weather-returns-next-week-as-high-pressure-takes-over/",
+   "d": "2026-11-15",
+   "at": "2026-11-15T11:13:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Weather",
+   "w": 6,
+   "dek": "Cooler-than-normal temperatures will gradually give way to a warming trend, with sunshine and […] The post Smokies forecast: Warmer weather returns next week as high pressure takes over appeared first on Smokies Live ."
+  },
+  {
+   "t": "Ober Gatlinburg receives first natural snowfall of 2026-27 winter season",
+   "u": "https://smokies.live/2026/11/14/ober-gatlinburg-receives-first-natural-snowfall-of-2026-27-winter-season/",
+   "d": "2026-11-14",
+   "at": "2026-11-14T12:00:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Weather",
+   "w": 6,
+   "dek": ""
+  },
+  {
+   "t": "Sevier County author shares heartwarming story of Santa and shelter dog Mary in new Christmas book",
+   "u": "https://smokies.live/2026/11/14/sevier-county-author-shares-heartwarming-story-of-santa-and-shelter-dog-mary-in-new-christmas-book/",
+   "d": "2026-11-14",
+   "at": "2026-11-14T11:41:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Events",
+   "w": 4,
+   "dek": "Book celebrates the power of pet adoption while raising money for the Sevier […] The post Sevier County author shares heartwarming story of Santa and shelter dog Mary in new Christmas book appeared first on Smokies Live…"
+  },
+  {
+   "t": "WBIR former and current employees reflect on Gatlinburg wildfires, 10 years later",
+   "u": "https://www.wbir.com/article/news/community/wbir-former-and-current-employees-reflect-on-gatlinburg-wildfires-10-years-later/51-fb8acbd3-946a-455d-b78f-d679fe3aae8d",
+   "d": "2026-11-13",
+   "at": "2026-11-14T02:07:53.000Z",
+   "src": "WBIR",
+   "tag": "Safety",
+   "w": 5,
+   "dek": "The wildfires devastated parts of Gatlinburg and Sevier County on the night of Nov. 28, 2016, taking 14 lives and destroying hundreds of homes and businesses."
+  },
+  {
+   "t": "Former fire chief reflects on 2016 Gatlinburg wildfires nearly 10 years later",
+   "u": "https://www.wbir.com/article/news/community/former-fire-chief-reflects-on-2016-gatlinburg-wildfires-nearly-10-years-later/51-1d0fc3fb-335a-40a7-876d-9273b4114214",
+   "d": "2026-11-13",
+   "at": "2026-11-13T23:54:11.000Z",
+   "src": "WBIR",
+   "tag": "Safety",
+   "w": 5,
+   "dek": "Nearly 10 years after the Gatlinburg wildfires, a former fire chief reflects on the challenges her crews faced and the memories that have stayed with her."
+  },
+  {
+   "t": "Busy days remain at Great Smoky Mountains National Park, so avoid these dates",
+   "u": "https://www.rgj.com/story/entertainment/smoky-mountains/2026/11/13/great-smoky-mountains-national-park-busy-days-visitors-november-december-fall-winter/92722959007/",
+   "d": "2026-11-13",
+   "at": "2026-11-13T12:00:00.000Z",
+   "src": "Reno Gazette Journal",
+   "tag": "Park",
+   "w": 5,
+   "dek": ""
+  },
+  {
+   "t": "Forecast shows snow for some, cold temperatures for all this weekend: What to know",
+   "u": "https://www.wate.com/weather-news/snow-great-smoky-mountains-nov-12-16-forecast/",
+   "d": "2026-11-12",
+   "at": "2026-11-12T16:48:30.000Z",
+   "src": "WATE",
+   "tag": "Weather",
+   "w": 6,
+   "dek": "East Tennessee faces a cold weekend with potential snowfall at elevations above 3,000 feet in the Great Smoky Mountains and freezing temperatures across all counties."
+  },
+  {
+   "t": "Major road closed for snow in Great Smoky Mountains National Park",
+   "u": "https://www.citizen-times.com/story/entertainment/smoky-mountains/2026/11/12/road-closures-begin-in-great-smoky-mountains-due-to-winter-weather/92744451007/",
+   "d": "2026-11-12",
+   "at": "2026-11-12T12:00:00.000Z",
+   "src": "Citizen Times",
+   "tag": "Roads",
+   "w": 6,
+   "dek": ""
+  },
+  {
+   "t": "'Thank them': Gold Star mother honors fallen son at annual Gatlinburg Veterans Day event",
+   "u": "https://www.wate.com/news/veterans-voices/2026-gatlinburg-veterans-day-celebration/",
+   "d": "2026-11-11",
+   "at": "2026-11-11T23:14:07.000Z",
+   "src": "WATE",
+   "tag": "Gatlinburg",
+   "w": 2,
+   "dek": "The Gatlinburg Pittman High School Concert Band kicked off the 26th annual Veterans Day Celebration at the Gatlinburg Convention Center, featuring speakers such as Gold Star Mother Kelly Swanson and Army Staff Sgt. Lee…"
+  },
+  {
+   "t": "Homeowners threatened with eviction from English Mountain POA over voluntary dues",
+   "u": "https://www.wate.com/investigations/english-mountian-poa-dispute/",
+   "d": "2026-11-10",
+   "at": "2026-11-10T22:55:00.000Z",
+   "src": "WATE",
+   "tag": "Rules",
+   "w": 10,
+   "dek": "Homeowners in the English Mountain community are disputing a threat of liens from their property owners association over whether annual dues are voluntary or mandatory under the neighborhood's original covenants."
+  },
+  {
+   "t": "Pigeon Forge park reopens after closure due to 'nuisance bear'",
+   "u": "https://www.wate.com/news/pigeon-forge-park-nuisance-bear/",
+   "d": "2026-11-07",
+   "at": "2026-11-08T01:22:44.000Z",
+   "src": "WATE",
+   "tag": "Roads",
+   "w": 6,
+   "dek": "Wear Farm Park reopened on Monday after being temporarily closed as wildlife officers investigated what the city referred to as a \"nuisance bear.\""
+  },
+  {
+   "t": "Gatlinburg launches drone program to help police, firefighters during emergencies",
+   "u": "https://www.wate.com/news/sevier-county-news/gatlinburg-drone-public-safety/",
+   "d": "2026-11-06",
+   "at": "2026-11-06T12:00:00.000Z",
+   "src": "WATE",
+   "tag": "Gatlinburg",
+   "w": 2,
+   "dek": ""
+  },
+  {
+   "t": "Portion of Smokies trail damaged during Hurricane Helene reopened",
+   "u": "https://www.wate.com/news/smoky-mountains/portion-of-gsmnp-trail-damaged-during-helene-reopened/",
+   "d": "2026-11-05",
+   "at": "2026-11-05T15:53:04.000Z",
+   "src": "WATE",
+   "tag": "Park",
+   "w": 5,
+   "dek": "More than two years after Hurricane Helene, the Great Smoky Mountains National Park has reopened a section of a trail that was damaged by heavy rainfall."
+  },
+  {
+   "t": "Harshbarger wins reelection to Congress",
+   "u": "https://www.wate.com/news/harshbarger-wins-reelection-to-congress/",
+   "d": "2026-11-03",
+   "at": "2026-11-04T03:40:25.000Z",
+   "src": "WATE",
+   "tag": "Local",
+   "w": 1,
+   "dek": "Diana Harshbarger has been reelected to the U.S. House of Representatives for Tennessee's First Congressional District. Harshbarger defeated Democratic challenger Kristi Burke in the Nov. 3 election. She was first…"
+  },
+  {
+   "t": "Find results for Sevier County’s November 2026 election",
+   "u": "https://www.wate.com/news/sevier-nov-2026-election-results/",
+   "d": "2026-11-03",
+   "at": "2026-11-04T00:04:00.000Z",
+   "src": "WATE",
+   "tag": "Sevier County",
+   "w": 2,
+   "dek": "It’s Election Day in Sevier County, and voters are to decide who will win in several key races. Residents have the opportunity to vote for Tennessee's next governor and on three proposed amendments to the state…"
+  },
+  {
+   "t": "When does Kuwohi Road close? Smokies seasonal road closures",
+   "u": "https://www.wate.com/news/smoky-mountains/when-does-kuwohi-road-close-smokies-seasonal-road-closures/",
+   "d": "2026-11-03",
+   "at": "2026-11-03T20:16:39.000Z",
+   "src": "WATE",
+   "tag": "Roads",
+   "w": 6,
+   "dek": "With fall colors on full display in the Great Smoky Mountains National Park, soon it will be time for the park's seasonal road closures to go into place before more wintry weather arrives. At the end of October, the…"
+  },
+  {
+   "t": "Gatlinburg Rental Occupancy Hits 68% in October as Bookings Come Late",
+   "u": "https://news.kingsofrealestate.com/gatlinburg-short-term-rental-occupancy-68-percent-october-booking-window-2026/",
+   "d": "2026-11-03",
+   "at": "2026-11-03T12:00:00.000Z",
+   "src": "Real Estate Insider",
+   "tag": "The Numbers",
+   "w": 9,
+   "dek": "Occupancy reached 68%, up from 62.2% a year earlier, per the Gatlinburg Convention and Visitors Bureau. Owners say guests now book far closer to their stay."
+  },
+  {
+   "t": "Cades Cove Loop Road, Laurel Creek Road to close for footrace: What to know",
+   "u": "https://www.wate.com/news/smoky-mountains/cades-cove-loop-road-closure-nov-8/",
+   "d": "2026-11-02",
+   "at": "2026-11-02T15:13:35.000Z",
+   "src": "WATE",
+   "tag": "Roads",
+   "w": 6,
+   "dek": "Two popular scenic roads in the Great Smoky Mountains National Park are scheduled to close over the weekend during a race. Cades Cove Loop Road and Laurel Creek Road will be closed on Sunday, November 8, until around 11…"
+  },
+  {
+   "t": "'Everything we do is the traditions' Sevierville favorite celebrates 50 years",
+   "u": "https://www.wate.com/news/sevier-county-news/apple-barn-50-years-sevierville/",
+   "d": "2026-11-01",
+   "at": "2026-11-01T18:20:16.000Z",
+   "src": "WATE",
+   "tag": "Events",
+   "w": 4,
+   "dek": "This month, a must-stop Sevierville destination celebrated 50 years of business. The Apple Barn opened up its doors in 1981 after primarily serving as a cattle and tobacco farm. Originally, a pharmacist named Bill…"
+  },
+  {
+   "t": "‘It’s definitely a lifesaver:’ Over 530 people helped through Sevier County free mammogram initiative",
+   "u": "https://www.wate.com/news/local-news/sevier-county-free-mammogram-program/",
+   "d": "2026-10-29",
+   "at": "2026-10-29T21:20:00.000Z",
+   "src": "WATE",
+   "tag": "Sevier County",
+   "w": 2,
+   "dek": "Covenant Health's Paint the Mountains Pink initiative has provided free mammograms to more than 530 qualifying women in Sevier County since 2012 to help overcome financial barriers to breast cancer detection."
+  },
+  {
+   "t": "Couples travel to the Smokies during the busiest wedding month of the year",
+   "u": "https://www.wate.com/news/smoky-mountains/destination-smokies/couples-in-smokies-busiest-wedding-month-of-the-year/",
+   "d": "2026-10-29",
+   "at": "2026-10-29T18:19:12.000Z",
+   "src": "WATE",
+   "tag": "Tourism",
+   "w": 7,
+   "dek": "October is one of the busiest months of the year to get married, according to a recent study by The Knot, and venues across Sevier County are booked and busy as couples pick the smokies as their destination wedding."
+  },
+  {
+   "t": "$5 'Local Appreciation Days' to return at Anakeesta, raising money for Second Harvest",
+   "u": "https://www.wate.com/news/local-appreciation-days-anakeesta-nov-2026/",
+   "d": "2026-10-29",
+   "at": "2026-10-29T17:24:49.000Z",
+   "src": "WATE",
+   "tag": "Attractions",
+   "w": 3,
+   "dek": "People living or working in certain counties will soon be able to attend Anakeesta for a discounted rate while raising money to help feed those in need. Anakeesta plans to hold its \"Local Appreciation Days\" from Friday…"
+  },
+  {
+   "t": "Tennessee sees rise in Hospitality and Leisure workforce",
+   "u": "https://www.wate.com/news/smoky-mountains/tennessee-sees-rise-in-hospitality-and-leisure-workforce/",
+   "d": "2026-10-28",
+   "at": "2026-10-28T12:00:00.000Z",
+   "src": "WATE",
+   "tag": "Jobs",
+   "w": 3,
+   "dek": ""
+  },
+  {
+   "t": "When can Sevier County residents get $5 admission to Dollywood",
+   "u": "https://www.wate.com/news/sevier-county-news/dollywoods-smoky-mountain-christmas-sevier-county-days-2026/",
+   "d": "2026-10-27",
+   "at": "2026-10-27T14:45:51.000Z",
+   "src": "WATE",
+   "tag": "Attractions",
+   "w": 3,
+   "dek": "Dollywood is bringing back its Sevier County Days promotion, giving those who live and work in the county a chance to experience the Smoky Mountain Christmas while donating to local nonprofits. On Tuesday, Dollywood…"
+  },
+  {
+   "t": "Pittman Center VFD delays planned shutdown as talks continue on future of fire protection",
+   "u": "https://www.wate.com/news/sevier-county-news/pittman-center-fire-department-sevier-county-continue-talks/",
+   "d": "2026-10-27",
+   "at": "2026-10-27T12:00:00.000Z",
+   "src": "WATE",
+   "tag": "Owners",
+   "w": 1,
+   "dek": ""
+  },
+  {
+   "t": "Meet the candidates running to represent Tennessee's 1st Congressional District",
+   "u": "https://www.wate.com/news/election-news/harshbarger-burke-tennessee-congressional-race/",
+   "d": "2026-10-26",
+   "at": "2026-10-26T21:20:00.000Z",
+   "src": "WATE",
+   "tag": "Local",
+   "w": 1,
+   "dek": "Democrat Kristi Burke is challenging incumbent Republican Representative Diana Harshbarger for Tennessee's 1st Congressional District seat in the upcoming November 3 election."
+  },
+  {
+   "t": "Sevier County teacher returns to school at 35, earns two degrees, inspires students",
+   "u": "https://www.wate.com/news/sevier-county-news/sevier-county-teacher-inspires-students/",
+   "d": "2026-10-26",
+   "at": "2026-10-26T11:58:45.000Z",
+   "src": "WATE",
+   "tag": "Sevier County",
+   "w": 2,
+   "dek": "A Sevier County teacher who returned to college at 35 is using her own experience to show students it is never too late to pursue their dreams. Brittany Atchison teaches fifth-grade science at Northview Intermediate…"
+  },
+  {
+   "t": "East Tennessee city ranks among state's most mispronounced words: Study",
+   "u": "https://www.wate.com/news/tennessee/study-tennessee-most-mispronounced-words/",
+   "d": "2026-10-25",
+   "at": "2026-10-25T19:07:57.000Z",
+   "src": "WATE",
+   "tag": "Local",
+   "w": 1,
+   "dek": "How do you pronounce Worcestershire sauce? According to a new study, Americans are flocking to Google to figure it out."
+  },
+  {
+   "t": "Girl Scouts earn Dolly Parton inspired patch in Pigeon Forge workshop",
+   "u": "https://www.wate.com/news/top-stories/girl-scouts-coat-of-many-colors-patch-pigeon-forge-workshop/",
+   "d": "2026-10-25",
+   "at": "2026-10-25T11:15:00.000Z",
+   "src": "WATE",
+   "tag": "Pigeon Forge",
+   "w": 2,
+   "dek": "Southern Appalachians chap of Girl Scouts gathered at Dream More Resort to earn Dolly Parton's Coat of Many Colors patch."
+  },
+  {
+   "t": "'Heartbeat of the fire service': East TN volunteer fire departments hit hard by diesel prices",
+   "u": "https://www.wate.com/news/top-stories/volunteer-firefighters-diesel-costs/",
+   "d": "2026-10-23",
+   "at": "2026-10-23T21:17:26.000Z",
+   "src": "WATE",
+   "tag": "Local",
+   "w": 1,
+   "dek": "Volunteer fire departments save lives every day. Fire engines run on diesel fuel, which has hovered around $6 per gallon, making it harder for volunteer firefighters to get where they need to be. Meet Blaze, the…"
+  },
+  {
+   "t": "New robots, VR headsets & 3D printers at Sevierville Intermediate after $27,500 makeover",
+   "u": "https://www.wate.com/news/education-schools/sevierville-intermediate-tech-lab-upgrade/",
+   "d": "2026-10-22",
+   "at": "2026-10-22T20:12:09.000Z",
+   "src": "WATE",
+   "tag": "Sevierville",
+   "w": 2,
+   "dek": "The technology lab at Sevierville Intermediate School has received some significant upgrades after being awarded a $27,500 prize by Oak Ridge Associated Universities. Sevierville Intermediate, which serves students in…"
+  },
+  {
+   "t": "Cades Cove Loop Road to partially close for tree work: What to know",
+   "u": "https://www.wate.com/news/smoky-mountains/cades-cove-road-closure-oct-26/",
+   "d": "2026-10-22",
+   "at": "2026-10-22T15:25:05.000Z",
+   "src": "WATE",
+   "tag": "Roads",
+   "w": 6,
+   "dek": "A partial closure of Cades Cove Loop Road in Great Smoky Mountains National Park is scheduled for Monday, October 26, due to tree work."
+  },
+  {
+   "t": "Historic church, cemeteries among East Tennessee sites receiving new recognition",
+   "u": "https://www.wate.com/news/tennessee/tn-landmarks-added-historic-registers/",
+   "d": "2026-10-21",
+   "at": "2026-10-21T14:49:23.000Z",
+   "src": "WATE",
+   "tag": "Local",
+   "w": 1,
+   "dek": "Several East Tennessee landmarks and communities were added to historical registers, while others received federal grant funding for restoration projects and planning efforts."
+  }
+ ]
+}
