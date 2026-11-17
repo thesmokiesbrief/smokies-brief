@@ -9,7 +9,7 @@ name: Daily feeds
 
 on:
   schedule:
-    - cron: "30 10 * * *"   # 10:30 UTC = 5:30 a.m. EST
+    - cron: "34 10 * * *"   # 10:34 UTC = 5:34 a.m. EST
   workflow_dispatch: {}
 
 permissions:

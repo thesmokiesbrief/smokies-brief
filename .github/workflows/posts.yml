@@ -3,7 +3,7 @@ name: Weekly posts (Mondays)
 
 on:
   schedule:
-    - cron: "0 11 * * 1"   # 11:00 UTC = 6:00 a.m. EST
+    - cron: "4 11 * * 1"   # 11:04 UTC = 6:04 a.m. EST
   workflow_dispatch: {}
 
 permissions:
