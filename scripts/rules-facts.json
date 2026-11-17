@@ -1,0 +1,126 @@
+{
+  "verified": "2026-11-17",
+  "areas": [
+    {
+      "slug": "sevier-county",
+      "watch": "county",
+      "name": "Unincorporated Sevier County",
+      "short": "Sevier County (outside city limits)",
+      "title": "Sevier County short-term rental rules outside city limits",
+      "desc": "Annual Fire Marshal permit and inspection, fees, safety items and where to pay taxes for Sevier County cabins outside Gatlinburg, Pigeon Forge and Sevierville city limits.",
+      "lede": "Cabins outside any city limits, including much of Wears Valley and the county's back roads, answer to Sevier County. Since January 1, 2024, every one of them needs a yearly permit and inspection from the county Fire Marshal's Office.",
+      "permit": "Short-Term Rental Unit permit (Fire Marshal)",
+      "fee": "$250 a year for 12 or fewer guests, plus $25 per guest over 12",
+      "inspection": "Yes, every year",
+      "renewal": "Every year, in the month of your first permit",
+      "facts": [
+        ["Who needs it", "Every short-term rental in Sevier County outside city limits. One application per address.", 0],
+        ["Started", "January 1, 2024. The county extended the first application deadline to June 30, 2024.", 1],
+        ["Cost", "$250 a year for a rental that sleeps 12 or fewer. Over 12, it's $250 plus $25 for each additional guest. Payments aren't refundable.", 0],
+        ["How to apply", "Online through the county's Community Connect portal: register as a business owner, add each rental address, choose Permits, then Apply for a Permit and attach the completed application.", 0],
+        ["Inspection", "The permit is issued after the inspection. Follow-up inspections happen every year in the month your first permit was issued. A third inspection, and any after it, costs $25 each.", 0],
+        ["What inspectors check", "Smoke alarms, carbon monoxide detectors, escape routes, electrical safety and heating and cooling. The county asks for a 2A10BC fire extinguisher on each level.", 0],
+        ["Business license and lodging tax", "Get a Sevier County business license from the County Clerk and pay lodging tax to the County Trustee.", 2],
+        ["Trash from cleaning crews", "Short-term rental cleaning companies must take rental trash to the Center View Road multipurpose convenience center and pay a disposal fee, not the residential centers.", 3],
+        ["Questions", "Sevier County Fire Marshal's Office, (865) 774-3603.", 0]
+      ],
+      "sources": [
+        ["Sevier County: Short-Term Rental Unit Inspection Program", "https://seviercountytn.gov/news_detail_T2_R68.php"],
+        ["Sevier County: application deadline extended", "https://www.seviercountytn.gov/news_detail_T2_R89.php"],
+        ["Sevier County Clerk: business license and short-term rentals", "https://www.seviercountytn.gov/government/county_officials/sevier_county_clerk/business_license.php"],
+        ["Sevier County: convenience center rules for rental cleaners", "https://www.seviercountytn.gov/news_detail_T2_R104.php"]
+      ],
+      "apply": ["Community Connect portal", "https://www.communityconnect.io/info/tn-seviercounty"]
+    },
+    {
+      "slug": "gatlinburg",
+      "watch": "gatlinburg",
+      "name": "Gatlinburg",
+      "short": "Gatlinburg",
+      "title": "Gatlinburg short-term rental rules: Tourist Residency Permit",
+      "desc": "What Gatlinburg requires for cabin rentals inside city limits: the Tourist Residency Permit, fees, zoning check, licenses, lodging tax and bear-resistant trash cans.",
+      "lede": "Inside Gatlinburg city limits, an overnight rental needs a Tourist Residency Permit from the city, and the property has to be zoned for overnight rental use. Check zoning before you buy or apply.",
+      "permit": "Tourist Residency Permit (City of Gatlinburg)",
+      "fee": "$200 for up to 2 bedrooms, plus $75 for each bedroom over 2",
+      "inspection": "Yes, fire and building inspection",
+      "renewal": "Ask the city",
+      "facts": [
+        ["Who needs it", "Anyone using a property inside Gatlinburg city limits for overnight rentals, as long as the property is zoned for it.", 0],
+        ["Zoning comes first", "The city says it's the applicant's job to confirm with the Building and Planning Department that the property is zoned for overnight rental use before applying. Call (865) 436-7792.", 0],
+        ["Cost", "$200 for a unit with 2 or fewer bedrooms, plus $75 for each bedroom over 2. The fee pays for the fire and building inspection.", 0],
+        ["What the application asks for", "Owner name and contact, the rental's location and name, number of bedrooms and stories, maximum occupancy, gross square footage, and the rental agent's name and contact.", 0],
+        ["Where to apply", "Drop the application and payment at the city's Customer Service Center or Finance Department, or mail it to the city.", 0],
+        ["Business licenses and lodging tax", "Rentals inside city limits need a city business license in addition to a Sevier County business license, and pay lodging tax to the city.", 1],
+        ["Bear-resistant trash cans", "Properties holding a Tourist Residency Permit are inside the city's animal-resistant container zone.", 2],
+        ["Questions", "City of Gatlinburg, (865) 436-1400.", 0]
+      ],
+      "sources": [
+        ["City of Gatlinburg: Apply for a Tourist Residency Permit", "https://www.gatlinburgtn.gov/page/apply-for-a-tourist-residency-permit"],
+        ["Sevier County Clerk: business license and short-term rentals", "https://www.seviercountytn.gov/government/county_officials/sevier_county_clerk/business_license.php"],
+        ["City of Gatlinburg: animal-resistant container zone", "https://www.gatlinburgtn.gov/article/1924965/"]
+      ],
+      "apply": ["City of Gatlinburg permit page", "https://www.gatlinburgtn.gov/page/apply-for-a-tourist-residency-permit"]
+    },
+    {
+      "slug": "pigeon-forge",
+      "watch": "pigeonforge",
+      "name": "Pigeon Forge",
+      "short": "Pigeon Forge",
+      "title": "Pigeon Forge short-term rental rules: R-1 permit, occupancy and taxes",
+      "desc": "Pigeon Forge short-term rental rules for cabin owners and buyers: the R-1 operating permit and its 2018 cutoff, fees, occupancy, advertising and taxes.",
+      "lede": "Pigeon Forge's biggest rule is about the R-1 low-density residential zone: short-term rentals there are allowed only for properties that were already renting by August 13, 2018, and they need a city operating permit. Outside R-1, zoning decides what's allowed.",
+      "permit": "Short-Term Rental Unit Operating Permit (R-1 zone)",
+      "fee": "$300 application, renewed every year",
+      "inspection": "Covered by the permit fee",
+      "renewal": "Every year, at least 14 business days before it expires",
+      "facts": [
+        ["The R-1 cutoff", "In the R-1 district, only owners who were renting short term on or before August 13, 2018, and who paid rental taxes for at least six of the twelve months before that date, can use the property as a short-term rental.", 0],
+        ["Buying an R-1 rental", "The city can revoke the permit when the owner stops owning the property, so a buyer can't count on taking it over. Get the city's answer in writing before you buy.", 0],
+        ["Permit types", "Owner occupied, non-owner occupied, and unoccupied.", 0],
+        ["Cost and term", "$300 to apply, not refundable. The permit is good for one calendar year, and the renewal fee is due at least 14 business days before it expires.", 0],
+        ["What the application needs", "A signed life safety affidavit, a 24-hour local contact, a site plan and floor plan showing parking, a valid business license, and proof that rental taxes were paid.", 0],
+        ["Occupancy", "No more than two guests per bedroom plus two.", 0],
+        ["Advertising", "Every ad, online or off, has to show the operating permit number.", 0],
+        ["Revocation", "The city can revoke a permit for false information, a safety threat, a change of ownership, 30 months without rental use, or three violations.", 0],
+        ["Taxes", "Operators owe the city hotel occupancy privilege tax, local sales tax and gross receipts tax, plus Tennessee sales tax and gross receipts tax.", 0],
+        ["Outside R-1", "The zoning ordinance lists overnight and weekly rentals as uses in some commercial districts. Check the zoning of any address with the city before you buy. City Hall: (865) 453-9061.", 1]
+      ],
+      "sources": [
+        ["Pigeon Forge Zoning Ordinance, Section 511 (2019 update)", "http://cityofpigeonforge.com/uploadedFiles/Community_Development/Pigeon%20Forge%20Zoning%20Ordinance%20(update%201_2019).pdf"],
+        ["Sevier County Clerk: city phone numbers for rentals inside city limits", "https://www.seviercountytn.gov/government/county_officials/sevier_county_clerk/business_license.php"]
+      ],
+      "note": "These facts come from the city's 2019 zoning ordinance update. The city may have amended it since, so confirm with City Hall.",
+      "apply": ["City of Pigeon Forge", "https://www.cityofpigeonforge.com/planning-information.aspx"]
+    },
+    {
+      "slug": "sevierville",
+      "watch": "sevierville",
+      "name": "Sevierville",
+      "short": "Sevierville",
+      "title": "Sevierville short-term rental rules: operational permit and inspection",
+      "desc": "Sevierville's short-term rental operational permit: annual inspection, neighbor notice in MDR zoning, posting rules, revocation, sprinklers and fire safety items.",
+      "lede": "Inside Sevierville city limits, a short-term rental needs an operational permit before it can operate or advertise. The permit is renewed every year and comes with a fire department life safety inspection.",
+      "permit": "Short-Term Rental Operational Permit (city planning and fire department)",
+      "fee": "Annual fee, set by the city",
+      "inspection": "Yes, every year",
+      "renewal": "Every year, before the old permit expires",
+      "facts": [
+        ["Who needs it", "Every short-term rental inside Sevierville city limits, before it operates or advertises. Use the city limits map to check an address.", 1],
+        ["How to apply", "Apply online through MyGovernmentOnline (MGO). You pay the annual fee and provide proof of insurance, and the fire department schedules the inspection.", 2],
+        ["Neighbor notice in MDR zoning", "In the Medium Density Residential district, the city notifies every property within 100 feet. Apply at least 21 days before the next Planning Commission meeting. Neighbors get seven days to respond, and opposition sends it to a public hearing.", 3],
+        ["Posting", "Post the permit inside the main entrance, and a short form of it where it can be seen from the front of the rental.", 1],
+        ["Revocation", "Three citations or violations within one permit year revoke the permit for a year. During that year, only an unrelated new owner can get a new one.", 1],
+        ["Sprinklers", "A fire sprinkler system is required for any rental that sleeps more than 12. Rentals more than three stories above grade must meet the International Building Code.", 2],
+        ["Fire safety items", "Interconnected smoke alarms on every level and in every sleeping area, a 5 lb 2A:10BC extinguisher on every level that is tagged every year, an escape window or door in every sleeping room, and a street number at least 4 inches tall that can be seen from the street.", 2],
+        ["Questions", "Sevierville Fire Department, (865) 868-1585.", 0]
+      ],
+      "sources": [
+        ["City of Sevierville: Short-Term Rentals", "https://www.seviervilletn.org/467/Short-Term-Rentals"],
+        ["Sevierville Zoning Ordinance, Section 8.9", "https://www.seviervilletn.org/DocumentCenter/View/357/Sevierville-Zoning-Ordinance-PDF"],
+        ["Sevierville Fire Department: Information to Know for Your STR Permit", "https://www.seviervilletn.org/DocumentCenter/View/791/Information-to-Know-for-Your-STR-Permit-PDF?bidId="],
+        ["City of Sevierville: Operate a Short-Term Rental (step-by-step map guide)", "https://mdib.seviervilletn.org/arcgis/apps/MapSeries/index.html?appid=2f07bc7a59744b6fac3c17688e376e03"]
+      ],
+      "apply": ["City of Sevierville short-term rentals", "https://www.seviervilletn.org/467/Short-Term-Rentals"]
+    }
+  ]
+}
