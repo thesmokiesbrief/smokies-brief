@@ -894,3 +894,15 @@ button,input,select{font:inherit;color:inherit}
 .bwa-t small{font-size:.75rem;color:rgba(244,239,230,.62)}
 @media (max-width:860px){.bwa{grid-template-columns:1fr}}
 @media (max-width:420px){.bwa-form{flex-direction:column}}
+
+/* logo */
+.brand{display:inline-flex;align-items:center;gap:.5em;color:#1F3329}
+.brand .bm{width:1.55em;height:1.36em;flex:none}
+.brand .bt{color:#1F3329}
+.emb{display:inline-flex;flex-direction:column;align-items:stretch;color:#F4EFE6;max-width:320px}
+.emb-top{display:flex;align-items:center;gap:12px}.emb-top i{flex:1;height:2px;background:#F4EFE6}
+.emb .bm{width:52px;height:46px}
+.emb-wm{font-family:var(--font-display);font-weight:700;letter-spacing:-.02em;line-height:.95;font-size:2.1rem;margin-top:8px;color:#F4EFE6;white-space:nowrap}
+.emb-wm span{display:block;font-size:.62em}
+.emb-bar{height:2px;background:#C9733F;margin-top:12px}
+.emb-tag{font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#C9D1CB;margin-top:10px;text-align:center}
