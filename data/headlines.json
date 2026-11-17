@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T17:32:40.221Z",
+ "updated": "2026-11-17T21:29:49.262Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -9,10 +9,10 @@
  ],
  "top": [
   "https://www.wate.com/investigations/english-mountian-poa-dispute/",
-  "https://www.wbir.com/article/life/heartwarming/smoky-mountains-inspire-east-tennessee-authors-christmas-story/51-7d1200ee-79fc-4914-89a1-fd0f34d01336",
+  "https://smokies.live/2026/11/13/faa-issues-nationwide-ground-stop-after-equipment-outage-knoxville-flights-delayed/",
   "https://fox17.com/news/local/dollywood-fans-fly-from-florida-to-smoky-mountain-christmas-on-themed-allegiant-trips",
   "https://www.wvlt.tv/2026/11/17/ground-stop-sparks-thanksgiving-travel-concerns/",
-  "https://smokies.live/2026/11/16/pigeon-forge-kicks-off-winterfest-season-with-holiday-market-lights-and-family-fun/"
+  "https://smokies.live/2026/11/12/dollywood-and-allegiant-team-up-for-first-of-its-kind-fan-flights-from-orlando-to-the-smokies/"
  ],
  "items": [
   {
@@ -146,6 +146,26 @@
    "dek": "The wildfires devastated parts of Gatlinburg and Sevier County on the night of Nov. 28, 2016, taking 14 lives and destroying hundreds of homes and businesses."
   },
   {
+   "t": "A Sunny Weekend Ahead, But Cold Mornings Bring Frost Concerns",
+   "u": "https://smokies.live/2026/11/13/a-sunny-weekend-ahead-but-cold-mornings-bring-frost-concerns/",
+   "d": "2026-11-13",
+   "at": "2026-11-14T00:41:14.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Weather",
+   "w": 6,
+   "dek": "GATLINBURG, Tenn. (Smokies.LIVE Storm Center) — Sunshine is expected to return to the […] The post A Sunny Weekend Ahead, But Cold Mornings Bring Frost Concerns appeared first on Smokies Live ."
+  },
+  {
+   "t": "FAA Issues Nationwide Ground Stop After Equipment Outage; Knoxville Flights Delayed",
+   "u": "https://smokies.live/2026/11/13/faa-issues-nationwide-ground-stop-after-equipment-outage-knoxville-flights-delayed/",
+   "d": "2026-11-13",
+   "at": "2026-11-13T23:58:09.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Tourism",
+   "w": 7,
+   "dek": "GATLINBURG, Tenn. (Smokies.LIVE Travel Center) — Air travel disruptions are being reported nationwide […] The post FAA Issues Nationwide Ground Stop After Equipment Outage; Knoxville Flights Delayed appeared first on…"
+  },
+  {
    "t": "Former fire chief reflects on 2016 Gatlinburg wildfires nearly 10 years later",
    "u": "https://www.wbir.com/article/news/community/former-fire-chief-reflects-on-2016-gatlinburg-wildfires-nearly-10-years-later/51-1d0fc3fb-335a-40a7-876d-9273b4114214",
    "d": "2026-11-13",
@@ -156,6 +176,16 @@
    "dek": "Nearly 10 years after the Gatlinburg wildfires, a former fire chief reflects on the challenges her crews faced and the memories that have stayed with her."
   },
   {
+   "t": "After 80 years, World War II soldier from Campbell County returns home to East Tennessee",
+   "u": "https://smokies.live/2026/11/13/after-80-years-world-war-ii-soldier-from-campbell-county-is-coming-home-to-east-tennessee/",
+   "d": "2026-11-13",
+   "at": "2026-11-13T15:57:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Local",
+   "w": 1,
+   "dek": "GATLINBURG, Tenn. (Smokies.LIVE Information Center) — For generations, a photograph hanging on a […] The post After 80 years, World War II soldier from Campbell County returns home to East Tennessee appeared first on…"
+  },
+  {
    "t": "Busy days remain at Great Smoky Mountains National Park, so avoid these dates",
    "u": "https://www.rgj.com/story/entertainment/smoky-mountains/2026/11/13/great-smoky-mountains-national-park-busy-days-visitors-november-december-fall-winter/92722959007/",
    "d": "2026-11-13",
@@ -164,6 +194,36 @@
    "tag": "Park",
    "w": 5,
    "dek": ""
+  },
+  {
+   "t": "Dolly Parton’s niece reflects on military service, sacrifice at Pigeon Forge Salute to Heroes",
+   "u": "https://smokies.live/2026/11/13/dolly-partons-niece-reflects-on-military-service-sacrifice-at-pigeon-forge-salute-to-heroes/",
+   "d": "2026-11-13",
+   "at": "2026-11-13T11:18:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Pigeon Forge",
+   "w": 2,
+   "dek": "PIGEON FORGE, Tenn. (Smokies.LIVE Information Center) — A decorated military career, a passion […] The post Dolly Parton’s niece reflects on military service, sacrifice at Pigeon Forge Salute to Heroes appeared first on…"
+  },
+  {
+   "t": "Snow Tracker Alert: Mountain snow expected through early Saturday",
+   "u": "https://smokies.live/2026/11/12/snow-tracker-alert-mountain-snow-expected-through-early-saturday/",
+   "d": "2026-11-12",
+   "at": "2026-11-13T02:34:30.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Weather",
+   "w": 6,
+   "dek": "GATLINBURG, Tenn. (Smokies.LIVE Storm Center) — Winter weather is moving into the higher […] The post Snow Tracker Alert: Mountain snow expected through early Saturday appeared first on Smokies Live ."
+  },
+  {
+   "t": "Dollywood and Allegiant team up for first-of-its-kind fan flights from Orlando to the Smokies",
+   "u": "https://smokies.live/2026/11/12/dollywood-and-allegiant-team-up-for-first-of-its-kind-fan-flights-from-orlando-to-the-smokies/",
+   "d": "2026-11-12",
+   "at": "2026-11-12T20:06:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Tourism",
+   "w": 7,
+   "dek": "PIGEON FORGE, Tenn. (Smokies.LIVE Adventure Center) — Dollywood and Allegiant teamed up for […] The post Dollywood and Allegiant team up for first-of-its-kind fan flights from Orlando to the Smokies appeared first on…"
   },
   {
    "t": "Forecast shows snow for some, cold temperatures for all this weekend: What to know",
