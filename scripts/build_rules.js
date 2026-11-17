@@ -60,12 +60,16 @@ async function gatlinburg() {
   const parent = await fetchRaw('https://www.gatlinburgtn.gov/documents/gatlinburg-goverment/boards-and-committees/gatlinburg-city-commission/minutes-and-agendas/478917');
   if (!parent) return null;
   const y = today.slice(0, 4), ids = [];
-  for (const yr of [y, String(+y - 1)]) { const m = parent.match(new RegExp(`${yr}-city-commission-agendas/(\\d+)`)); if (m) ids.push([yr, m[1]]); }
+  const KNOWN = { 2026: '23639541' }; // fallback if the index page hides the link
+  for (const yr of [y, String(+y - 1)]) { const m = parent.match(new RegExp(`${yr}-city-commission-agendas/(\\d+)`)); if (m || KNOWN[yr]) ids.push([yr, m ? m[1] : KNOWN[yr]]); }
+  console.log(`Gatlinburg: agenda folders ${ids.map(x => x.join(':')).join(', ') || 'none'}`);
   const out = [];
   for (const [yr, id] of ids) {
     const page = await fetchRaw(`https://www.gatlinburgtn.gov/documents/gatlinburg-goverment/boards-and-committees/gatlinburg-city-commission/minutes-and-agendas/${yr}-city-commission-agendas/${id}`);
     if (!page) continue;
-    for (const u of new Set(page.match(/https:\/\/files-backend\.assets\.thrillshare\.com\/[^"\\\s]+?\.pdf/g) || [])) {
+    const pdfs = new Set(page.match(/https:\/\/files-backend\.assets\.thrillshare\.com\/[^"\\\s]+?\.pdf/g) || []);
+    console.log(`Gatlinburg ${yr}: page ${page.length} bytes, ${pdfs.size} PDFs`);
+    for (const u of pdfs) {
       const name = decodeURIComponent(u.split('/').pop()), d = dateIn(name);
       if (d && inWindow(d) && /agenda/i.test(name)) out.push({ date: d, title: 'City Commission agenda', url: u + '?disposition=inline' });
     }
@@ -140,6 +144,8 @@ const TOWNS = [
   for (const T of TOWNS) {
     let list = null;
     try { list = await T.run(); } catch (e) { console.log(`${T.name}: ${e.message}`); }
+    // a town that meets every few weeks with nothing in 45 days usually means the page didn't load right
+    if (list && !list.length && prev.towns[T.key] && (prev.towns[T.key].agendas || []).length) list = null;
     if (!list) { result.towns[T.key] = { ...(prev.towns[T.key] || {}), stale: true }; console.log(`${T.name}: unreachable, keeping last result`); continue; }
     list.sort((a, b) => b.date.localeCompare(a.date));
     const read = [];
