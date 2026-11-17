@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%231F3329%27/%3E%3Cpath d=%27M4 24l8-11 5 7 4-5 7 9z%27 fill=%27%23F2C9A8%27/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Smokies stay</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@500,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#F4EFE6;--card:#FBF8F2;--ink:#1D2420;--ink2:#4A524C;--ink3:#7A817B;--spruce:#1F3329;--moss:#3E6B57;--ember:#B9572B;--emberd:#9A4521;--gold:#C9A65A;--peach:#F2C9A8;--line:#DCD3C3}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:'Satoshi',Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+  a{color:inherit}
+  .hero{position:relative;color:#fff;overflow:hidden;background:var(--spruce)}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,22,18,.35),rgba(14,22,18,.2) 40%,rgba(14,22,18,.85))}
+  .hero-in{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:clamp(5rem,16vw,9rem) 1.25rem 2rem}
+  .kick{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--peach)}
+  h1{font-family:'Zodiak',Georgia,serif;font-weight:500;font-size:clamp(2.3rem,1.2rem + 4.5vw,4.2rem);line-height:1.02;letter-spacing:-.02em;margin:.5rem 0 .6rem;text-wrap:balance}
+  .dates{font-size:clamp(1rem,.9rem + .5vw,1.25rem);font-weight:600;color:rgba(255,255,255,.92)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 1.25rem}
+  .note{position:relative;margin-top:-1px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.1rem 1.25rem;margin:1.25rem 0 0;font-size:1rem;color:var(--ink2);white-space:pre-line}
+  .note b{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ember);margin-bottom:.3rem}
+  .grid{display:grid;grid-template-columns:1.35fr 1fr;gap:1rem;margin:1.25rem 0 2rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.25rem 1.35rem}
+  .card+.card{margin-top:1rem}
+  h2{font-family:'Zodiak',Georgia,serif;font-weight:500;font-size:1.45rem;line-height:1.15;margin-bottom:.6rem;display:flex;align-items:center;gap:.55rem}
+  h2::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--ember);flex:none}
+  .ev{list-style:none}
+  .ev li{display:grid;grid-template-columns:4.6rem 1fr;gap:.8rem;padding:.65rem 0;border-top:1px solid var(--line)}
+  .ev li:first-child{border-top:0;padding-top:.2rem}
+  .ev time{font-size:.78rem;font-weight:700;color:var(--ember);text-transform:uppercase;letter-spacing:.03em;line-height:1.3}
+  .ev a,.ev span.t{font-weight:600;font-size:.95rem;line-height:1.35;text-decoration:none}
+  .ev a:hover{color:var(--emberd);text-decoration:underline}
+  .ev small{display:block;font-size:.8rem;color:var(--ink3);font-weight:500}
+  .run{margin-top:.8rem;background:var(--paper);border-radius:12px;padding:.75rem .9rem;font-size:.86rem;color:var(--ink2)}
+  .run b{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--moss)}
+  .empty{font-size:.9rem;color:var(--ink3)}
+  .wx{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:.5rem}
+  .wx div{background:var(--paper);border-radius:12px;padding:.6rem .7rem;text-align:center}
+  .wx b{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3)}
+  .wx strong{display:block;font-family:'Zodiak',Georgia,serif;font-weight:500;font-size:1.6rem;line-height:1.1}
+  .wx span{font-size:.75rem;color:var(--ink2)}
+  ul.dots{list-style:none;font-size:.9rem;color:var(--ink2)}
+  ul.dots li{position:relative;padding:.35rem 0 .35rem 1rem}
+  ul.dots li::before{content:"";position:absolute;left:0;top:.85rem;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+  ul.dots li.warn::before{background:var(--ember)}
+  .calls{display:grid;grid-template-columns:1.1fr 1fr;gap:.45rem .8rem;font-size:.9rem}
+  .calls a{font-weight:700;text-decoration:none;white-space:nowrap;color:var(--ink)}
+  .calls a:hover{color:var(--emberd)}
+  .tools{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+  .tools button,.tools a{font:700 .85rem 'Satoshi',Arial,sans-serif;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:.6rem 1rem;cursor:pointer;text-decoration:none}
+  .tools button.pri{background:var(--spruce);border-color:var(--spruce);color:var(--paper)}
+  footer{border-top:1px solid var(--line);padding:1.25rem 0 2.5rem;font-size:.78rem;color:var(--ink3);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+  footer b{font-family:'Zodiak',Georgia,serif;font-size:.95rem;color:var(--ink)}
+  .upd{display:inline-flex;align-items:center;gap:.4rem;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9FD3B5;margin-top:.9rem}
+  .upd i{width:7px;height:7px;border-radius:50%;background:#5FD08F}
+  @media (max-width:760px){ .grid{grid-template-columns:1fr} }
+  @media print{
+    @page{size:letter;margin:.4in}
+    body{background:#fff;font-size:12px}
+    .hero{background:none;color:var(--ink)} .hero img,.hero::after,.tools,.upd{display:none}
+    .hero-in{padding:0 0 .6rem;border-bottom:3px solid var(--spruce)} .kick{color:var(--ember)} h1{font-size:34px;margin:.2rem 0} .dates{color:var(--ink)}
+    .wrap{padding:0;max-width:none} .grid{grid-template-columns:1.35fr 1fr;gap:14px;margin:12px 0} .card{padding:10px 12px;border-radius:10px;break-inside:avoid} .card+.card{margin-top:10px}
+    h2{font-size:17px;margin-bottom:4px} .ev li{padding:5px 0} .ev a,.ev span.t{font-size:12px} .note{margin-top:10px;padding:8px 12px;font-size:12px}
+    footer{padding:8px 0 0}
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <img src="img/hero.webp" alt="">
+  <div class="hero-in">
+    <p class="kick" id="kick">Welcome to the Smokies</p>
+    <h1 id="title">Your Smokies stay</h1>
+    <p class="dates" id="dates"></p>
+    <p class="upd"><i></i>Updated every morning</p>
+  </div>
+</header>
+<main class="wrap">
+  <div class="note" id="note" hidden></div>
+  <div class="grid">
+    <section>
+      <div class="card" id="wxCard" hidden><h2>Weather</h2><div class="wx" id="wx"></div><p class="empty" id="wxNote" style="margin-top:.6rem"></p></div>
+      <div class="card"><h2 id="evTitle">Happening during your stay</h2><ul class="ev" id="ev"></ul><div class="run" id="run"></div></div>
+    </section>
+    <aside>
+      <div class="card"><h2>National park</h2><ul class="dots" id="park"></ul></div>
+      <div class="card"><h2>Good to know</h2><ul class="dots">
+        <li>Parking in the national park for more than 15 minutes needs a parking tag: $5 a day or $15 a week. Buy one at a visitor center, or online at recreation.gov and print it (<a href="https://www.nps.gov/grsm/planyourvisit/fees.htm" target="_blank" rel="noopener">details</a>).</li>
+        <li>Never leave food, coolers or trash outside. Bears are common around cabins.</li>
+        <li>Mountain roads and steep driveways ice up fast in cold weather. Drive slowly and use low gear downhill.</li>
+      </ul></div>
+      <div class="card"><h2>Who to call</h2><div class="calls">
+        <span>Emergency</span><a href="tel:911">911</a>
+        <span id="hostLbl">Your host</span><span id="hostVal">Message in your booking app</span>
+        <span>Power out (Sevier County Electric)</span><a href="tel:+18657746300">865-774-6300</a>
+        <span>Park road conditions</span><a href="tel:+18654361200">865-436-1200 ext. 631</a>
+      </div></div>
+      <div class="tools"><button class="pri" type="button" onclick="window.print()">Print this page</button><button type="button" id="shareBtn">Share with your group</button></div>
+    </aside>
+  </div>
+  <footer><b>The Smokies Brief</b><span>Events, park updates and local news for the Smokies, updated every morning.</span></footer>
+</main>
+<script src="content.js"></script>
+<script>
+(function(){
+  const K = window.CONTENT, N = K.now, q = new URLSearchParams(location.search);
+  const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], WD=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const day = s => new Date(s+'T12:00:00'); const today = day(K.today);
+  const esc = s => (s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const valid = s => /^\d{4}-\d{2}-\d{2}$/.test(s||'');
+  let a = valid(q.get('a')) ? day(q.get('a')) : new Date(today), d = valid(q.get('d')) ? day(q.get('d')) : null;
+  const custom = !!d; if (!d){ d = new Date(today); d.setDate(d.getDate()+30); }
+  if (a < today && d >= today) a = new Date(today);
+  const cabin = (q.get('c')||'').slice(0,60), host = (q.get('h')||'').slice(0,40), note = (q.get('n')||'').slice(0,600);
+  const fmt = x => `${WD[x.getDay()]}, ${MON[x.getMonth()]} ${x.getDate()}`;
+  document.title = cabin ? `Your stay at ${cabin}` : 'Your Smokies stay';
+  if (cabin){ document.getElementById('kick').textContent = 'Welcome to the Smokies'; document.getElementById('title').textContent = `Your stay at ${cabin}`; }
+  document.getElementById('dates').textContent = custom ? `${fmt(a)} – ${fmt(d)}, ${d.getFullYear()}` : `What's happening ${MON[a.getMonth()]} ${a.getDate()} – ${MON[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+  if (!custom) document.getElementById('evTitle').textContent = 'Coming up in the next 30 days';
+  if (note || host){ const n = document.getElementById('note'); n.hidden = false; n.innerHTML = `<b>A note from ${esc(host) || 'your host'}</b>${esc(note) || 'We hope you have a great stay. Message us anytime if you need anything.'}`; }
+  if (host){ document.getElementById('hostLbl').textContent = `Your host, ${host}`; }
+  // events during the stay (one extra day either side catches arrival/departure-day events)
+  const lo = new Date(a); lo.setDate(lo.getDate()-1); const hi = new Date(d); hi.setDate(hi.getDate()+1);
+  const ev = K.events.filter(e => e.c!=='meet' && day(e.e||e.d) >= lo && day(e.d) <= hi).slice(0, custom ? 14 : 10);
+  const rng = e => { const s = day(e.d); if(!e.e) return ''; const t = day(e.e); return ` – ${t.getMonth()===s.getMonth()?'':MON[t.getMonth()]+' '}${t.getDate()}`; };
+  document.getElementById('ev').innerHTML = ev.length ? ev.map(e=>{ const s = day(e.d); const title = e.u ? `<a href="${e.u}" target="_blank" rel="noopener">${esc(e.t)}</a>` : `<span class="t">${esc(e.t)}</span>`;
+    return `<li><time>${WD[s.getDay()]}<br>${MON[s.getMonth()]} ${s.getDate()}${rng(e)}</time><span>${title}<small>${esc(e.p)}</small></span></li>`; }).join('') : '<li class="empty">No special events listed for these dates yet. New dates are added every morning.</li>';
+  const run = K.spans.filter(s => day(s.s) <= d && day(s.e) >= a);
+  document.getElementById('run').innerHTML = run.length ? '<b>Running during your stay</b>' + run.map(s=> esc(s.t)).join(' · ') : ''; if (!run.length) document.getElementById('run').hidden = true;
+  // weather when the stay is within the forecast window
+  const wxDays = [['Today',0],['Tomorrow',1],['Thursday',2]]; const W = N.weather; const byDay = [W[0], W[2], W[4]];
+  const inWin = []; for (let i=0;i<3;i++){ const x = new Date(today); x.setDate(x.getDate()+i); if (x >= a && x <= d) inWin.push([i===0?'Today':WD[x.getDay()], byDay[i]]); }
+  const wc = document.getElementById('wxCard'); wc.hidden = false;
+  if (inWin.length){ document.getElementById('wx').innerHTML = inWin.map(([n,w])=>`<div><b>${n}</b><strong>${w[1]}°</strong><span>${w[2]}</span></div>`).join(''); document.getElementById('wxNote').textContent = 'Gatlinburg forecast from the National Weather Service.'; }
+  else { document.getElementById('wx').hidden = true; document.getElementById('wxNote').textContent = 'The forecast for your dates shows up here about a week before you arrive. Check back before you head up.'; }
+  // park
+  const busy = N.busyDays; const park = N.roads.slice(0,2).map(r=>`<li class="warn">${esc(r)}</li>`);
+  if (N.roadsSoon && day('2026-11-29') <= d) park.push(`<li class="warn">${esc(N.roadsSoon)}</li>`);
+  park.push(`<li>Busiest park days ahead: ${esc(busy)}. Go early or try a quieter area.</li>`);
+  document.getElementById('park').innerHTML = park.join('');
+  document.getElementById('shareBtn').addEventListener('click', async ()=>{ const u = location.href; try { if (navigator.share) await navigator.share({title:document.title, url:u}); else { await navigator.clipboard.writeText(u); document.getElementById('shareBtn').textContent = 'Link copied'; } } catch(_){} });
+})();
+</script>
+</body>
+</html>

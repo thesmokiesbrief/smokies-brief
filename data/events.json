@@ -1,0 +1,244 @@
+{
+ "updated": "2026-11-17",
+ "note": "Smokies events for Gatlinburg, Pigeon Forge and Sevierville. Categories: big, fest, conv, meet, park, civic.",
+ "events": [
+  {
+   "start": "2026-11-20",
+   "end": "2026-11-20",
+   "title": "Ober Mountain opens skiing, snowboarding and tubing (weather permitting)",
+   "place": "Gatlinburg",
+   "category": "big",
+   "url": "https://www.obergatlinburg.com/blog/get-ready-for-winter-2026-27-at-ober-gatlinburg"
+  },
+  {
+   "start": "2026-11-21",
+   "end": "2026-11-21",
+   "title": "The Island Winterfest kickoff: free concert and tree lighting",
+   "place": "Pigeon Forge",
+   "category": "fest",
+   "url": "https://deeparrival.com/news/the-island-pigeon-forge-winterfest-kickoff-november-21-2026/"
+  },
+  {
+   "start": "2026-11-24",
+   "end": "2026-11-29",
+   "title": "Gatlinburg Festival of Trees",
+   "place": "Gatlinburg",
+   "category": "fest",
+   "url": "https://www.pigeonforge.com/fun/winterfest/"
+  },
+  {
+   "start": "2026-11-26",
+   "end": "2026-11-26",
+   "title": "Thanksgiving Day",
+   "place": "Everywhere",
+   "category": "big",
+   "url": "https://www.rgj.com/story/entertainment/smoky-mountains/2026/11/13/great-smoky-mountains-national-park-busy-days-visitors-november-december-fall-winter/92722959007/"
+  },
+  {
+   "start": "2026-11-27",
+   "end": "2026-12-27",
+   "title": "Mountain Mile Christmas Market (Fridays and Saturdays)",
+   "place": "Pigeon Forge",
+   "category": "fest",
+   "url": "https://www.knoxnews.com/story/entertainment/2026/11/06/christmas-markets-in-knoxville-gatlinburg-pigeon-forge-2026/92561135007/",
+   "weekdays": [
+    5,
+    6
+   ]
+  },
+  {
+   "start": "2026-11-28",
+   "end": "2026-11-28",
+   "title": "Chimney Tops 2 Wildfires 10-year gathering of remembrance",
+   "place": "Sevier County",
+   "category": "civic",
+   "url": "https://www.seviercountytn.gov/"
+  },
+  {
+   "start": "2026-11-29",
+   "end": "2026-11-29",
+   "title": "Kuwohi Road and Roaring Fork Motor Nature Trail close for the season",
+   "place": "National park",
+   "category": "park",
+   "url": "https://www.wate.com/news/smoky-mountains/when-does-kuwohi-road-close-smokies-seasonal-road-closures/"
+  },
+  {
+   "start": "2026-12-04",
+   "end": "2026-12-06",
+   "title": "Yama-Con anime and gaming convention",
+   "place": "LeConte Center",
+   "category": "conv",
+   "url": "https://www.pigeonforge.com/area/leconte-center/events/"
+  },
+  {
+   "start": "2026-12-28",
+   "end": "2026-12-30",
+   "title": "Strength to Stand December Conference",
+   "place": "Pigeon Forge",
+   "category": "conv",
+   "url": "https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=2026-06-20"
+  },
+  {
+   "start": "2026-12-31",
+   "end": "2026-12-31",
+   "title": "New Year's Eve celebration and fireworks at The Island",
+   "place": "Pigeon Forge",
+   "category": "big",
+   "url": "https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=2026-06-20"
+  },
+  {
+   "start": "2027-01-04",
+   "end": "2027-01-07",
+   "title": "Wilderness Wildlife Week",
+   "place": "LeConte Center",
+   "category": "conv",
+   "url": "https://www.pigeonforge.com/area/leconte-center/events/"
+  },
+  {
+   "start": "2027-01-16",
+   "end": "2027-01-18",
+   "title": "Strength to Stand January Conference",
+   "place": "Pigeon Forge",
+   "category": "conv",
+   "url": "https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=2026-06-20"
+  },
+  {
+   "start": "2027-01-16",
+   "end": "2027-01-18",
+   "title": "Martin Luther King Jr. Day weekend",
+   "place": "Holiday weekend",
+   "category": "big",
+   "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+  },
+  {
+   "start": "2027-01-22",
+   "end": "2027-01-24",
+   "title": "Resurrection Youth Conference",
+   "place": "Pigeon Forge",
+   "category": "conv",
+   "url": "https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=2026-06-20"
+  },
+  {
+   "start": "2027-02-04",
+   "end": "2027-02-05",
+   "title": "Smoky Mountain Jubilee",
+   "place": "Pigeon Forge",
+   "category": "conv",
+   "url": "https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=2026-06-20"
+  },
+  {
+   "start": "2027-02-06",
+   "end": "2027-02-06",
+   "title": "February Freeze 5K on the Riverwalk",
+   "place": "Pigeon Forge",
+   "category": "fest",
+   "url": "https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=2026-06-20"
+  },
+  {
+   "start": "2027-02-11",
+   "end": "2027-02-15",
+   "title": "Make It Count Spectacular gymnastics meet",
+   "place": "Pigeon Forge",
+   "category": "conv",
+   "url": "https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=2026-06-20"
+  },
+  {
+   "start": "2027-02-13",
+   "end": "2027-02-15",
+   "title": "Presidents' Day weekend",
+   "place": "Holiday weekend",
+   "category": "big",
+   "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+  },
+  {
+   "start": "2027-03-11",
+   "end": "2027-03-11",
+   "title": "Dollywood opens its I Will Always Love You Festival",
+   "place": "Dollywood",
+   "category": "big",
+   "url": "https://www.mypigeonforge.com/events/dollywood/"
+  },
+  {
+   "start": "2027-03-26",
+   "end": "2027-03-28",
+   "title": "Easter weekend",
+   "place": "Holiday weekend",
+   "category": "big",
+   "url": null
+  },
+  {
+   "start": "2027-04-08",
+   "end": "2027-04-10",
+   "title": "Corvette Expo",
+   "place": "LeConte Center",
+   "category": "conv",
+   "url": "https://www.pigeonforge.com/area/leconte-center/events/"
+  },
+  {
+   "start": "2027-05-07",
+   "end": "2027-05-07",
+   "title": "Dollywood's Flower & Food Festival opens",
+   "place": "Dollywood",
+   "category": "big",
+   "url": "https://www.mypigeonforge.com/events/dollywood/"
+  },
+  {
+   "start": "2027-05-20",
+   "end": "2027-05-22",
+   "title": "Spring Rod Run (new May dates for 2027)",
+   "place": "LeConte Center",
+   "category": "big",
+   "url": "https://www.pigeonforge.com/area/leconte-center/events/"
+  },
+  {
+   "start": "2027-05-29",
+   "end": "2027-05-31",
+   "title": "Memorial Day weekend",
+   "place": "Holiday weekend",
+   "category": "big",
+   "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+  }
+ ],
+ "ongoing": [
+  {
+   "start": "2026-11-05",
+   "end": "2027-02-15",
+   "title": "Gatlinburg & Sevierville Winterfest lights",
+   "short": "Gatlinburg & Sevierville Winterfest",
+   "category": "fest",
+   "url": "https://visitsevierville.com/winterfest.aspx"
+  },
+  {
+   "start": "2026-11-06",
+   "end": "2027-01-31",
+   "title": "Pigeon Forge Winterfest lights",
+   "short": "Pigeon Forge Winterfest",
+   "category": "fest",
+   "url": "https://www.mypigeonforge.com/event/winterfest/"
+  },
+  {
+   "start": "2026-11-06",
+   "end": "2027-01-03",
+   "title": "Dollywood's Smoky Mountain Christmas",
+   "short": "Dollywood Christmas",
+   "category": "big",
+   "url": "https://www.mypigeonforge.com/events/dollywood/"
+  },
+  {
+   "start": "2027-03-11",
+   "end": "2027-04-11",
+   "title": "Dollywood's I Will Always Love You Festival",
+   "short": "I Will Always Love You Festival",
+   "category": "big",
+   "url": "https://www.mypigeonforge.com/events/dollywood/"
+  },
+  {
+   "start": "2027-05-07",
+   "end": "2027-06-20",
+   "title": "Dollywood's Flower & Food Festival",
+   "short": "Flower & Food Festival",
+   "category": "big",
+   "url": "https://www.mypigeonforge.com/events/dollywood/"
+  }
+ ]
+}

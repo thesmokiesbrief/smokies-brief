@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Post template</title>
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,700&f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#F4EFE6;--card:#FBF8F2;--ink:#1D2420;--ink2:#4A524C;--ink3:#7A817B;--spruce:#1F3329;--moss:#3E6B57;--ember:#B9572B;--gold:#C9A65A;--peach:#F2C9A8;--line:#DCD3C3}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1080px;height:1350px;overflow:hidden;background:var(--spruce)}
+  body{font-family:'Satoshi',Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+  .post{position:relative;width:1080px;height:1350px;display:flex;flex-direction:column;overflow:hidden}
+  .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,22,18,.55) 0%,rgba(14,22,18,.25) 30%,rgba(14,22,18,.15) 45%,rgba(14,22,18,.0) 52%)}
+  .top{position:relative;padding:72px 80px 0;color:#fff;flex:0 0 auto}
+  .kick{display:inline-flex;align-items:center;gap:12px;font-size:24px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--peach)}
+  .kick i{width:12px;height:12px;border-radius:50%;background:#5FD08F}
+  h1{font-family:'Zodiak',Georgia,serif;font-weight:500;font-size:92px;line-height:.98;letter-spacing:-.025em;margin-top:22px;max-width:900px;text-wrap:balance;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+  .sheet{position:absolute;left:48px;right:48px;bottom:150px;background:var(--card);border-radius:28px;padding:44px 52px;box-shadow:0 30px 80px -30px rgba(0,0,0,.6)}
+  .foot{position:absolute;left:0;right:0;bottom:0;height:150px;display:flex;align-items:center;justify-content:space-between;padding:0 80px;color:#fff}
+  .brand{font-family:'Zodiak',Georgia,serif;font-weight:700;font-size:44px;letter-spacing:-.01em}
+  .url{font-size:26px;font-weight:700;color:var(--peach);text-align:right;line-height:1.3}
+  .url small{display:block;font-size:20px;font-weight:500;color:rgba(255,255,255,.7)}
+  .credit{position:absolute;left:80px;bottom:120px;font-size:17px;color:rgba(255,255,255,.6)}
+  /* stat rows */
+  .stats{display:flex;flex-direction:column}
+  .stat{display:grid;grid-template-columns:300px 1fr;gap:28px;align-items:center;padding:24px 0;border-top:2px solid var(--line)}
+  .stat:first-child{border-top:0;padding-top:0}.stat:last-child{padding-bottom:0}
+  .stat b{font-family:'Zodiak',Georgia,serif;font-weight:500;font-size:76px;line-height:1;color:var(--ember);letter-spacing:-.02em}
+  .stat span{font-size:32px;font-weight:500;line-height:1.25;color:var(--ink)}
+  /* list rows */
+  .rows{display:flex;flex-direction:column}
+  .row{display:grid;grid-template-columns:190px 1fr;gap:28px;align-items:start;padding:22px 0;border-top:2px solid var(--line)}
+  .row:first-child{border-top:0;padding-top:0}.row:last-child{padding-bottom:0}
+  .row .d{font-size:28px;font-weight:900;color:var(--ember);letter-spacing:.02em;text-transform:uppercase;line-height:1.15}
+  .row .d small{display:block;font-size:22px;font-weight:700;color:var(--ink3)}
+  .row .t{font-size:33px;font-weight:700;line-height:1.22}
+  .row .t small{display:block;font-size:24px;font-weight:500;color:var(--ink2);margin-top:4px}
+  .tag{display:inline-block;font-size:20px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px;background:rgba(185,87,43,.12);color:var(--ember)}
+  .tag.ok{background:rgba(62,107,87,.12);color:var(--moss)}
+  .note{margin-top:28px;padding:22px 26px;background:var(--paper);border-radius:18px;font-size:26px;line-height:1.4;color:var(--ink2)}
+  .note b{color:var(--ink)}
+  /* chart */
+  .chart{display:flex;align-items:flex-end;gap:14px;height:420px;padding-top:40px}
+  .bar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:10px}
+  .bar i{display:block;width:100%;border-radius:12px 12px 4px 4px;background:rgba(62,107,87,.75)}
+  .bar.hi i{background:var(--ember)}
+  .bar em{font-style:normal;font-size:21px;font-weight:700;color:var(--ink3)}
+  .bar.hi em,.bar.hi .v{color:var(--ember)}
+  .bar .v{font-size:20px;font-weight:700;color:var(--ink2)}
+  .big{font-family:'Zodiak',Georgia,serif;font-weight:500;font-size:64px;line-height:1.05;letter-spacing:-.02em}
+  .big em{font-style:normal;color:var(--ember)}
+  .sub{font-size:28px;color:var(--ink2);margin-top:12px;line-height:1.35}
+  /* gauge */
+  .gauge{display:grid;grid-template-columns:420px 1fr;gap:40px;align-items:center}
+  .gauge svg{width:420px;height:250px}
+</style>
+</head>
+<body>
+<div class="post" id="post"></div>
+<script src="../content.js"></script>
+<script>
+(function(){
+  const K = window.CONTENT, N = K.now; const q = new URLSearchParams(location.search); const t = q.get('t') || 'week';
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], WD = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const day = s => new Date(s + 'T12:00:00'); const today = day(K.today);
+  const range = e => { const a = day(e.d); if (!e.e) return `${MON[a.getMonth()]} ${a.getDate()}`; const b = day(e.e); return a.getMonth()===b.getMonth() ? `${MON[a.getMonth()]} ${a.getDate()}–${b.getDate()}` : `${MON[a.getMonth()]} ${a.getDate()} – ${MON[b.getMonth()]} ${b.getDate()}`; };
+  const strip = s => s.replace(/\s*\([^)]*\)\s*$/, '');
+  const foot = credit => `${credit ? `<p class="credit">${credit}</p>` : ''}<div class="foot"><span class="brand">The Smokies Brief</span><span class="url">thesmokiesbrief.com<small>Free every Monday for Smokies hosts</small></span></div>`;
+  const frame = (img, kick, h1, sheet, credit) => `<img class="photo" src="../img/${img}.webp" alt=""><div class="shade"></div><div style="position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(180deg,rgba(14,22,18,0),rgba(14,22,18,.92) 30%)"></div><div class="top"><p class="kick"><i></i>${kick}</p><h1>${h1}</h1></div><div class="sheet">${sheet}</div>${foot(credit)}`;
+  let html = '';
+  if (t === 'week'){
+    html = frame('hero', `This week · ${MON[today.getMonth()]} ${today.getDate()}`, 'Four numbers Smokies hosts should see', `<div class="stats">${N.week.map(r=>`<div class="stat"><b>${r[0]}</b><span>${r[1]}</span></div>`).join('')}</div>`);
+  } else if (t === 'weekend'){
+    const fri = new Date(today); fri.setDate(fri.getDate() + ((5 - fri.getDay() + 7) % 7)); const sun = new Date(fri); sun.setDate(sun.getDate() + 2);
+    const ev = K.events.filter(e => e.c !== 'meet' && day(e.e||e.d) >= fri && day(e.d) <= sun).slice(0,3);
+    const run = K.spans.filter(s => day(s.s) <= sun && day(s.e) >= fri);
+    html = frame('cabin', `This weekend · ${MON[fri.getMonth()]} ${fri.getDate()}–${sun.getDate()}`, 'What’s happening in the Smokies', `<div class="rows">${ev.map(e=>{const d=day(e.d);return `<div class="row"><p class="d">${WD[d.getDay()]}<small>${MON[d.getMonth()]} ${d.getDate()}</small></p><p class="t">${strip(e.t)}<small>${e.p}</small></p></div>`}).join('')}</div><p class="note"><b>Also running:</b> ${run.map(s=>s.sh||s.t).join(' · ')}</p>`);
+  } else if (t === 'busy'){
+    const ev = K.events.filter(e => e.c==='big' && day(e.e||e.d) >= today).slice(0,5);
+    html = frame('interior', 'Busy dates ahead', 'Price these dates before they book', `<div class="rows">${ev.map(e=>`<div class="row"><p class="d">${range(e)}</p><p class="t">${strip(e.t)}<small>${e.p}</small></p></div>`).join('')}</div>`);
+  } else if (t === 'roads'){
+    const items = N.roads.slice(0,3).map(r=>`<div class="row" style="grid-template-columns:150px 1fr"><p><span class="tag">Closed</span></p><p class="t" style="font-weight:600;font-size:30px">${r}</p></div>`).join('');
+    html = frame('road', 'Great Smoky Mountains NP', 'Park roads right now', `<div class="rows">${items}<div class="row" style="grid-template-columns:150px 1fr"><p><span class="tag" style="background:rgba(201,166,90,.22);color:#7A6127">Nov 29</span></p><p class="t" style="font-weight:600;font-size:30px">${N.roadsSoon.replace(' on Nov 29','')}</p></div></div><p class="note"><b>Tell your guests:</b> parking over 15 minutes needs a tag, $5 a day or $15 a week.</p>`, 'Source: National Park Service alerts');
+  } else if (t === 'rates'){
+    const R = K.rates; const max = Math.max(...R.adr); const nov = R.adr[10], dec = R.adr[11]; const pct = Math.round((dec-nov)/nov*100);
+    html = frame('townhall', 'Nightly rates by month', `December rates run ${pct}% above November`, `<p class="big">Average nightly rate in Sevier County: <em>$${dec}</em> in December</p><div class="chart">${R.adr.map((v,i)=>`<div class="bar${i===11?' hi':''}"><span class="v">$${v}</span><i style="height:${(v/max*100).toFixed(0)}%"></i><em>${R.months[i][0]}</em></div>`).join('')}</div>`, `Data: AirROI, Sevier County short-term rentals, ${R.period}`);
+  } else if (t === 'market'){
+    const g = 25; const a = Math.PI * (1 - g/100); const x = 210 + 170*Math.cos(a), y = 220 - 170*Math.sin(a);
+    html = frame('development', 'Monthly market check', 'It’s a buyer’s market in Sevier County', `<div class="gauge"><svg viewBox="0 0 420 250"><path d="M40 220 A170 170 0 0 1 380 220" fill="none" stroke="#ECE5D8" stroke-width="36" stroke-linecap="round"/><path d="M40 220 A170 170 0 0 1 ${x.toFixed(1)} ${y.toFixed(1)}" fill="none" stroke="#B9572B" stroke-width="36" stroke-linecap="round"/><text x="210" y="205" text-anchor="middle" font-family="Zodiak" font-size="96" fill="#1D2420">${g}</text><text x="210" y="244" text-anchor="middle" font-family="Satoshi" font-weight="700" font-size="22" fill="#7A817B">OUT OF 100</text></svg><div><p class="big" style="font-size:56px">9.1 months</p><p class="sub">of homes for sale at today’s pace. Under 4 favors sellers; over 6 favors buyers.</p></div></div>`, 'Data Provided by Zillow Group (market heat index and inventory)');
+  }
+  document.getElementById('post').innerHTML = html;
+  document.fonts.ready.then(()=> setTimeout(()=> document.body.dataset.ready = '1', 300));
+})();
+</script>
+</body>
+</html>

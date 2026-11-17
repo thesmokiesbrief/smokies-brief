@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%231F3329%27/%3E%3Cpath d=%27M4 24l8-11 5 7 4-5 7 9z%27 fill=%27%23F2C9A8%27/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A card for you</title>
+<meta property="og:title" content="A card from one Smokies host to another">
+<meta property="og:description" content="Open your card, and make one of your own for free.">
+<meta property="og:image" content="img/hero.webp">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body{background:var(--spruce);color:var(--paper);min-height:100vh}
+  .cw{max-width:620px;margin:0 auto;padding:clamp(1.5rem,5vw,3rem) 1.25rem 3rem;display:flex;flex-direction:column;align-items:center;gap:1.25rem;text-align:center}
+  .cw .kicker{color:#F2C9A8}
+  .cw canvas{width:100%;height:auto;border-radius:16px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7);background:#0E1612}
+  .cw h1{color:var(--paper);font-family:var(--font-display);font-weight:500;font-size:var(--text-xl);line-height:1.15}
+  .cw p{color:rgba(244,239,230,.75);font-size:var(--text-sm);max-width:44ch}
+  .acts{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center}
+  .btn-ghost{background:transparent;border:1px solid rgba(244,239,230,.35);color:var(--paper)}
+</style>
+</head>
+<body>
+<main class="cw">
+  <p class="kicker" id="k">You got a card</p>
+  <canvas id="cv" width="1080" height="1080" aria-label="Your card"></canvas>
+  <div class="acts"><a class="btn btn-ember" href="cards.html">Make one of your own, free</a><button class="btn btn-ghost" id="dl" type="button">Save this card</button></div>
+  <h1>Free tools for Smokies hosts</h1>
+  <p>Events, park updates, power outages and market numbers for Gatlinburg, Pigeon Forge and Sevierville, updated every morning.</p>
+  <a class="btn btn-ghost" href="index.html">Visit The Smokies Brief</a>
+</main>
+<script src="cards.js"></script>
+<script>
+(function(){
+  const C = window.CARDS, q = new URLSearchParams(location.search), cv = document.getElementById('cv');
+  const pick = (v, obj, d) => Object.prototype.hasOwnProperty.call(obj, v) ? v : d;
+  const o = { m: Math.min(C.MSGS.length-1, Math.max(0, parseInt(q.get('m')||'0',10)||0)), custom:(q.get('t')||'').slice(0,140), from:(q.get('f')||'').slice(0,40), photo:pick(q.get('p'), C.PHOTOS, 'hero'), style:pick(q.get('y'), C.STYLES, 'classic'), size:pick(q.get('s'), C.SIZES, 'square'), base: location.href.split('?')[0].replace(/[^/]*$/, '') };
+  if (o.from) document.getElementById('k').textContent = 'A card from ' + o.from;
+  C.draw(cv, o);
+  document.getElementById('dl').addEventListener('click', ()=> C.save(cv, 'smokies-card.jpg'));
+})();
+</script>
+</body>
+</html>

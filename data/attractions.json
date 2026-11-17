@@ -1,0 +1,94 @@
+{
+ "updated": "2026-11-17T11:56:48.684Z",
+ "dollywood": {
+  "url": "https://www.dollywood.com/",
+  "seasons": [
+   {
+    "from": "2026-11-06",
+    "until": "2027-01-03",
+    "name": "Smoky Mountain Christmas",
+    "url": "https://www.mypigeonforge.com/events/dollywood/"
+   },
+   {
+    "from": "2027-03-11",
+    "until": "2027-04-11",
+    "name": "I Will Always Love You Festival",
+    "url": "https://www.mypigeonforge.com/events/dollywood/"
+   },
+   {
+    "from": "2027-05-07",
+    "until": "2027-06-20",
+    "name": "Flower & Food Festival",
+    "url": "https://www.mypigeonforge.com/events/dollywood/"
+   }
+  ],
+  "deals": [
+   {
+    "title": "$45 Christmas friend ticket",
+    "text": "Buy any 2027 season pass by Dec 13 and bring a friend for $45.",
+    "until": "2026-12-13",
+    "url": "https://www.dollywood.com/Deals/Special-Offers"
+   },
+   {
+    "title": "$59 tickets for public employees",
+    "text": "Military, first responders, school, government and medical workers, verified by ID.me.",
+    "until": "2026-11-23",
+    "url": "https://www.dollywood.com/press/dollywood-christmas-shopping/"
+   },
+   {
+    "title": "$10 off adult day tickets",
+    "text": "Limited-time online offer.",
+    "until": "2026-11-23",
+    "url": "https://www.dollywood.com/press/dollywood-christmas-shopping/"
+   },
+   {
+    "title": "Military discount",
+    "text": "Year-round savings on tickets and passes, verified by ID.me.",
+    "url": "https://www.dollywood.com/deals/special-offers/military-discount/"
+   }
+  ],
+  "tips": [
+   {
+    "text": "Go on a weekday if you can. Saturdays are much busier.",
+    "url": "https://queue-times.com/en-US/parks/55/stats/2024"
+   },
+   {
+    "text": "Have a Silver pass? It isn't valid Dec 14 through Jan 3. You'll need a Gold pass or a day ticket on those dates.",
+    "from": "2026-11-06",
+    "until": "2027-01-03",
+    "url": "https://www.dollywood.com/tickets/season-passes/current-passholders/renewals/"
+   },
+   {
+    "text": "Dollywood doesn't offer AAA discounts, but some AAA offices sell tickets.",
+    "url": "https://www.dollywood.com/themepark/Guest-Services/FAQs"
+   }
+  ]
+ },
+ "cards": [
+  {
+   "name": "Ober Mountain",
+   "town": "Gatlinburg",
+   "title": "Skiing and tubing open Friday, Nov 20",
+   "text": "Weather permitting. The summit already has its first natural snow of the season.",
+   "until": "2026-11-22",
+   "url": "https://www.obergatlinburg.com/blog/get-ready-for-winter-2026-27-at-ober-gatlinburg"
+  },
+  {
+   "name": "The Island",
+   "town": "Pigeon Forge",
+   "title": "Free Winterfest kickoff Saturday, Nov 21",
+   "text": "Concert at 6 p.m. and tree lighting at 8 p.m. Free admission and parking.",
+   "until": "2026-11-21",
+   "url": "https://deeparrival.com/news/the-island-pigeon-forge-winterfest-kickoff-november-21-2026/"
+  },
+  {
+   "name": "The Island",
+   "town": "Pigeon Forge",
+   "title": "Free nightly light shows",
+   "text": "Shows at 6, 7, 8 and 9 p.m. through Jan 31. Free admission and parking.",
+   "from": "2026-11-21",
+   "until": "2027-01-31",
+   "url": "https://deeparrival.com/news/the-island-pigeon-forge-winterfest-kickoff-november-21-2026/"
+  }
+ ]
+}

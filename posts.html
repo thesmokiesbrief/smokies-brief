@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%231F3329%27/%3E%3Cpath d=%27M4 24l8-11 5 7 4-5 7 9z%27 fill=%27%23F2C9A8%27/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ready-to-post this week · The Smokies Brief</title>
+<meta name="description" content="Free, ready-made Facebook and Instagram posts for Smokies hosts, new every Monday.">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .pg-head{padding-block:clamp(2.5rem,6vw,4.5rem) 1.5rem}
+  .pg-head h1{font-family:var(--font-display);font-weight:500;font-size:var(--text-2xl);line-height:1.05;letter-spacing:-.02em;margin:.6rem 0 .8rem;max-width:20ch}
+  .pg-head p{color:var(--ink-2);max-width:62ch}
+  .how{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-top:1.25rem;font-size:var(--text-sm);color:var(--ink-2)}
+  .how b{color:var(--ember-d);margin-right:.35rem}
+  .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;padding-bottom:4rem}
+  .pc{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column}
+  .pc img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--spruce)}
+  .pc-b{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
+  .pc-b h2{font-size:var(--text-base);font-weight:700}
+  .pc-b textarea{width:100%;min-height:9.5rem;font:400 .82rem/1.5 var(--font-body);color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:10px;padding:.7rem .8rem;resize:vertical;flex:1}
+  .pc-a{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
+  .pc-a .ok{font-size:.75rem;color:var(--moss);font-weight:600}
+  .wk{display:inline-flex;align-items:center;gap:.5rem;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--moss);background:rgba(62,107,87,.1);padding:.35em .8em;border-radius:999px}
+  @media (max-width:1000px){.posts{grid-template-columns:1fr 1fr}}
+  @media (max-width:620px){.posts{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="masthead" style="position:static"><div class="wrap mast-in"><a href="index.html" class="wordmark wordmark-sm">The Smokies Brief</a><a class="btn btn-sm" href="index.html#free">All free tools</a></div></header>
+<main class="wrap">
+  <section class="pg-head">
+    <p class="kicker">Free for hosts · new every Monday</p>
+    <h1>Ready-to-post this week</h1>
+    <p>Six posts made from this week's Smokies numbers, events and park updates. Download the image, copy the caption, and post it in your host groups or on your page. No sign-up needed.</p>
+    <p class="how"><span><b>1</b>Download the image</span><span><b>2</b>Copy the caption</span><span><b>3</b>Post it in Facebook or Instagram</span></p>
+    <p style="margin-top:1rem"><span class="wk" id="wk">Week of Nov 17</span></p>
+  </section>
+  <section class="posts" id="posts"></section>
+</main>
+<script>
+fetch('posts/latest/manifest.json').then(r=>r.json()).then(m=>{
+  const d = new Date(m.week + 'T12:00:00'); document.getElementById('wk').textContent = 'Week of ' + d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+  const box = document.getElementById('posts');
+  box.innerHTML = m.posts.map((p,i)=>`<article class="pc"><img src="${p.image}" alt="${p.title} post image" loading="lazy"><div class="pc-b"><h2>${p.title}</h2><label class="sr" for="c${i}">Caption</label><textarea id="c${i}">${p.caption}</textarea><div class="pc-a"><a class="btn btn-sm btn-ember" href="${p.image}" download="smokies-${p.id}-${m.week}.jpg">Download image</a><button class="btn btn-sm" type="button" data-c="c${i}">Copy caption</button><span class="ok" hidden>Copied</span></div></div></article>`).join('');
+  box.querySelectorAll('button[data-c]').forEach(b=> b.addEventListener('click', async ()=>{
+    const ta = document.getElementById(b.dataset.c); const ok = b.nextElementSibling;
+    try { await navigator.clipboard.writeText(ta.value); } catch(e){ ta.select(); try { document.execCommand('copy'); } catch(_){} }
+    ok.hidden = false; setTimeout(()=> ok.hidden = true, 2500);
+  }));
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%231F3329%27/%3E%3Cpath d=%27M4 24l8-11 5 7 4-5 7 9z%27 fill=%27%23F2C9A8%27/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seasonal checklists for Smokies cabins · The Smokies Brief</title>
+<meta name="description" content="Free winterizing, hot tub, gutter and spring opening checklists for Gatlinburg, Pigeon Forge and Sevierville cabin hosts. Check off as you go, print, or add yearly reminders to your calendar.">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .ck-head{padding-block:clamp(2.5rem,6vw,4rem) 1.25rem;display:grid;grid-template-columns:1fr auto;gap:1rem 2rem;align-items:end}
+  .ck-head h1{font-family:var(--font-display);font-weight:500;font-size:var(--text-2xl);line-height:1.05;letter-spacing:-.02em;margin:.6rem 0 .6rem}
+  .ck-head p{color:var(--ink-2);max-width:62ch}
+  .due{display:flex;flex-direction:column;gap:.4rem;align-items:flex-end}
+  .due small{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+  .due div{display:flex;gap:.4rem;flex-wrap:wrap;justify-content:flex-end}
+  .due a{display:inline-flex;align-items:center;gap:.4rem;font:600 .82rem var(--font-body);color:var(--ember-d);background:#FBEDE6;border:1px solid #EBC7B5;border-radius:999px;padding:.35rem .8rem;text-decoration:none}
+  .due a::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ember)}
+
+  .tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-block:.5rem 1.5rem}
+  .tab{position:relative;display:flex;flex-direction:column;text-align:left;border:1px solid var(--line);background:var(--card);border-radius:var(--r-lg);overflow:hidden;cursor:pointer;padding:0;font:inherit;color:inherit;transition:border-color .2s,box-shadow .2s,transform .2s}
+  .tab:hover{transform:translateY(-2px);box-shadow:0 14px 30px -22px rgba(29,36,32,.55)}
+  .tab[aria-selected="true"]{border-color:var(--spruce);box-shadow:0 0 0 1px var(--spruce),0 14px 30px -22px rgba(29,36,32,.55)}
+  .tab img{width:100%;height:88px;object-fit:cover;display:block}
+  .tab .tb{padding:.75rem .9rem .85rem;display:flex;flex-direction:column;gap:.2rem}
+  .tab b{font-family:var(--font-display);font-weight:500;font-size:1.25rem;line-height:1.1}
+  .tab span.w{font-size:.76rem;color:var(--ink-3);line-height:1.35}
+  .bar{height:6px;border-radius:99px;background:var(--paper-2);overflow:hidden;margin-top:.45rem}
+  .bar i{display:block;height:100%;width:0;background:var(--moss);border-radius:99px;transition:width .3s}
+  .tab .cnt{font-size:.72rem;font-weight:700;color:var(--ink-2);margin-top:.25rem}
+  .badge{position:absolute;top:.55rem;left:.55rem;font:700 .64rem var(--font-body);letter-spacing:.08em;text-transform:uppercase;padding:.25rem .55rem;border-radius:999px;background:var(--ember);color:#fff}
+  .badge.on{background:var(--spruce)}
+
+  .ckpanel{display:grid;grid-template-columns:minmax(260px,330px) 1fr;gap:clamp(1.25rem,3vw,2.5rem);align-items:start;padding-bottom:3rem}
+  .side{position:sticky;top:1rem;display:flex;flex-direction:column;gap:1rem}
+  .side .ph{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/3;background:var(--spruce)}
+  .side .ph img{width:100%;height:100%;object-fit:cover;display:block}
+  .side h2{font-family:var(--font-display);font-weight:500;font-size:var(--text-xl);line-height:1.05}
+  .side .when{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ember)}
+  .side p{color:var(--ink-2);font-size:var(--text-sm)}
+  .prog{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:1rem}
+  .prog .big{font-family:var(--font-display);font-size:2rem;line-height:1}
+  .prog .big small{font-family:var(--font-body);font-size:.85rem;color:var(--ink-3);margin-left:.35rem}
+  .acts{display:flex;flex-direction:column;gap:.5rem}
+  .acts .btn{justify-content:center;width:100%}
+  .linkish{background:none;border:0;font:600 .8rem var(--font-body);color:var(--ink-3);text-decoration:underline;cursor:pointer;padding:.25rem;align-self:center}
+
+  .grp{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:.4rem 1.25rem 1rem;margin-bottom:1rem}
+  .grp h3{font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);padding:.9rem 0 .35rem;display:flex;justify-content:space-between}
+  .item{display:grid;grid-template-columns:28px 1fr;gap:.8rem;padding:.8rem 0;border-top:1px solid var(--line);cursor:pointer}
+  .item:first-of-type{border-top:0}
+  .item input{position:absolute;opacity:0;pointer-events:none}
+  .box{width:24px;height:24px;border-radius:7px;border:2px solid var(--ink-3);display:grid;place-items:center;transition:all .2s;margin-top:1px;background:#fff}
+  .box svg{width:14px;height:14px;stroke:#fff;stroke-width:3;fill:none;opacity:0;transform:scale(.5);transition:all .2s}
+  .item input:checked + .box{background:var(--moss);border-color:var(--moss)}
+  .item input:checked + .box svg{opacity:1;transform:scale(1)}
+  .item input:focus-visible + .box{outline:3px solid var(--gold);outline-offset:2px}
+  .item .t{font-weight:600;line-height:1.4;transition:color .2s}
+  .item .n{display:block;font-size:.88rem;color:var(--ink-2);line-height:1.45;margin-top:.2rem}
+  .item input:checked ~ div .t{color:var(--ink-3);text-decoration:line-through;text-decoration-color:var(--ink-3)}
+  .item sup{font-size:.68rem;font-weight:700;color:var(--ember);margin-left:2px}
+  .item sup a{color:var(--ember);text-decoration:none}
+  .item .lk{display:inline-block;margin-top:.3rem;font-size:.82rem;font-weight:700;color:var(--ember-d)}
+  .srcs{font-size:.78rem;color:var(--ink-3);margin-top:1.25rem}
+  .srcs h4{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.4rem}
+  .srcs ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:.2rem}
+  .srcs a{color:var(--ink-2);word-break:break-word}
+  .done-msg{display:none;background:#EAF1EC;border-left:4px solid var(--moss);border-radius:10px;padding:.8rem 1rem;margin-bottom:1rem;font-weight:600;color:var(--spruce)}
+  .done-msg.show{display:block}
+  .toast{position:fixed;left:50%;bottom:1.25rem;transform:translateX(-50%) translateY(150%);background:var(--spruce);color:var(--paper);font:600 .85rem var(--font-body);padding:.7rem 1.1rem;border-radius:999px;transition:transform .3s,opacity .3s,visibility .3s;z-index:20;opacity:0;visibility:hidden}
+  .toast.show{transform:translateX(-50%) translateY(0);opacity:1;visibility:visible}
+
+  @media (max-width:960px){ .tabs{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:860px){ .ckpanel{grid-template-columns:1fr} .side{position:static} .side .ph{aspect-ratio:16/7} .ck-head{grid-template-columns:1fr} .due{align-items:flex-start} .due div{justify-content:flex-start} }
+  @media (max-width:420px){ .tab img{height:64px} .tab b{font-size:1.05rem} .grp{padding-inline:1rem} }
+
+  @media print{
+    @page{margin:.5in}
+    body{background:#fff}
+    .masthead,.tabs,.due,.acts,.linkish,.toast,.side .ph,.foot-cta,footer{display:none !important}
+    .ckpanel{grid-template-columns:1fr;gap:.5rem}
+    .side{position:static}
+    .grp{break-inside:avoid;border-color:#ccc}
+    .item{break-inside:avoid}
+    .item input:checked ~ div .t{text-decoration:none;color:var(--ink)}
+    .box{border-color:#555}
+  }
+</style>
+</head>
+<body>
+<header class="masthead" style="position:static"><div class="wrap mast-in"><a href="index.html" class="wordmark wordmark-sm">The Smokies Brief</a><a class="btn btn-sm" href="index.html#free">All free tools</a></div></header>
+<main class="wrap">
+  <section class="ck-head">
+    <div>
+      <p class="kicker">Free for hosts</p>
+      <h1>Seasonal checklists for Smokies cabins</h1>
+      <p>Winterizing, hot tub, gutters and spring opening, written for mountain rental cabins. Check items off as you go, print a list for your cleaner or handyman, or add yearly reminders to your calendar.</p>
+    </div>
+    <div class="due" id="due"><small>Due now</small><div></div></div>
+  </section>
+
+  <nav class="tabs" id="tabs" role="tablist" aria-label="Choose a checklist"></nav>
+
+  <section class="ckpanel" id="panel" aria-live="polite">
+    <aside class="side">
+      <div class="ph"><img id="pImg" alt="" width="660" height="495"></div>
+      <div>
+        <p class="when" id="pWhen"></p>
+        <h2 id="pName"></h2>
+      </div>
+      <p id="pIntro"></p>
+      <div class="prog">
+        <div class="big" id="pCount">0<small>of 0 done</small></div>
+        <div class="bar"><i id="pBar"></i></div>
+      </div>
+      <div class="acts">
+        <button class="btn btn-ember" id="printBtn" type="button">Print this checklist</button>
+        <a class="btn" href="downloads/smokies-seasonal-checklists.pdf" download>Download all four (PDF)</a>
+        <button class="btn" id="icsBtn" type="button">Add yearly reminders to my calendar</button>
+        <button class="btn" id="shareBtn" type="button">Send this list to my cleaner</button>
+        <button class="linkish" id="resetBtn" type="button">Clear my checkmarks</button>
+      </div>
+    </aside>
+    <div>
+      <div class="done-msg" id="doneMsg">All done for this season. Nice work.</div>
+      <div id="groups"></div>
+      <div class="srcs"><h4>Sources</h4><ol id="srcList"></ol></div>
+    </div>
+  </section>
+</main>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="checklists-data.js"></script>
+<script>
+(function(){
+  const {SRC, LISTS, REMIND} = window.CHECKLISTS;
+  // Checkmarks are saved in a small cookie on this device (no account, nothing sent anywhere)
+  const KEY = 'sbck';
+  let state = {};
+  try { const m = document.cookie.match(/(?:^|; )sbck=([^;]*)/); if (m) decodeURIComponent(m[1]).split('.').filter(Boolean).forEach(k => state[k] = 1); } catch(e) { state = {}; }
+  const save = () => { try { document.cookie = `${KEY}=${encodeURIComponent(Object.keys(state).join('.'))}; max-age=31536000; path=/; SameSite=Lax`; } catch(e) {} };
+  const $ = id => document.getElementById(id);
+  const month = new Date().getMonth() + 1;
+  const isDue = L => L.id !== 'hot-tub' && L.months.includes(month);
+  const allItems = L => L.groups.flatMap(g => g.items);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const toast = msg => { const t = $('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('show'), 2400); };
+
+  // Due-now chips
+  const dueWrap = $('due').querySelector('div');
+  const dueLists = LISTS.filter(isDue);
+  if (!dueLists.length) $('due').style.display = 'none';
+  dueLists.forEach(L => { const a = document.createElement('a'); a.href = '#' + L.id; a.textContent = L.name; dueWrap.appendChild(a); });
+
+  // Tabs
+  const tabs = $('tabs');
+  LISTS.forEach(L => {
+    const b = document.createElement('button');
+    b.className = 'tab'; b.type = 'button'; b.setAttribute('role', 'tab'); b.dataset.id = L.id;
+    b.innerHTML = `${isDue(L) ? '<span class="badge">Due now</span>' : (L.id === 'hot-tub' ? '<span class="badge on">Ongoing</span>' : '')}<img src="${L.img}" alt="" loading="lazy" width="400" height="176"><span class="tb"><b>${esc(L.name)}</b><span class="w">${esc(L.when)}</span><span class="bar"><i></i></span><span class="cnt"></span></span>`;
+    b.addEventListener('click', () => { location.hash = L.id; });
+    tabs.appendChild(b);
+  });
+
+  function counts(L){ const it = allItems(L); const d = it.filter(i => state[i.k]).length; return [d, it.length]; }
+  function refreshCounts(){
+    LISTS.forEach(L => {
+      const [d, n] = counts(L);
+      const b = tabs.querySelector(`[data-id="${L.id}"]`);
+      b.querySelector('.bar i').style.width = (100 * d / n) + '%';
+      b.querySelector('.cnt').textContent = d ? `${d} of ${n} done` : `${n} items`;
+      if (L.id === cur.id) {
+        $('pCount').innerHTML = `${d}<small>of ${n} done</small>`;
+        $('pBar').style.width = (100 * d / n) + '%';
+        $('doneMsg').classList.toggle('show', d === n);
+      }
+    });
+  }
+
+  let cur = LISTS[0];
+  function render(id){
+    cur = LISTS.find(L => L.id === id) || dueLists[0] || LISTS[0];
+    tabs.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', String(t.dataset.id === cur.id)));
+    $('pImg').src = cur.img; $('pWhen').textContent = cur.when; $('pName').textContent = cur.name; $('pIntro').textContent = cur.intro;
+    document.title = `${cur.name} checklist for Smokies cabins · The Smokies Brief`;
+    // number sources in order of first use
+    const order = [];
+    allItems(cur).forEach(i => (i.s || []).forEach(s => { if (!order.includes(s)) order.push(s); }));
+    const num = s => order.indexOf(s) + 1;
+    $('groups').innerHTML = cur.groups.map(g => `
+      <div class="grp"><h3><span>${esc(g.h)}</span></h3>
+      ${g.items.map(i => `
+        <label class="item"><input type="checkbox" data-k="${i.k}" ${state[i.k] ? 'checked' : ''}>
+          <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          <div><span class="t">${esc(i.t)}${(i.s && i.s.length) ? `<sup>${i.s.map(s => `<a href="#src-${s}" title="${esc(SRC[s][0])}">${num(s)}</a>`).join(',')}</sup>` : ''}</span>
+          ${i.n ? `<span class="n">${esc(i.n)}</span>` : ''}
+          ${i.link ? `<a class="lk" href="${i.link[1]}">${esc(i.link[0])} \u2192</a>` : ''}</div>
+        </label>`).join('')}
+      </div>`).join('');
+    $('srcList').innerHTML = order.map(s => `<li id="src-${s}">${esc(SRC[s][0])}: <a href="${SRC[s][1]}" target="_blank" rel="noopener">${esc(SRC[s][1].replace(/^https?:\/\/(www\.)?/, ''))}</a></li>`).join('');
+    $('groups').querySelectorAll('input').forEach(cb => cb.addEventListener('change', () => {
+      if (cb.checked) state[cb.dataset.k] = 1; else delete state[cb.dataset.k];
+      save(); refreshCounts();
+    }));
+    // keep source links and in-page links from triggering the checkbox
+    $('groups').querySelectorAll('a').forEach(a => a.addEventListener('click', e => e.stopPropagation()));
+    refreshCounts();
+  }
+
+  function route(){ const h = location.hash.replace('#', ''); if (h.startsWith('src-')) return; render(h); }
+  window.addEventListener('hashchange', () => { route(); if (window.innerWidth < 860) $('panel').scrollIntoView({behavior: 'smooth'}); });
+  route();
+
+  $('printBtn').addEventListener('click', () => window.print());
+  $('resetBtn').addEventListener('click', () => { allItems(cur).forEach(i => delete state[i.k]); save(); render(cur.id); toast('Checkmarks cleared for ' + cur.name.toLowerCase()); });
+
+  $('shareBtn').addEventListener('click', async () => {
+    const url = location.href.split('#')[0] + '#' + cur.id;
+    const text = `${cur.name} checklist for the cabin: ${url}`;
+    try {
+      if (navigator.share) { await navigator.share({title: cur.name + ' checklist', text: `${cur.name} checklist for the cabin`, url}); return; }
+      await navigator.clipboard.writeText(text); toast('Link copied. Paste it into a text.');
+    } catch(e) { if (e && e.name !== 'AbortError') prompt('Copy this link:', url); }
+  });
+
+  // Yearly reminders as an .ics file
+  $('icsBtn').addEventListener('click', () => {
+    const now = new Date(); const pad = n => String(n).padStart(2, '0');
+    const stamp = now.toISOString().replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z');
+    const next = (m, d) => { let y = now.getFullYear(); const dt = new Date(y, m - 1, d); if (dt < now) y++; return `${y}${pad(m)}${pad(d)}`; };
+    const base = 'https://thesmokiesbrief.com/checklists.html#';
+    const ev = [];
+    REMIND.forEach((r, i) => ev.push(['BEGIN:VEVENT', `UID:sb-check-${i}@thesmokiesbrief.com`, `DTSTAMP:${stamp}`, `DTSTART;VALUE=DATE:${next(r.m, r.d)}`, 'RRULE:FREQ=YEARLY', `SUMMARY:${r.t}`, `DESCRIPTION:Checklist: ${base}${r.id}`, `URL:${base}${r.id}`, 'BEGIN:VALARM', 'TRIGGER:-P3D', 'ACTION:DISPLAY', `DESCRIPTION:${r.t}`, 'END:VALARM', 'END:VEVENT'].join('\r\n')));
+    const firstOfMonth = (() => { const d = new Date(now.getFullYear(), now.getMonth() + 1, 1); return `${d.getFullYear()}${pad(d.getMonth() + 1)}01`; })();
+    ev.push(['BEGIN:VEVENT', 'UID:sb-check-monthly@thesmokiesbrief.com', `DTSTAMP:${stamp}`, `DTSTART;VALUE=DATE:${firstOfMonth}`, 'RRULE:FREQ=MONTHLY', 'SUMMARY:Monthly cabin safety check', `DESCRIPTION:Test the hot tub GFCI\\, smoke and CO alarms. Checklist: ${base}hot-tub`, `URL:${base}hot-tub`, 'END:VEVENT'].join('\r\n'));
+    const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//The Smokies Brief//Seasonal checklists//EN', 'CALSCALE:GREGORIAN', 'X-WR-CALNAME:Cabin checklists', ...ev, 'END:VCALENDAR'].join('\r\n');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([ics], {type: 'text/calendar'}));
+    a.download = 'smokies-cabin-checklist-reminders.ics';
+    document.body.appendChild(a); a.click(); a.remove();
+    toast('Reminders downloaded. Open the file to add them.');
+  });
+})();
+</script>
+</body>
+</html>

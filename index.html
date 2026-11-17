@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%231F3329%27/%3E%3Cpath d=%27M4 24l8-11 5 7 4-5 7 9z%27 fill=%27%23F2C9A8%27/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Smokies Brief — Weekly STR news for Smoky Mountain cabin owners</title>
+<meta name="description" content="Rules, numbers and news for Smoky Mountain cabin owners and investors. Gatlinburg, Pigeon Forge, Sevierville and Sevier County, every Monday.">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="preview-flag">Mockup preview · sample issue built from real Nov 2026 sources</div>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <span class="topbar-date">Issue 01 · Week of November 16, 2026</span>
+    <a class="btn btn-sm" href="#subscribe">Get it free every Monday</a>
+  </div>
+</header>
+
+<div class="masthead">
+  <div class="wrap mast-in">
+    <a href="#" class="wordmark" aria-label="The Smokies Brief home">The Smokies Brief</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#news">News</a>
+      <a href="#now">Right Now</a>
+      <a href="#park">Park</a>
+      <a href="#cams">Live Cams</a>
+      <a href="#attractions">Attractions</a>
+      <a href="#events">Events</a>
+      <a href="#market">Market</a>
+      <a href="#free">Free Tools</a>
+    </nav>
+  </div>
+</div>
+
+<div class="fresh" role="status">
+  <div class="wrap fresh-in">
+    <span class="live"><i></i>Live</span>
+    <p class="fresh-main"><b>Updated every morning.</b> Last update <time id="updTime">Tue, Nov 17, 5:30 a.m.</time></p>
+    <ul class="fresh-sched" aria-label="Update schedule">
+      <li><b>Live</b> power, park, cams</li>
+      <li><b>Daily</b> news, events</li>
+      <li><b>Mondays</b> new issue</li>
+      <li><b>Monthly</b> market</li>
+    </ul>
+    <a href="#latest" class="new-pill" id="newPill">12 new today</a>
+  </div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero2" id="today">
+  <img class="hero-img" src="img/hero.webp" alt="Fog over layered ridges of the Smoky Mountains at dawn" width="1672" height="941">
+  <div class="hero2-shade"></div>
+  <div class="wrap hero2-in">
+    <div class="hero2-copy">
+      <p class="kicker kicker-light">Gatlinburg · Pigeon Forge · Sevierville · Wears Valley</p>
+      <h1>The Smokies, every morning.</h1>
+      <p class="hero-dek">News, rules, roads, power, events and market numbers for Smoky Mountain cabin owners and hosts. Updated daily, and free in your inbox every Monday.</p>
+      <form class="sub-form hero-form" data-kit="weekly" novalidate>
+        <label class="sr" for="em0">Email address</label>
+        <input id="em0" type="email" placeholder="you@email.com" required>
+        <button class="btn btn-ember" type="submit">Get the Monday Brief</button>
+      </form>
+      <p class="hero-trust">Free. Five minutes a week. Unsubscribe anytime.</p>
+    </div>
+  </div>
+  <div class="wrap board-wrap">
+    <div class="board" aria-label="Right now in the Smokies">
+      <a class="tile" href="#now">
+        <span class="t-lbl">Gatlinburg weather</span>
+        <span class="t-val">63°</span>
+        <span class="t-sub">Sunny today · 39° tonight</span>
+      </a>
+      <a class="tile" href="#power">
+        <span class="t-lbl">Power outages</span>
+        <span class="t-val" id="tPwVal">0<small> out</small></span>
+        <svg class="t-spark" id="tPwSpark" viewBox="0 0 100 32" preserveAspectRatio="none" aria-hidden="true"><polyline points="0.0,30.0 2.1,30.0 4.2,28.2 6.2,28.2 8.3,29.9 10.4,30.0 12.5,30.0 14.6,30.0 16.7,30.0 18.8,30.0 20.8,30.0 22.9,30.0 25.0,30.0 27.1,30.0 29.2,30.0 31.2,30.0 33.3,30.0 35.4,30.0 37.5,30.0 39.6,3.0 41.7,23.5 43.8,23.5 45.8,23.5 47.9,6.5 50.0,30.0 52.1,30.0 54.2,30.0 56.2,30.0 58.3,28.2 60.4,28.2 62.5,29.3 64.6,29.3 66.7,29.8 68.8,29.9 70.8,29.9 72.9,29.9 75.0,29.9 77.1,30.0 79.2,30.0 81.2,30.0 83.3,30.0 85.4,30.0 87.5,30.0 89.6,30.0 91.7,30.0 93.8,30.0 95.8,30.0 97.9,30.0 100.0,30.0" fill="none" stroke="#F2C9A8" stroke-width="1.6" vector-effect="non-scaling-stroke"/></svg>
+        <span class="t-sub" id="tPwSub">Sevier County Electric · peak 502 Sunday night</span>
+      </a>
+      <a class="tile tile-warn" href="#park">
+        <span class="t-lbl">Park roads</span>
+        <span class="t-val t-val-sm">Kuwohi Road closed</span>
+        <span class="t-sub">Snow and ice · 4 other seasonal closures</span>
+      </a>
+      <a class="tile" href="#attractions">
+        <span class="t-lbl">Dollywood</span>
+        <span class="t-val t-val-sm">Smoky Mountain Christmas</span>
+        <span class="t-sub">Through Jan 3 · live waits when open</span>
+      </a>
+      <a class="tile" href="#events">
+        <span class="t-lbl">Next big draw</span>
+        <span class="t-val t-val-sm">Sat, Nov 21</span>
+        <span class="t-sub">Winterfest kickoff at The Island · free</span>
+      </a>
+      <a class="tile" href="#market">
+        <span class="t-lbl">Market gauge</span>
+        <span class="t-val">25<small>/100</small></span>
+        <span class="t-sub">Buyer's market · 9.1 months of supply</span>
+      </a>
+    </div>
+    <p class="board-note"><span class="live"><i></i>Live</span> Snapshot from 5:30 a.m. Power refreshes every 15 minutes, park alerts and weather every hour.</p>
+  </div>
+</section>
+
+<!-- THIS WEEK -->
+<section class="week" id="week">
+  <div class="wrap week-in">
+    <article class="week-lead">
+      <p class="kicker">This week's lead · Issue 01</p>
+      <h2>Big cabins are 23% off their peak. Small ones are still climbing.</h2>
+      <p>Top-tier Sevier County homes have fallen from $881K to $680K since July 2022, while entry-level homes gained 4.4% this year. Here's what that means for buying, selling and pricing.</p>
+      <a class="btn" href="#market">Open the Market Report</a>
+    </article>
+    <aside class="brief60" aria-label="The 60-second Brief">
+      <p class="kicker">The 60-second Brief</p>
+      <ol>
+        <li><p><strong>68%</strong> Gatlinburg rental occupancy in October, but guests are booking later.</p></li>
+        <li><p><strong>9 months</strong> of homes for sale at today's pace. It's a buyer's market.</p></li>
+        <li><p><strong>Gatlinburg</strong> occupancy-cap proposal still under review.</p></li>
+        <li><p><strong>Ober Mountain</strong> plans to open skiing and tubing Friday, Nov 20.</p></li>
+        <li><p><strong>Airbnb</strong> policy changes apply to bookings made from Nov 20.</p></li>
+      </ol>
+    </aside>
+  </div>
+</section>
+
+<!-- RULES WATCH -->
+<section id="rules" class="rules">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title">Rules Watch</h2>
+      <p class="sec-note"><span class="upd">Checked daily</span> Official pages and meeting agendas · last check today, 6:00 a.m.</p>
+    </div>
+    <div class="rules-grid">
+      <a class="rule watch" href="https://treftn.com/blog/smokies-str-rules-update" target="_blank" rel="noopener">
+        <span class="rule-dot"></span><span class="rule-town">Gatlinburg</span>
+        <span class="rule-status">Occupancy cap proposal reported under review</span>
+        <span class="rule-src">Source →</span>
+      </a>
+      <a class="rule ok" href="https://rentalrulebook.com/short-term-rental-rules/pigeon-forge-tn/" target="_blank" rel="noopener">
+        <span class="rule-dot"></span><span class="rule-town">Pigeon Forge</span>
+        <span class="rule-status">No new STR agenda items this week</span>
+        <span class="rule-src">Current rules →</span>
+      </a>
+      <a class="rule ok" href="https://rulegrid.dev/tennessee/us-tn-sevierville" target="_blank" rel="noopener">
+        <span class="rule-dot"></span><span class="rule-town">Sevierville</span>
+        <span class="rule-status">No new STR agenda items this week</span>
+        <span class="rule-src">Current rules →</span>
+      </a>
+      <a class="rule ok" href="https://www.seviercountytn.gov/" target="_blank" rel="noopener">
+        <span class="rule-dot"></span><span class="rule-town">Sevier County</span>
+        <span class="rule-status">Permit page unchanged · lodging tax due Dec 20</span>
+        <span class="rule-src">County site →</span>
+      </a>
+      <a class="rule ok" href="https://www.airroi.com/airbnb-data/united-states/tennessee/regulations" target="_blank" rel="noopener">
+        <span class="rule-dot"></span><span class="rule-town">Tennessee</span>
+        <span class="rule-status">Legislature out of session · no new bills</span>
+        <span class="rule-src">State rules →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news" class="news">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title">Smokies News</h2>
+      <p class="sec-note"><span class="upd">Updated daily</span> Headlines as published, linked to the source</p>
+    </div>
+        <div class="top-stories">
+      <a class="ts-lead" href="https://news.kingsofrealestate.com/gatlinburg-short-term-rental-occupancy-68-percent-october-booking-window-2026/" target="_blank" rel="noopener"><p class="tag">The Numbers</p><h3>Gatlinburg Rental Occupancy Hits 68% in October as Bookings Come Late</h3><p class="dek">Occupancy reached 68%, up from 62.2% a year earlier, per the Gatlinburg Convention and Visitors Bureau. Owners say guests now book far closer to their stay.</p><p class="meta">Real Estate Insider · citing WVLT · Nov 3</p></a>
+      <div class="ts-side">
+        <a class="ts" href="https://news.kingsofrealestate.com/sevierville-407-indoor-water-park-site-plan-2026/" target="_blank" rel="noopener"><p class="tag">New Supply</p><h3>Sevierville Approves 407 Indoor Water Park Site Plan</h3><p class="meta">Real Estate Insider · citing The Mountain Press</p></a>
+        <a class="ts" href="https://treftn.com/blog/smokies-str-rules-update" target="_blank" rel="noopener"><p class="tag">Rules</p><h3>What's Changing for Smokies Short-Term Rentals This Year</h3><p class="meta">TREF · Oct 8</p></a>
+        <a class="ts" href="https://www.thehostreport.com/" target="_blank" rel="noopener"><p class="tag">Platforms</p><h3>Airbnb's Q3 2026 Earnings: 4 Things Hosts Should Pay Attention To</h3><p class="meta">The Host Report · Nov 15</p></a>
+      </div>
+    </div>
+    <div class="latest" id="latest">
+      <div class="latest-head"><h3>Latest headlines</h3><p>From local news, city sites and industry sources, filtered for cabin owners</p></div>
+      <ol class="hl-list">
+        <li><a href="https://fox17.com/news/local/dollywood-fans-fly-from-florida-to-smoky-mountain-christmas-on-themed-allegiant-trips" target="_blank" rel="noopener" data-date="2026-11-17"><span class="hl-meta"><span class="hl-tag">Tourism</span><time datetime="2026-11-17">Nov 17</time></span><span class="hl-t">Dollywood fans fly from Florida to Smoky Mountain Christmas on themed Allegiant trips</span><span class="hl-src">FOX 17</span></a></li>
+        <li><a href="https://www.wvlt.tv/2026/11/17/gatlinburg-builds-new-emergency-operations-center-10-years-after-wildfires/" target="_blank" rel="noopener" data-date="2026-11-16"><span class="hl-meta"><span class="hl-tag">Gatlinburg</span><time datetime="2026-11-16">Nov 16</time></span><span class="hl-t">Gatlinburg builds new emergency operations center 10 years after wildfires</span><span class="hl-src">WVLT</span></a></li>
+        <li><a href="https://www.wvlt.tv/2026/11/17/ground-stop-sparks-thanksgiving-travel-concerns/" target="_blank" rel="noopener" data-date="2026-11-16"><span class="hl-meta"><span class="hl-tag">Guests</span><time datetime="2026-11-16">Nov 16</time></span><span class="hl-t">Ground stop sparks Thanksgiving travel concerns</span><span class="hl-src">WVLT</span></a></li>
+        <li><a href="https://smokies.live/2026/11/16/pigeon-forge-kicks-off-winterfest-season-with-holiday-market-lights-and-family-fun/" target="_blank" rel="noopener" data-date="2026-11-16"><span class="hl-meta"><span class="hl-tag">Events</span><time datetime="2026-11-16">Nov 16</time></span><span class="hl-t">Pigeon Forge kicks off Winterfest season with holiday market, lights and family fun</span><span class="hl-src">Smokies.LIVE</span></a></li>
+        <li><a href="https://smokies.live/2026/11/16/wilderness-at-the-smokies-brings-back-outdoor-ice-skating-for-the-holidays/" target="_blank" rel="noopener" data-date="2026-11-16"><span class="hl-meta"><span class="hl-tag">Attractions</span><time datetime="2026-11-16">Nov 16</time></span><span class="hl-t">Wilderness at the Smokies brings back outdoor ice skating for the holidays</span><span class="hl-src">Smokies.LIVE</span></a></li>
+        <li><a href="https://smokies.live/2026/11/16/ripleys-aquarium-of-the-smokies-brings-back-sea-of-trees-holiday-display/" target="_blank" rel="noopener" data-date="2026-11-16"><span class="hl-meta"><span class="hl-tag">Attractions</span><time datetime="2026-11-16">Nov 16</time></span><span class="hl-t">Ripley's Aquarium of the Smokies brings back Sea of Trees holiday display</span><span class="hl-src">Smokies.LIVE</span></a></li>
+        <li><a href="https://smokies.live/2026/11/14/ober-gatlinburg-receives-first-natural-snowfall-of-2026-27-winter-season/" target="_blank" rel="noopener" data-date="2026-11-14"><span class="hl-meta"><span class="hl-tag">Weather</span><time datetime="2026-11-14">Nov 14</time></span><span class="hl-t">Ober Gatlinburg receives first natural snowfall of 2026-27 winter season</span><span class="hl-src">Smokies.LIVE</span></a></li>
+        <li><a href="https://www.rgj.com/story/entertainment/smoky-mountains/2026/11/13/great-smoky-mountains-national-park-busy-days-visitors-november-december-fall-winter/92722959007/" target="_blank" rel="noopener" data-date="2026-11-13"><span class="hl-meta"><span class="hl-tag">Park</span><time datetime="2026-11-13">Nov 13</time></span><span class="hl-t">Busy days remain at Great Smoky Mountains National Park, so avoid these dates</span><span class="hl-src">Reno Gazette Journal</span></a></li>
+        <li><a href="https://www.citizen-times.com/story/entertainment/smoky-mountains/2026/11/12/road-closures-begin-in-great-smoky-mountains-due-to-winter-weather/92744451007/" target="_blank" rel="noopener" data-date="2026-11-12"><span class="hl-meta"><span class="hl-tag">Roads</span><time datetime="2026-11-12">Nov 12</time></span><span class="hl-t">Major road closed for snow in Great Smoky Mountains National Park</span><span class="hl-src">Citizen Times</span></a></li>
+        <li><a href="https://www.wate.com/news/sevier-county-news/gatlinburg-drone-public-safety/" target="_blank" rel="noopener" data-date="2026-11-06"><span class="hl-meta"><span class="hl-tag">Gatlinburg</span><time datetime="2026-11-06">Nov 6</time></span><span class="hl-t">Gatlinburg launches drone program to help police, firefighters during emergencies</span><span class="hl-src">WATE</span></a></li>
+        <li><a href="https://www.wate.com/news/smoky-mountains/tennessee-sees-rise-in-hospitality-and-leisure-workforce/" target="_blank" rel="noopener" data-date="2026-10-28"><span class="hl-meta"><span class="hl-tag">Jobs</span><time datetime="2026-10-28">Oct 28</time></span><span class="hl-t">Tennessee sees rise in Hospitality and Leisure workforce</span><span class="hl-src">WATE</span></a></li>
+        <li><a href="https://www.wate.com/news/sevier-county-news/pittman-center-fire-department-sevier-county-continue-talks/" target="_blank" rel="noopener" data-date="2026-10-27"><span class="hl-meta"><span class="hl-tag">Owners</span><time datetime="2026-10-27">Oct 27</time></span><span class="hl-t">Pittman Center VFD delays planned shutdown as talks continue on future of fire protection</span><span class="hl-src">WATE</span></a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- MAKING NOISE -->
+<section id="noise" class="noise">
+  <div class="wrap">
+    <div class="sec-head sec-head-light">
+      <h2 class="sec-title">Making Noise</h2>
+      <p class="sec-note"><span class="upd upd-light">Updated daily</span> The stories people are arguing about, ranked by discussion</p>
+    </div>
+    <div class="noise-grid">
+      <a class="noise-item" href="https://www.themountainpress.com/news/sevier-county-mayor-candidate-jerry-grubb/article_66e24c1d-2bf8-5361-9d80-5d183caeb5d2.html" target="_blank" rel="noopener">
+        <span class="heat" aria-label="Heat 3 of 3"><i></i><i></i><i></i></span>
+        <p class="tag tag-light">Local politics</p>
+        <h3>Sevier County Mayor Candidate — Jerry Grubb</h3>
+        <p class="dek">Candidate questionnaire calls for a moratorium on corporate construction until an outside study is done.</p>
+        <p class="meta">The Mountain Press</p>
+      </a>
+      <a class="noise-item" href="https://www.biggerpockets.com/forums/530/topics/1320142-report-from-the-smokies-the-worm-is-turning" target="_blank" rel="noopener">
+        <span class="heat" aria-label="Heat 3 of 3"><i></i><i></i><i></i></span>
+        <p class="tag tag-light">Owners talking</p>
+        <h3>REPORT FROM THE SMOKIES: The worm is turning</h3>
+        <p class="dek">Fall bookings up 15%, one owner says. Replies push back: large cabins are still struggling.</p>
+        <p class="meta">BiggerPockets forum · 16 replies</p>
+      </a>
+      <a class="noise-item" href="https://www.wate.com/investigations/english-mountian-poa-dispute/" target="_blank" rel="noopener">
+        <span class="heat" aria-label="Heat 3 of 3"><i></i><i></i><i></i></span>
+        <p class="tag tag-light">Neighborhoods</p>
+        <h3>Homeowners threatened with eviction from English Mountain POA over voluntary dues</h3>
+        <p class="meta">WATE 6 On Your Side · Nov 10</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- RIGHT NOW -->
+<section id="now" class="now">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title">Right now in Sevier County</h2>
+      <p class="sec-note"><span class="upd">Live</span> Power, weather and official alerts</p>
+    </div>
+    <div class="now-grid">
+      <article class="panel power" id="power">
+        <div class="pw-cols">
+          <div class="pw-stats">
+            <div class="panel-top"><h3 class="panel-title">Power outages</h3><span class="pw-time" id="pwTime">Updated 5:41 a.m.</span></div>
+            <p class="pw-big"><span id="pwNow">0</span> <span>customers out now</span></p>
+            <p class="panel-note" id="pwNote">Of 65,589 served by Sevier County Electric System, which covers Gatlinburg, Pigeon Forge and Sevierville. No planned outages posted.</p>
+            <div class="pw-chart" id="pwChart" aria-label="Customers without power, last 48 hours"></div>
+            <div class="pw-axis"><span>48 hours ago</span><span>24 hours ago</span><span>Now</span></div>
+            <p class="pw-peak" id="pwPeak">Peak in the last 48 hours: <b>502 customers</b>.</p>
+            <p class="pw-links"><a class="lnk" href="https://viewer.sces.net" target="_blank" rel="noopener">Official SCES outage map →</a><span>Report an outage: <a href="tel:+18657746300">865-774-6300</a></span></p>
+          </div>
+          <div class="pw-mapwrap">
+            <div class="pw-map" id="pwMap" role="img" aria-label="Map of current power outages in Sevier County"></div>
+            <div class="pw-overlay" id="pwOverlay"><b>No outages right now</b><span>Outages appear here as dots sized by how many customers are out.</span></div>
+            <div class="pw-legend"><span><i class="lg-dot"></i>Outage</span><span><i class="lg-area"></i>Affected area</span><span><i class="lg-line"></i>Sevier County</span></div>
+            <button class="pw-demo" id="pwDemo" type="button" aria-pressed="false">Show an example</button>
+          </div>
+        </div>
+        <div class="pw-check" id="pwCheck">
+          <div class="pc-head">
+            <div><h4>Does my cabin have power?</h4><p>Type a property address, or tap the map where it is. Add more than one to check all your cabins at once.</p></div>
+          </div>
+          <form class="pc-form" id="pcForm" autocomplete="off">
+            <label class="sr" for="pcAddr">Property address</label>
+            <input id="pcAddr" type="text" placeholder="Street address, city (for example: 1011 Banner Rd, Gatlinburg)" required>
+            <button class="btn btn-sm btn-ember" type="submit">Check power</button>
+          </form>
+          <ul class="pc-list" id="pcList" aria-live="polite"></ul>
+          <p class="pc-fine">This checks the address against outages reported to Sevier County Electric. It can't see your meter. If the lights are out and nothing shows here, call <a href="tel:+18657746300">865-774-6300</a>. Addresses are looked up with the free U.S. Census geocoder and aren't saved by this site. <span id="pcSave" hidden><a href="#" id="pcLink">Bookmark this link</a> to check the same cabins next time.</span></p>
+        </div>
+      </article>
+      <article class="panel wx">
+        <div class="panel-top"><h3 class="panel-title">Gatlinburg forecast</h3><a class="lnk" href="https://forecast.weather.gov/MapClick.php?lat=35.7143&lon=-83.5102" target="_blank" rel="noopener">NWS →</a></div>
+        <ul class="wx-list"><li><span class="wx-n">Tuesday</span><span class="wx-t">63°</span><span class="wx-f">Sunny</span></li><li><span class="wx-n">Tuesday Night</span><span class="wx-t">39°</span><span class="wx-f">Mostly Clear</span></li><li><span class="wx-n">Wednesday</span><span class="wx-t">66°</span><span class="wx-f">Sunny</span></li><li><span class="wx-n">Wednesday Night</span><span class="wx-t">42°</span><span class="wx-f">Mostly Clear</span></li><li><span class="wx-n">Thursday</span><span class="wx-t">67°</span><span class="wx-f">Mostly Sunny</span></li></ul>
+        <p class="wx-ok">No active weather alerts for Gatlinburg.</p>
+      </article>
+      <article class="panel accts">
+        <div class="panel-top"><h3 class="panel-title">Official accounts on X</h3></div>
+        <div class="acct-list"><a class="acct" href="https://x.com/GreatSmokyNPS" target="_blank" rel="noopener"><span class="acct-x" aria-hidden="true">𝕏</span><span><b>@GreatSmokyNPS</b><em>Great Smoky Mountains NP</em><small>Road closures, trail and weather updates. The park's road-status account retired, so updates post here now.</small></span></a><a class="acct" href="https://x.com/SevierSheriff" target="_blank" rel="noopener"><span class="acct-x" aria-hidden="true">𝕏</span><span><b>@SevierSheriff</b><em>Sevier County Sheriff's Office</em><small>Crashes, road blockages and public-safety notices.</small></span></a><a class="acct" href="https://x.com/SevierCounty" target="_blank" rel="noopener"><span class="acct-x" aria-hidden="true">𝕏</span><span><b>@SevierCounty</b><em>Sevier County Government</em><small>Office closures, county events and announcements.</small></span></a><a class="acct" href="https://x.com/GatlinburgCity" target="_blank" rel="noopener"><span class="acct-x" aria-hidden="true">𝕏</span><span><b>@GatlinburgCity</b><em>City of Gatlinburg</em><small>City notices, police and fire department events.</small></span></a><a class="acct" href="https://x.com/NWSMorristown" target="_blank" rel="noopener"><span class="acct-x" aria-hidden="true">𝕏</span><span><b>@NWSMorristown</b><em>National Weather Service</em><small>Winter storms, wind and flood warnings for East Tennessee.</small></span></a></div>
+        <p class="panel-note">In production, new posts from these accounts appear here with a link to the original.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- NATIONAL PARK -->
+<section id="park" class="park">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker">Great Smoky Mountains National Park</p><h2 class="sec-title">Park roads, trails and closures</h2></div>
+      <p class="sec-note"><span class="upd">Updated hourly</span> Straight from the park's official alerts</p>
+    </div>
+    <div class="park-grid">
+      <div class="alerts"><a class="alert-row al-closed" href="https://www.nps.gov/grsm/planyourvisit/conditions.htm" target="_blank" rel="noopener"><span class="al-cat">Closed</span><span class="al-txt"><b>Kuwohi Road Closed Due To Snow And Ice</b><small>Closed to all traffic until crews clear the road. Check before sending guests up.</small></span><span class="al-d">Nov 16</span></a><a class="alert-row al-closed" href="https://www.nps.gov/grsm/planyourvisit/seasonalroads.htm" target="_blank" rel="noopener"><span class="al-cat">Closed</span><span class="al-txt"><b>Seasonal road closures</b><small>Heintooga Ridge Road, Parson Branch Road, and Rich Mountain Road are closed for the season.</small></span><span class="al-d">Nov 10</span></a><a class="alert-row al-closed" href="https://www.nps.gov/grsm/planyourvisit/conditions.htm" target="_blank" rel="noopener"><span class="al-cat">Closed</span><span class="al-txt"><b>Park Headquarters Road is closed</b><small>Park Headquarters Road is closed due to rehabilitation work on the Sugarlands water and wastewater systems.</small></span><span class="al-d">Since Jun 26</span></a><a class="alert-row al-closed" href="https://www.nps.gov/grsm/planyourvisit/seasonalroads.htm" target="_blank" rel="noopener"><span class="al-cat">Closed</span><span class="al-txt"><b>Straight Fork and the one-way section of Balsam Mountain Road closed.</b><small>Straight Fork and the one-way section of Balsam Mountain Road (Heintooga Round-Bottom Road) are closed.</small></span><span class="al-d">Ongoing</span></a><a class="alert-row al-info" href="https://www.nps.gov/grsm/planyourvisit/fees.htm" target="_blank" rel="noopener"><span class="al-cat">Info</span><span class="al-txt"><b>Most visitors need a parking tag</b><small>All vehicles parking for longer than 15 minutes require a parking tag. Three tag durations are available for purchase for all vehicle sizes and types:…</small></span><span class="al-d">Ongoing</span></a></div>
+      <aside class="park-side">
+        <div class="ps-card">
+          <h3>Busiest days ahead</h3>
+          <p>The park expects full lots and heavy traffic on <b>Nov 22, 25, 27–28</b> and <b>Dec 1–2 and 26</b>.</p>
+          <a class="lnk" href="https://www.rgj.com/story/entertainment/smoky-mountains/2026/11/13/great-smoky-mountains-national-park-busy-days-visitors-november-december-fall-winter/92722959007/" target="_blank" rel="noopener">Park congestion forecast →</a>
+        </div>
+        <div class="ps-card">
+          <h3>Closing Nov 29</h3>
+          <p>Kuwohi Road, Roaring Fork Motor Nature Trail and Little Greenbrier Road close for the season. Elkmont campground closes too.</p>
+          <a class="lnk" href="https://www.wate.com/news/smoky-mountains/when-does-kuwohi-road-close-smokies-seasonal-road-closures/" target="_blank" rel="noopener">WATE →</a>
+        </div>
+        <div class="ps-card ps-tip">
+          <h3>Tell your guests</h3>
+          <p>Parking anywhere in the park longer than 15 minutes needs a parking tag. Road line: 865-436-1200, ext. 631.</p>
+          <a class="lnk" href="https://www.nps.gov/grsm/planyourvisit/fees.htm" target="_blank" rel="noopener">Parking tags →</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE CAMS -->
+<section id="cams" class="cams">
+  <div class="wrap">
+    <div class="sec-head sec-head-light">
+      <h2 class="sec-title">Live cams</h2>
+      <p class="sec-note"><span class="upd upd-light">Live</span> See the weather, the traffic and the crowds before guests ask</p>
+    </div>
+    <div class="cam-grid">
+      <article class="cam cam-lead"><button class="yt yt-live" data-id="EVK9iNnARh8" aria-label="Play live cam: Downtown Gatlinburg from SkyPark"><img src="https://i.ytimg.com/vi/EVK9iNnARh8/maxresdefault_live.jpg" alt="" loading="lazy"><span class="live-badge"><i></i>Live</span><span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button><div class="cam-body"><h3>Downtown Gatlinburg from SkyPark</h3><p>Gatlinburg SkyPark</p></div></article>
+      <div class="cam-side"><article class="cam"><button class="yt yt-live" data-id="YUlS-JhGZ8U" aria-label="Play live cam: Pigeon Forge Parkway"><img src="https://i.ytimg.com/vi/YUlS-JhGZ8U/hqdefault_live.jpg" alt="" loading="lazy"><span class="live-badge"><i></i>Live</span><span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button><div class="cam-body"><h3>Pigeon Forge Parkway</h3><p>WVLT News</p></div></article><article class="cam"><button class="yt yt-live" data-id="Exaxsl-pg84" aria-label="Play live cam: Clayton's Landing at SkyPark"><img src="https://i.ytimg.com/vi/Exaxsl-pg84/hqdefault_live.jpg" alt="" loading="lazy"><span class="live-badge"><i></i>Live</span><span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button><div class="cam-body"><h3>Clayton's Landing at SkyPark</h3><p>Gatlinburg SkyPark</p></div></article><article class="cam"><button class="yt yt-live" data-id="J-TJECRGI18" aria-label="Play live cam: Bluff Mountain"><img src="https://i.ytimg.com/vi/J-TJECRGI18/hqdefault_live.jpg" alt="" loading="lazy"><span class="live-badge"><i></i>Live</span><span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button><div class="cam-body"><h3>Bluff Mountain</h3><p>Mountain Valley Winery</p></div></article><article class="cam"><button class="yt yt-live" data-channel="UCEGt67zzSCWsMklhjEpNYNg" aria-label="Play live cam: Mountain view from Gatlinburg Landing"><img src="https://i.ytimg.com/vi/how60qY6PXk/hqdefault_live.jpg" alt="" loading="lazy"><span class="live-badge"><i></i>Live</span><span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button><div class="cam-body"><h3>Mountain view from Gatlinburg Landing</h3><p>Gatlinburg Landing</p></div></article></div>
+    </div>
+    <h3 class="cams-sub">Inside the national park</h3>
+    <div class="nps-grid"><a class="npscam" href="https://home.nps.gov/grsm/learn/photosmultimedia/webcams.htm" target="_blank" rel="noopener"><span class="np-img"><img src="https://www.nps.gov/featurecontent/ard/webcams/images/grsm.jpg" alt="Current view from the Look Rock park webcam" loading="lazy" onerror="this.parentElement.classList.add('np-off')"><span class="live-badge live-badge-sm">Every 15 min</span></span><b>Look Rock</b><small>Foothills Parkway West</small></a><a class="npscam" href="https://home.nps.gov/grsm/learn/photosmultimedia/webcams.htm" target="_blank" rel="noopener"><span class="np-img"><img src="https://www.nps.gov/featurecontent/ard/webcams/images/gsng.jpg" alt="Current view from the Newfound Gap park webcam" loading="lazy" onerror="this.parentElement.classList.add('np-off')"><span class="live-badge live-badge-sm">Every 15 min</span></span><b>Newfound Gap</b><small>US 441 at the Tennessee–North Carolina line</small></a><a class="npscam" href="https://home.nps.gov/grsm/learn/photosmultimedia/webcams.htm" target="_blank" rel="noopener"><span class="np-img"><img src="https://www.nps.gov/featurecontent/ard/webcams/images/grpk.jpg" alt="Current view from the Purchase Knob park webcam" loading="lazy" onerror="this.parentElement.classList.add('np-off')"><span class="live-badge live-badge-sm">Every 15 min</span></span><b>Purchase Knob</b><small>High-elevation view, North Carolina side</small></a><div class="npscam np-note"><b>Kuwohi</b><small>The Kuwohi cam is inactive for the season. It will show here again when the park turns it back on.</small></div></div>
+    <div class="more-cams"><span>More cams</span><a href="https://anakeesta.com/live-cameras-at-anakeesta/" target="_blank" rel="noopener">Anakeesta 360° tower cam ↗</a><a href="https://www.gatlinburgspaceneedle.com/webcam/" target="_blank" rel="noopener">Gatlinburg Space Needle ↗</a><a href="https://www.obergatlinburg.com/webcams" target="_blank" rel="noopener">Ober Mountain base ↗</a><a href="https://www.moonshinemountaincoaster.com/live-feed/" target="_blank" rel="noopener">Moonshine Mountain Coaster ↗</a><a href="https://www.elkspringsresort.com/live-gatlinburg-webcam/" target="_blank" rel="noopener">Elk Springs, Gatlinburg ↗</a></div>
+  </div>
+</section>
+
+<!-- ATTRACTIONS -->
+<section id="attractions" class="attr">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker">Big attractions</p><h2 class="sec-title">Dollywood and the big draws</h2></div>
+      <p class="sec-note"><span class="upd">Updated daily</span> Deals, hours and tips your guests will ask about</p>
+    </div>
+    <div class="attr-grid">
+      <article class="dolly">
+        <div class="dolly-head">
+          <div><p class="tag tag-light">Dollywood · Pigeon Forge</p><h3>Smoky Mountain Christmas</h3><p class="dolly-sub">Now through Jan 3, 2027</p></div>
+          <span class="dolly-status"><i></i>Live waits during park hours</span>
+        </div>
+        <div class="dolly-cols">
+          <div>
+            <h4>Ride waits</h4>
+            <p class="dw-note">All-time average waits. Live waits fill in during park hours.</p>
+            <ul class="rides"><li><span>NightFlight Expedition</span><span class="rw-bar"><i style="width:59%"></i></span><b>47 min</b><small>usual daily max 79</small><em class="rw-now">live: —</em></li><li><span>FireChaser Express</span><span class="rw-bar"><i style="width:38%"></i></span><b>30 min</b><small>usual daily max 53</small><em class="rw-now">live: —</em></li><li><span>Lightning Rod</span><span class="rw-bar"><i style="width:38%"></i></span><b>30 min</b><small>usual daily max 61</small><em class="rw-now">live: —</em></li><li><span>Big Bear Mountain</span><span class="rw-bar"><i style="width:31%"></i></span><b>25 min</b><small>usual daily max 45</small><em class="rw-now">live: —</em></li><li><span>Dragonflier</span><span class="rw-bar"><i style="width:30%"></i></span><b>24 min</b><small>usual daily max 43</small><em class="rw-now">live: —</em></li><li><span>Mystery Mine</span><span class="rw-bar"><i style="width:28%"></i></span><b>22 min</b><small>usual daily max 41</small><em class="rw-now">live: —</em></li></ul>
+            <p class="qt">Wait times powered by <a href="https://queue-times.com/" target="_blank" rel="noopener">Queue-Times.com</a></p>
+          </div>
+          <div>
+            <h4>Current deals</h4>
+            <ul class="deals">
+              <li><b>$45 Christmas friend ticket</b>Buy any 2027 season pass by Dec 13. <a href="https://www.dollywood.com/Deals/Special-Offers" target="_blank" rel="noopener">Dollywood</a></li>
+              <li><b>$59 for public employees</b>Military, first responders, school, government and medical workers, verified by ID.me. Through Nov 23. <a href="https://www.dollywood.com/press/dollywood-christmas-shopping/" target="_blank" rel="noopener">Dollywood</a></li>
+              <li><b>$10 off adult day tickets</b>Limited-time offer through Nov 23. <a href="https://www.dollywood.com/press/dollywood-christmas-shopping/" target="_blank" rel="noopener">Dollywood</a></li>
+              <li><b>Military discount, year round</b>Tickets and passes, verified by ID.me. <a href="https://www.dollywood.com/deals/special-offers/military-discount/" target="_blank" rel="noopener">Dollywood</a></li>
+            </ul>
+            <h4>Host tips</h4>
+            <ul class="tips">
+              <li>Dollywood doesn't offer AAA discounts, though some AAA offices sell tickets. <a href="https://www.dollywood.com/themepark/Guest-Services/FAQs" target="_blank" rel="noopener">FAQ</a></li>
+              <li>Silver passes stop Dec 13. Guests coming Dec 14–Jan 3 need Gold or day tickets. <a href="https://www.dollywood.com/tickets/season-passes/current-passholders/renewals/" target="_blank" rel="noopener">Pass tiers</a></li>
+              <li>Saturdays run far busier than weekdays. Suggest a weekday visit. <a href="https://queue-times.com/en-US/parks/55/stats/2024" target="_blank" rel="noopener">Crowd data</a></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <div class="attr-side">
+        <article class="att">
+          <p class="tag">Ober Mountain · Gatlinburg</p>
+          <h3>Skiing and tubing open Friday, Nov 20</h3>
+          <p>Weather permitting. The summit has already picked up about 2 inches of natural snow, the first of the 2026–27 season.</p>
+          <a class="lnk" href="https://www.obergatlinburg.com/blog/get-ready-for-winter-2026-27-at-ober-gatlinburg" target="_blank" rel="noopener">Ober →</a>
+        </article>
+        <article class="att">
+          <p class="tag">The Island · Pigeon Forge</p>
+          <h3>Free Winterfest kickoff Saturday</h3>
+          <p>Concert at 6 p.m., tree lighting at 8 p.m. Light shows run nightly at 6, 7, 8 and 9 p.m. through Jan 31. Free admission and parking.</p>
+          <a class="lnk" href="https://deeparrival.com/news/the-island-pigeon-forge-winterfest-kickoff-november-21-2026/" target="_blank" rel="noopener">Details →</a>
+        </article>
+        <article class="att">
+          <p class="tag">Anakeesta · Gatlinburg</p>
+          <h3>$5 local days just wrapped</h3>
+          <p>Residents and workers in Sevier, Blount, Cocke and Jefferson counties got in for $5 Nov 6–13. We'll post the next dates here.</p>
+          <a class="lnk" href="https://anakeesta.com/event/local-appreciation-days/" target="_blank" rel="noopener">Anakeesta →</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events" class="events">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="kicker">Events calendar</p>
+        <h2 class="sec-title">The next six months in the Smokies</h2>
+      </div>
+      <p class="sec-note"><span class="upd">Updated daily</span> Price the big weekends before they book up</p>
+    </div>
+    <div class="ev-strip" id="evStrip" aria-label="Long-running festivals over the next six months"></div>
+    <div class="ev-controls">
+      <div class="ev-tabs" id="evTabs" role="tablist" aria-label="Choose a month"></div>
+      <div class="ev-filters" aria-label="Filter events">
+        <button aria-pressed="true" data-c="all">All</button>
+        <button aria-pressed="false" data-c="big">Big draws</button>
+        <button aria-pressed="false" data-c="fest">Festivals</button>
+        <button aria-pressed="false" data-c="conv">Conventions</button>
+        <button aria-pressed="false" data-c="meet">City meetings</button>
+        <button aria-pressed="false" data-c="park">Park</button>
+      </div>
+    </div>
+    <div class="ev-board">
+      <div class="ev-cal-card">
+        <div id="evCal"></div>
+        <div class="ev-legend"><span><i class="c-big"></i>Big draw</span><span><i class="c-fest"></i>Festival</span><span><i class="c-conv"></i>Convention</span><span><i class="c-meet"></i>Meeting</span><span><i class="c-park"></i>Park</span><span><i class="lg-wk"></i>Fri &amp; Sat nights</span></div>
+        <div class="ev-busy"><b>Busiest park days ahead</b><span>Nov 22, 25, 27–28, Dec 1–2 and Dec 26. Expect full lots and slow traffic.</span></div>
+        <div class="ev-ics">
+          <button class="btn btn-sm" id="icsBtn" type="button">Add every date to my calendar</button>
+          <p>Works with Google, Apple and Outlook. New dates show up on their own.</p>
+        </div>
+      </div>
+      <div class="ev-agenda" id="evAgenda" aria-live="polite"></div>
+    </div>
+
+    <div class="bwa" id="bwa">
+      <div class="bwa-l">
+        <span class="fr-tag fr-auto">Free · Automatic</span>
+        <h3>Big weekend alerts</h3>
+        <p>Get an email 30 days before every big weekend, holiday and convention, with last year's average rate for that month and a quick pricing checklist. Only alerts, nothing else.</p>
+        <form class="bwa-form" id="bwaForm" novalidate>
+          <label class="sr" for="bwaEmail">Email address</label>
+          <input id="bwaEmail" name="email" type="email" placeholder="Your email" autocomplete="email" required>
+          <button class="btn btn-ember" type="submit">Get alerts</button>
+        </form>
+        <p class="bwa-msg" id="bwaMsg" role="status"></p>
+        <p class="bwa-cal">Prefer your calendar? <a id="bwaCal" href="data/big-weekends.ics">Subscribe to the alerts</a> in Google, Apple or Outlook.</p>
+      </div>
+      <div class="bwa-r">
+        <p class="bwa-h">Next alerts</p>
+        <ul class="bwa-next" id="bwaNext"><li>Loading…</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos" class="videos">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title">Watch</h2>
+      <p class="sec-note"><span class="upd">Updated daily</span> New videos from Smokies agents, hosts and STR channels</p>
+    </div>
+    <div class="vid-grid">
+      <article class="vid vid-lead">
+        <button class="yt" data-id="nqN2-x4K1JA" aria-label="Play video: Buying a Cabin for Airbnb in Gatlinburg? What Cabins Make in 2026">
+          <img src="https://i.ytimg.com/vi/nqN2-x4K1JA/hqdefault.jpg" alt="" loading="lazy">
+          <span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+          <span class="yt-dur">5:45</span>
+        </button>
+        <div class="vid-body"><p class="tag">Market data</p><h3>Buying a Cabin for Airbnb in Gatlinburg? What Cabins Make in 2026</h3><p class="meta">STRProfitMap · YouTube</p></div>
+      </article>
+      <div class="vid-side">
+      <article class="vid">
+        <button class="yt" data-id="yvXwPUv_uRE" aria-label="Play video: Airbnb Crash is Here… No One Can Sell!">
+          <img src="https://i.ytimg.com/vi/yvXwPUv_uRE/hqdefault.jpg" alt="" loading="lazy">
+          <span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+          
+        </button>
+        <div class="vid-body"><p class="tag">Debate</p><h3>Airbnb Crash is Here… No One Can Sell!</h3><p class="meta">Nima Jay · YouTube</p></div>
+      </article>
+      <article class="vid">
+        <button class="yt" data-id="ZoDIFkev2YM" aria-label="Play video: 10 INSANE Smoky Mountain Cabins You Have to See to Believe!">
+          <img src="https://i.ytimg.com/vi/ZoDIFkev2YM/hqdefault.jpg" alt="" loading="lazy">
+          <span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+          
+        </button>
+        <div class="vid-body"><p class="tag">Cabin tours</p><h3>10 INSANE Smoky Mountain Cabins You Have to See to Believe!</h3><p class="meta">Brandon's Travel Guides · YouTube</p></div>
+      </article>
+      <article class="vid">
+        <button class="yt" data-id="RF0nSLkUlkA" aria-label="Play video: Home Prices Dropped for the First Time in 3 Years Explained">
+          <img src="https://i.ytimg.com/vi/RF0nSLkUlkA/hqdefault.jpg" alt="" loading="lazy">
+          <span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+          
+        </button>
+        <div class="vid-body"><p class="tag">National</p><h3>Home Prices Dropped for the First Time in 3 Years Explained</h3><p class="meta">BiggerPockets · YouTube</p></div>
+      </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET REPORT -->
+<section id="market" class="market">
+  <div class="wrap">
+    <div class="market-head">
+      <div>
+        <p class="kicker">Market Report · October 2026</p>
+        <h2 class="market-title">Sevier County cabin market</h2>
+      </div>
+      <p class="market-sub"><span class="upd">Updated monthly</span> Next update Dec 16</p>
+    </div>
+
+    <div class="mr-grid">
+      <!-- Gauge -->
+      <article class="panel panel-gauge">
+        <h3 class="panel-title">Buyer's or seller's market?</h3>
+        <div class="gauge-wrap">
+          <svg viewBox="0 0 240 140" class="gauge" role="img" aria-label="Market gauge at 25 out of 100, favoring buyers">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#3E6B57"/><stop offset=".5" stop-color="#C9A65A"/><stop offset="1" stop-color="#B9572B"/>
+              </linearGradient>
+            </defs>
+            <path d="M20 120 A100 100 0 0 1 220 120" fill="none" stroke="url(#g)" stroke-width="18" stroke-linecap="round"/>
+            <g id="needle"><line x1="120" y1="120" x2="120" y2="36" stroke="#1D2420" stroke-width="4" stroke-linecap="round"/><circle cx="120" cy="120" r="9" fill="#1D2420"/></g>
+          </svg>
+          <div class="gauge-ends"><span>Favors buyers</span><span>Favors sellers</span></div>
+          <div class="gauge-read"><span class="gauge-num">25</span><span class="gauge-lbl">Buyer's market</span></div>
+        </div>
+        <p class="panel-note">Peaked at 82 in Sept 2020. Zillow's market heat index; 50 is balanced.</p>
+        <div class="chart-sm"><canvas id="heatChart" aria-label="Market heat index since 2019"></canvas></div>
+      </article>
+
+      <!-- Gap -->
+      <article class="panel panel-gap">
+        <div class="panel-top">
+          <h3 class="panel-title">The luxury vs. entry-level gap</h3>
+          <div class="legend"><span class="lg lg-top">Top third of homes</span><span class="lg lg-bot">Bottom third</span></div>
+        </div>
+        <div class="callouts">
+          <div class="callout"><span class="c-num neg">−23%</span><span class="c-txt">Top third since its July 2022 peak ($881K → $680K)</span></div>
+          <div class="callout"><span class="c-num pos">+4.4%</span><span class="c-txt">Bottom third, past 12 months ($266K)</span></div>
+        </div>
+        <div class="chart-lg"><canvas id="gapChart" aria-label="Typical values, top third versus bottom third of Sevier County homes since 2019"></canvas></div>
+      </article>
+
+      <!-- Months of supply -->
+      <article class="panel panel-mos">
+        <h3 class="panel-title">Months of supply</h3>
+        <p class="big-stat">9.1 <span>months</span></p>
+        <p class="panel-note">Homes for sale ÷ monthly sales. Under 6 favors sellers, over 6 favors buyers. Was 2.1 in Oct 2021.</p>
+        <div class="chart-md"><canvas id="mosChart" aria-label="Months of supply since 2019 with 6-month balanced line"></canvas></div>
+      </article>
+
+      <!-- Ladder -->
+      <article class="panel panel-ladder">
+        <div class="panel-top">
+          <h3 class="panel-title">Price ladder by bedrooms</h3>
+          <div class="seg" role="tablist" aria-label="Town">
+            <button role="tab" aria-selected="true" data-town="Gatlinburg">Gatlinburg</button>
+            <button role="tab" aria-selected="false" data-town="Pigeon Forge">Pigeon Forge</button>
+            <button role="tab" aria-selected="false" data-town="Sevierville">Sevierville</button>
+          </div>
+        </div>
+        <div id="ladder" class="ladder"></div>
+        <p class="panel-note">Typical home value by bedroom count, change vs. October 2025.</p>
+      </article>
+    </div>
+    <p class="credit">Data Provided by Zillow Group. Months of supply calculated from Zillow inventory and sales counts.</p>
+  </div>
+</section>
+
+<!-- NIGHTLY RATES -->
+<section id="rates" class="rates">
+  <div class="wrap">
+    <div class="rates-in">
+      <div class="rates-intro">
+        <p class="kicker">Nightly rate rhythm</p>
+        <h2 class="sec-title">Is your rate drop normal?</h2>
+        <p>Smokies cabin rates rise and fall on the same calendar every year. If your price slides after July or in January, nearly every cabin's does too.</p>
+        <div class="rate-calls">
+          <div class="rc rc-up"><span>+16%</span><p>Typical jump from November to December. Holiday weeks are coming.</p></div>
+          <div class="rc rc-dn"><span>−22%</span><p>Typical drop from December to January. Normal, not a warning sign.</p></div>
+          <div class="rc"><span>$480 → $703</span><p>Low month (Sep) to high month (Jun), average across Sevier County.</p></div>
+        </div>
+      </div>
+      <article class="panel panel-rates">
+        <div class="panel-top">
+          <h3 class="panel-title">Average nightly rate and occupancy by month</h3>
+          <div class="legend"><span class="lg lg-adr">Nightly rate</span><span class="lg lg-occ">Occupancy</span></div>
+        </div>
+        <div class="chart-rates"><canvas id="ratesChart" aria-label="Average nightly rate and occupancy by month in Sevier County"></canvas></div>
+        <div class="season" id="seasonStrip" aria-label="Season by month"></div>
+        <div class="bed-adr">
+          <p>By bedrooms</p>
+          <span><b>2 BR</b>$313</span><span><b>3 BR</b>$415</span><span><b>4 BR</b>$557</span><span><b>5+ BR</b>$938</span>
+        </div>
+        <p class="panel-note">Sevier County, all active Airbnb listings, Oct 2025–Sep 2026. Source: <a href="https://www.airroi.com/airbnb-data/united-states/tennessee/sevier-county" target="_blank" rel="noopener">AirROI</a>. <span class="upd">Updated monthly</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FREE FOR HOSTS -->
+<section id="free" class="free">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker">Free for hosts</p><h2 class="sec-title">Free tools that make hosting easier</h2></div>
+      <p class="sec-note"><span class="upd">Free</span> Most need no sign-up. The ones that update themselves say so.</p>
+    </div>
+    <div class="free-grid">
+      <a class="fr" href="#staylink"><span class="fr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z M14 2v6h6 M9 13h8 M9 17h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><span class="fr-tag fr-auto">Free · updates daily</span><h3>Guest stay link</h3><p>A page for each booking with the events, weather and park updates for your guests’ exact dates. Text it, or print the QR code.</p><span class="fr-cta">Make a stay link →</span></a>
+      <a class="fr" href="#power"><span class="fr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><span class="fr-tag fr-auto">Free · live</span><h3>Does my cabin have power?</h3><p>Type your cabin addresses and see right away if Sevier County Electric has an outage reported nearby.</p><span class="fr-cta">Check my cabins →</span></a>
+      <a class="fr" href="posts.html" target="_blank" rel="noopener"><span class="fr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 16l5-5 4 4 3-3 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="16" cy="9" r="1.6" fill="currentColor"/></svg></span><span class="fr-tag fr-auto">Free · new every Monday</span><h3>Ready-to-post this week</h3><p>Six finished posts with captions, made from this week’s numbers, events and park updates. Download and share.</p><span class="fr-cta">See this week’s posts →</span></a>
+      <a class="fr" href="cards.html" target="_blank" rel="noopener"><span class="fr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7h18v13H3z M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><span class="fr-tag">Free</span><h3>Card maker</h3><p>Holiday cards, welcome-to-the-neighborhood cards and thank-you cards to send another host, in square, post and story sizes.</p><span class="fr-cta">Make a card →</span></a>
+      <button class="fr" type="button" id="icsBtn2"><span class="fr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18 M8 3v4 M16 3v4 M8 15h3" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></span><span class="fr-tag fr-auto">Free · updates daily</span><h3>Smokies events in your calendar</h3><p>Every big weekend, festival, convention and city meeting in your Google, Apple or Outlook calendar.</p><span class="fr-cta">Add to my calendar →</span></button>
+      <a class="fr" href="#checkin"><span class="fr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8 M8 12h5" stroke="currentColor" stroke-width="1.6"/></svg></span><span class="fr-tag fr-auto">Free · updates daily</span><h3>Check-in message builder</h3><p>A ready-to-send guest message with today’s road closures, weather and events. Paste it into Airbnb, VRBO or a text.</p><span class="fr-cta">Build a message →</span></a>
+      <a class="fr" href="downloads/smokies-welcome-book-template.docx" download><span class="fr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z M20 4h-4a2 2 0 0 0-2 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><span class="fr-tag">Free download</span><h3>Smokies welcome book template</h3><p>An editable welcome book written for Smokies cabins: steep driveways, bears and trash, hot tubs, the park and local favorites.</p><span class="fr-cta">Download (Word) →</span></a>
+      <a class="fr" href="downloads/smokies-winter-guest-guide.pdf" target="_blank" rel="noopener" download><span class="fr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2v20 M4 6l16 12 M20 6L4 18" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span><span class="fr-tag">Free download</span><h3>Winter-ready guest guide</h3><p>What guests need to know about snow and ice, mountain roads, power outages and park closures. Print it or send it before arrival.</p><span class="fr-cta">Download (PDF) →</span></a>
+    </div>
+
+    <div class="season" id="checklists">
+      <div class="season-txt">
+        <span class="fr-tag">Free · Check off, print or add reminders</span>
+        <h3>Seasonal checklists for your cabin</h3>
+        <p>Winterizing, hot tub, gutters and spring opening, written for mountain rentals. Send a list to your cleaner or handyman in one tap.</p>
+        <a class="fr-cta" href="checklists.html">Open the checklists &rarr;</a>
+      </div>
+      <div class="season-tiles">
+        <a href="checklists.html#winterizing" data-m="10,11,12,1,2"><img src="img/winter.webp" alt="" loading="lazy" width="300" height="200"><b>Winterizing</b><small>Oct to Nov</small></a>
+        <a href="checklists.html#hot-tub" data-m="all"><img src="img/hottub.webp" alt="" loading="lazy" width="300" height="200"><b>Hot tub</b><small>Every turnover</small></a>
+        <a href="checklists.html#gutters" data-m="11,12,5"><img src="img/cabin.webp" alt="" loading="lazy" width="300" height="200"><b>Gutters</b><small>Late fall and spring</small></a>
+        <a href="checklists.html#spring-opening" data-m="3,4"><img src="img/spring.webp" alt="" loading="lazy" width="300" height="200"><b>Spring opening</b><small>Mar to Apr</small></a>
+      </div>
+    </div>
+    <script>
+      (function(){var m=new Date().getMonth()+1;document.querySelectorAll('.season-tiles a').forEach(function(a){var d=a.getAttribute('data-m');var b=document.createElement('span');if(d==='all'){b.className='st-b st-on';b.textContent='Ongoing';}else if(d.split(',').map(Number).indexOf(m)>-1){b.className='st-b';b.textContent='Due now';}else return;a.appendChild(b);});})();
+    </script>
+
+    <div class="free-tools">
+      <article class="tool" id="checkin">
+        <div class="tool-head"><h3>Check-in message builder</h3><span class="fr-tag fr-auto">Today's info</span></div>
+        <div class="ci-opts" id="ciOpts">
+          <label><input type="checkbox" value="roads" checked> Park roads</label>
+          <label><input type="checkbox" value="weather" checked> Weather</label>
+          <label><input type="checkbox" value="events" checked> Events this week</label>
+          <label><input type="checkbox" value="parking" checked> Parking tags</label>
+          <label><input type="checkbox" value="power"> Power outages</label>
+        </div>
+        <label class="sr" for="ciText">Message</label>
+        <textarea id="ciText" rows="11"></textarea>
+        <div class="tool-actions"><button class="btn btn-sm" id="ciCopy" type="button">Copy message</button><span class="tool-note" id="ciNote">Edit anything before you copy.</span></div>
+      </article>
+      <article class="tool" id="staylink">
+        <div class="tool-head"><h3>Guest stay link</h3><span class="fr-tag fr-auto">Updates every morning</span></div>
+        <p class="tool-note" style="font-size:.85rem;margin-top:-.4rem">Your guests get a page with events, weather and park updates for their dates. It keeps updating until they leave. Don't put door codes or your street address here.</p>
+        <form class="sl-form" id="slForm">
+          <label>Cabin name <input id="slCabin" type="text" maxlength="60" placeholder="The Ridge Cabin"></label>
+          <label>Your first name <input id="slHost" type="text" maxlength="40" placeholder="Mike"></label>
+          <label>Check-in <input id="slIn" type="date" required></label>
+          <label>Check-out <input id="slOut" type="date" required></label>
+          <label class="sl-wide">Note to guests (optional) <textarea id="slNote" rows="3" maxlength="600" placeholder="Hot tub is ready. Firewood is on the porch. Enjoy the view!"></textarea></label>
+        </form>
+        <div class="sl-out">
+          <div class="sl-qr" id="slQr" aria-label="QR code for the stay link"></div>
+          <div class="sl-link">
+            <label class="sr" for="slUrl">Stay link</label>
+            <input id="slUrl" type="text" readonly>
+            <div class="tool-actions"><button class="btn btn-sm btn-ember" id="slCopy" type="button">Copy link</button><a class="btn btn-sm" id="slOpen" href="stay.html" target="_blank" rel="noopener">Preview</a><span class="tool-note" id="slMsg">Paste it into your check-in message.</span></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BREAK-EVEN CALCULATOR -->
+<section id="tools" class="calc">
+  <div class="wrap calc-in">
+    <div class="calc-intro">
+      <p class="kicker">Tool</p>
+      <h2 class="sec-title">How many nights pay the mortgage?</h2>
+      <p>Pick a town and bedroom count. We fill in the typical price and today's mortgage rate. Change anything to match your cabin.</p>
+      <img src="img/interior.webp" alt="Cabin great room with stone fireplace and mountain view" class="calc-img" loading="lazy">
+    </div>
+    <form class="calc-form" id="calc" onsubmit="return false">
+      <div class="row2">
+        <label>Town<select id="cTown"><option>Gatlinburg</option><option>Pigeon Forge</option><option>Sevierville</option></select></label>
+        <label>Bedrooms<select id="cBeds"><option value="1">1</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5+</option></select></label>
+      </div>
+      <div class="row2">
+        <label>Purchase price<input id="cPrice" type="number" step="1000" inputmode="numeric"></label>
+        <label>Your nightly rate<input id="cRate" type="number" step="5" inputmode="numeric"></label>
+      </div>
+      <div class="row3">
+        <label>Down payment %<input id="cDown" type="number" value="20" step="1"></label>
+        <label>Mortgage rate %<input id="cMort" type="number" step="0.01"></label>
+        <label>Booking costs %<input id="cVar" type="number" value="30" step="1" title="Cleaning, platform fees, supplies, management"></label>
+      </div>
+      <label>Monthly fixed costs (tax, insurance, utilities, upkeep)<input id="cFixed" type="number" value="950" step="25"></label>
+
+      <div class="result" aria-live="polite">
+        <div class="res-main"><span id="rNights" class="res-num">—</span><span class="res-lbl">booked nights a month to break even</span></div>
+        <div class="month-bar" id="monthBar" aria-hidden="true"></div>
+        <div class="res-row">
+          <div><span id="rOcc">—</span><small>occupancy needed</small></div>
+          <div><span id="rPay">—</span><small>mortgage payment</small></div>
+          <div><span id="rCost">—</span><small>total monthly cost</small></div>
+        </div>
+      </div>
+      <p class="fine">Estimate only. Price from Zillow typical values; rate is Freddie Mac's 30-year average (7.11%, Nov 12, 2026). Nightly rate is an example until you enter yours.</p>
+    </form>
+  </div>
+</section>
+
+<!-- POLL + CALENDAR + BEST OF -->
+<section class="trio">
+  <div class="wrap trio-grid trio-2">
+    <article class="poll" id="poll">
+      <p class="kicker">Owner Poll</p>
+      <h3>Are your December bookings ahead of last year?</h3>
+      <div class="poll-opts">
+        <button data-v="Ahead">Ahead</button><button data-v="About the same">About the same</button><button data-v="Behind">Behind</button>
+      </div>
+      <div class="poll-res" hidden>
+        <div class="pr"><span>Ahead</span><b style="--w:34%"></b><em>34%</em></div>
+        <div class="pr"><span>Same</span><b style="--w:27%"></b><em>27%</em></div>
+        <div class="pr"><span>Behind</span><b style="--w:39%"></b><em>39%</em></div>
+        <p class="fine">Sample results for the mockup. Real results run in next week's issue.</p>
+      </div>
+    </article>
+    <article class="best">
+      <p class="kicker">Best of the Week</p>
+      <a class="media" href="https://podcasts.apple.com/es/podcast/podcast/id1451872835/episodes" target="_blank" rel="noopener">
+        <span class="m-ico">▶</span><span><b>Thanks For Visiting</b>The two new Airbnb policies for bookings from Nov 20</span>
+      </a>
+      <a class="media" href="https://podimo.com/dk/shows/vacation-rental-scale-up/episode/c07ca975-1d8a-5107-912a-fcaab4f8ec80" target="_blank" rel="noopener">
+        <span class="m-ico">▶</span><span><b>Vacation Rental Scale-Up</b>Late Bookings, OTA Growth and 2027 Planning With Sally Henry of KeyData</span>
+      </a>
+      <a class="media" href="https://podcasts.apple.com/us/podcast/the-short-term-show/id1576433178" target="_blank" rel="noopener">
+        <span class="m-ico">▶</span><span><b>The Short Term Show</b>Avery Carl on buying, financing and markets</span>
+      </a>
+    </article>
+  </div>
+</section>
+
+<!-- SUBSCRIBE -->
+<section id="subscribe" class="sub">
+  <img src="img/road.webp" alt="" class="sub-bg" loading="lazy">
+  <div class="sub-shade"></div>
+  <div class="wrap sub-in">
+    <h2>Get the Brief every Monday.</h2>
+    <p>Rules, numbers and news for your cabin, in five minutes. Free. Plus the 2027 Sevier County STR rules guide, town by town.</p>
+    <form class="sub-form" data-kit="weekly" novalidate>
+      <label class="sr" for="em">Email address</label>
+      <input id="em" type="email" placeholder="you@email.com" required>
+      <button class="btn btn-ember" type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="wordmark wordmark-sm">The Smokies Brief</p>
+      <p class="foot-p">Independent weekly news for Smoky Mountain cabin owners and investors.</p>
+    </div>
+    <div class="foot-help">
+      <p><strong>Need a cabin manager or your own booking website?</strong> Our publisher can help. <a href="#">Learn more →</a></p>
+    </div>
+    <div class="foot-fine">
+      <p>Published by [DBA name], which also offers cabin management and host websites. Market data provided by Zillow Group. Mortgage rate: Freddie Mac. Headlines link to their original publishers.</p>
+      <p>[Mailing address] · <a href="#">Privacy</a> · <a href="#">About</a> · <a href="#">Unsubscribe</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="data.js"></script>
+<script src="content.js"></script>
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" defer></script>
+<script src="power.js" defer></script>
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+<script src="free.js"></script>
+<script src="site-config.js"></script>
+<script src="alerts.js"></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+{
+ "updated": "2026-11-17T12:30:47.126Z",
+ "lead_days": 30,
+ "alerts": [
+  {
+   "id": "2026-12-04-yama-con-anime-and-gaming-convention",
+   "title": "Yama-Con anime and gaming convention",
+   "short": "Yama-Con anime and gaming convention",
+   "start": "2026-12-04",
+   "end": "2026-12-06",
+   "dates": "Dec 4–6",
+   "place": "LeConte Center",
+   "kind": "conv",
+   "url": "https://www.pigeonforge.com/area/leconte-center/events/",
+   "alert_on": "2026-11-04",
+   "month": "Dec",
+   "market": {
+    "adr": 699,
+    "occ": 50,
+    "season": "High",
+    "period": "Oct 2025 – Sep 2026"
+   }
+  },
+  {
+   "id": "2026-12-28-strength-to-stand-december-conference",
+   "title": "Strength to Stand December Conference",
+   "short": "Strength to Stand December Conference",
+   "start": "2026-12-28",
+   "end": "2026-12-30",
+   "dates": "Dec 28–30",
+   "place": "Pigeon Forge",
+   "kind": "conv",
+   "url": "https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=2026-06-20",
+   "alert_on": "2026-11-28",
+   "month": "Dec",
+   "market": {
+    "adr": 699,
+    "occ": 50,
+    "season": "High",
+    "period": "Oct 2025 – Sep 2026"
+   }
+  },
+  {
+   "id": "2026-12-31-new-year-s-eve-celebration-and-fireworks-at-the-island",
+   "title": "New Year's Eve celebration and fireworks at The Island",
+   "short": "New Year's Eve celebration and fireworks at The Island",
+   "start": "2026-12-31",
+   "end": "2026-12-31",
+   "dates": "Dec 31",
+   "place": "Pigeon Forge",
+   "kind": "big",
+   "url": "https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=2026-06-20",
+   "alert_on": "2026-12-01",
+   "month": "Dec",
+   "market": {
+    "adr": 699,
+    "occ": 50,
+    "season": "High",
+    "period": "Oct 2025 – Sep 2026"
+   }
+  },
+  {
+   "id": "2027-01-04-wilderness-wildlife-week",
+   "title": "Wilderness Wildlife Week",
+   "short": "Wilderness Wildlife Week",
+   "start": "2027-01-04",
+   "end": "2027-01-07",
+   "dates": "Jan 4–7",
+   "place": "LeConte Center",
+   "kind": "conv",
+   "url": "https://www.pigeonforge.com/area/leconte-center/events/",
+   "alert_on": "2026-12-05",
+   "month": "Jan",
+   "market": {
+    "adr": 548,
+    "occ": 27,
+    "season": "Low",
+    "period": "Oct 2025 – Sep 2026"
+   }
+  },
+  {
+   "id": "2027-01-16-strength-to-stand-january-conference",
+   "title": "Strength to Stand January Conference",
+   "short": "Strength to Stand January Conference",
+   "start": "2027-01-16",
+   "end": "2027-01-18",
+   "dates": "Jan 16–18",
+   "place": "Pigeon Forge",
+   "kind": "conv",
+   "url": "https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=2026-06-20",
+   "alert_on": "2026-12-17",
+   "month": "Jan",
+   "market": {
+    "adr": 548,
+    "occ": 27,
+    "season": "Low",
+    "period": "Oct 2025 – Sep 2026"
+   }
+  },
+  {
+   "id": "2027-01-16-martin-luther-king-jr-day-weekend",
+   "title": "Martin Luther King Jr. Day weekend",
+   "short": "Martin Luther King Jr. Day weekend",
+   "start": "2027-01-16",
+   "end": "2027-01-18",
+   "dates": "Jan 16–18",
+   "place": "Holiday weekend",
+   "kind": "big",
+   "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+   "alert_on": "2026-12-17",
+   "month": "Jan",
+   "market": {
+    "adr": 548,
+    "occ": 27,
+    "season": "Low",
+    "period": "Oct 2025 – Sep 2026"
+   }
+  },
+  {
+   "id": "2027-01-22-resurrection-youth-conference",
+   "title": "Resurrection Youth Conference",
+   "short": "Resurrection Youth Conference",
+   "start": "2027-01-22",
+   "end": "2027-01-24",
+   "dates": "Jan 22–24",
+   "place": "Pigeon Forge",
+   "kind": "conv",
+   "url": "https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=2026-06-20",
+   "alert_on": "2026-12-23",
+   "month": "Jan",
+   "market": {
+    "adr": 548,
+    "occ": 27,
+    "season": "Low",
+    "period": "Oct 2025 – Sep 2026"
+   }
+  },
+  {
+   "id": "2027-02-04-smoky-mountain-jubilee",
+   "title": "Smoky Mountain Jubilee",
+   "short": "Smoky Mountain Jubilee",
+   "start": "2027-02-04",
+   "end": "2027-02-05",
+   "dates": "Feb 4–5",
+   "place": "Pigeon Forge",
+   "kind": "conv",
+   "url": "https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=2026-06-20",
+   "alert_on": "2027-01-05",
+   "month": "Feb",
+   "market": {
+    "adr": 516,
+    "occ": 29.4,
+    "season": "Low",
+    "period": "Oct 2025 – Sep 2026"
+   }
+  },
+  {
+   "id": "2027-02-11-make-it-count-spectacular-gymnastics-meet",
+   "title": "Make It Count Spectacular gymnastics meet",
+   "short": "Make It Count Spectacular gymnastics meet",
+   "start": "2027-02-11",
+   "end": "2027-02-15",
+   "dates": "Feb 11–15",
+   "place": "Pigeon Forge",
+   "kind": "conv",
+   "url": "https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=2026-06-20",
+   "alert_on": "2027-01-12",
+   "month": "Feb",
+   "market": {
+    "adr": 516,
+    "occ": 29.4,
+    "season": "Low",
+    "period": "Oct 2025 – Sep 2026"
+   }
+  },
+  {
+   "id": "2027-02-13-presidents-day-weekend",
+   "title": "Presidents' Day weekend",
+   "short": "Presidents' Day weekend",
+   "start": "2027-02-13",
+   "end": "2027-02-15",
+   "dates": "Feb 13–15",
+   "place": "Holiday weekend",
+   "kind": "big",
+   "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+   "alert_on": "2027-01-14",
+   "month": "Feb",
+   "market": {
+    "adr": 516,
+    "occ": 29.4,
+    "season": "Low",
+    "period": "Oct 2025 – Sep 2026"
+   }
+  },
+  {
+   "id": "2027-03-11-dollywood-opens-its-i-will-always-love-you-festival",
+   "title": "Dollywood opens its I Will Always Love You Festival",
+   "short": "Dollywood opens its I Will Always Love You Festival",
+   "start": "2027-03-11",
+   "end": "2027-03-11",
+   "dates": "Mar 11",
+   "place": "Dollywood",
+   "kind": "big",
+   "url": "https://www.mypigeonforge.com/events/dollywood/",
+   "alert_on": "2027-02-09",
+   "month": "Mar",
+   "market": {
+    "adr": 577,
+    "occ": 47,
+    "season": "Shoulder",
+    "period": "Oct 2025 – Sep 2026"
+   }
+  },
+  {
+   "id": "2027-03-26-easter-weekend",
+   "title": "Easter weekend",
+   "short": "Easter weekend",
+   "start": "2027-03-26",
+   "end": "2027-03-28",
+   "dates": "Mar 26–28",
+   "place": "Holiday weekend",
+   "kind": "big",
+   "url": null,
+   "alert_on": "2027-02-24",
+   "month": "Mar",
+   "market": {
+    "adr": 577,
+    "occ": 47,
+    "season": "Shoulder",
+    "period": "Oct 2025 – Sep 2026"
+   }
+  },
+  {
+   "id": "2027-04-08-corvette-expo",
+   "title": "Corvette Expo",
+   "short": "Corvette Expo",
+   "start": "2027-04-08",
+   "end": "2027-04-10",
+   "dates": "Apr 8–10",
+   "place": "LeConte Center",
+   "kind": "conv",
+   "url": "https://www.pigeonforge.com/area/leconte-center/events/",
+   "alert_on": "2027-03-09",
+   "month": "Apr",
+   "market": {
+    "adr": 542,
+    "occ": 43.1,
+    "season": "Low",
+    "period": "Oct 2025 – Sep 2026"
+   }
+  },
+  {
+   "id": "2027-05-07-dollywood-s-flower-food-festival-opens",
+   "title": "Dollywood's Flower & Food Festival opens",
+   "short": "Dollywood's Flower & Food Festival opens",
+   "start": "2027-05-07",
+   "end": "2027-05-07",
+   "dates": "May 7",
+   "place": "Dollywood",
+   "kind": "big",
+   "url": "https://www.mypigeonforge.com/events/dollywood/",
+   "alert_on": "2027-04-07",
+   "month": "May",
+   "market": {
+    "adr": 545,
+    "occ": 46.8,
+    "season": "Low",
+    "period": "Oct 2025 – Sep 2026"
+   }
+  },
+  {
+   "id": "2027-05-20-spring-rod-run-new-may-dates-for-2027",
+   "title": "Spring Rod Run (new May dates for 2027)",
+   "short": "Spring Rod Run",
+   "start": "2027-05-20",
+   "end": "2027-05-22",
+   "dates": "May 20–22",
+   "place": "LeConte Center",
+   "kind": "big",
+   "url": "https://www.pigeonforge.com/area/leconte-center/events/",
+   "alert_on": "2027-04-20",
+   "month": "May",
+   "market": {
+    "adr": 545,
+    "occ": 46.8,
+    "season": "Low",
+    "period": "Oct 2025 – Sep 2026"
+   }
+  },
+  {
+   "id": "2027-05-29-memorial-day-weekend",
+   "title": "Memorial Day weekend",
+   "short": "Memorial Day weekend",
+   "start": "2027-05-29",
+   "end": "2027-05-31",
+   "dates": "May 29–31",
+   "place": "Holiday weekend",
+   "kind": "big",
+   "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+   "alert_on": "2027-04-29",
+   "month": "May",
+   "market": {
+    "adr": 545,
+    "occ": 46.8,
+    "season": "Low",
+    "period": "Oct 2025 – Sep 2026"
+   }
+  }
+ ]
+}

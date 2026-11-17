@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%231F3329%27/%3E%3Cpath d=%27M4 24l8-11 5 7 4-5 7 9z%27 fill=%27%23F2C9A8%27/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free card maker for Smokies hosts · The Smokies Brief</title>
+<meta name="description" content="Make a free holiday, welcome or thank-you card to send another Smokies host.">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .cm{display:grid;grid-template-columns:minmax(300px,420px) 1fr;gap:clamp(1.25rem,3vw,2.5rem);align-items:start;padding-block:1rem 4rem}
+  .cm-head{padding-block:clamp(2.5rem,6vw,4rem) 1rem}
+  .cm-head h1{font-family:var(--font-display);font-weight:500;font-size:var(--text-2xl);line-height:1.05;letter-spacing:-.02em;margin:.6rem 0 .6rem}
+  .cm-head p{color:var(--ink-2);max-width:60ch}
+  .ctl{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:1.25rem;display:flex;flex-direction:column;gap:1.1rem;position:sticky;top:1rem}
+  .ctl fieldset{border:0;display:flex;flex-direction:column;gap:.5rem}
+  .ctl legend,.ctl label>span{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.35rem}
+  .ctl label{display:flex;flex-direction:column}
+  .msgs{display:flex;flex-direction:column;gap:.35rem}
+  .msgs button{text-align:left;font:500 .88rem/1.35 var(--font-body);color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:10px;padding:.6rem .75rem;cursor:pointer}
+  .msgs button[aria-pressed="true"]{border-color:var(--spruce);box-shadow:inset 0 0 0 1px var(--spruce);background:rgba(62,107,87,.06)}
+  .ctl input[type=text],.ctl textarea{font:500 .9rem var(--font-body);color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:10px;padding:.65rem .75rem;width:100%}
+  .seg{display:flex;gap:4px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px}
+  .seg button{flex:1;border:0;background:transparent;border-radius:999px;padding:.5em .6em;font:600 .78rem var(--font-body);color:var(--ink-2);cursor:pointer}
+  .seg button[aria-pressed="true"]{background:var(--spruce);color:var(--paper)}
+  .ph{display:grid;grid-template-columns:repeat(5,1fr);gap:.4rem}
+  .ph button{aspect-ratio:1/1;border-radius:10px;border:2px solid transparent;padding:0;overflow:hidden;cursor:pointer;background:var(--paper-2)}
+  .ph button img{width:100%;height:100%;object-fit:cover;display:block}
+  .ph button[aria-pressed="true"]{border-color:var(--ember)}
+  .ph .up{display:grid;place-items:center;font:700 .7rem var(--font-body);color:var(--ink-2);text-align:center;line-height:1.2;border:1px dashed var(--ink-3)}
+  .pv{display:flex;flex-direction:column;gap:1rem;align-items:center}
+  .pv canvas{display:block;width:100%;max-width:560px;height:auto;border-radius:14px;box-shadow:0 24px 50px -28px rgba(29,36,32,.6);background:var(--spruce)}
+  .acts{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center}
+  .lnkbox{width:100%;max-width:560px;display:flex;gap:.5rem;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 5px 5px 1rem}
+  .lnkbox input{flex:1;min-width:0;border:0;background:transparent;font:500 .78rem var(--font-body);color:var(--ink-2)}
+  .hint{font-size:.78rem;color:var(--ink-3);text-align:center;max-width:52ch}
+  @media (max-width:860px){ .cm{grid-template-columns:1fr} .ctl{position:static} .pv{order:-1} }
+</style>
+</head>
+<body>
+<header class="masthead" style="position:static"><div class="wrap mast-in"><a href="index.html" class="wordmark wordmark-sm">The Smokies Brief</a><a class="btn btn-sm" href="index.html#free">All free tools</a></div></header>
+<main class="wrap">
+  <section class="cm-head"><p class="kicker">Free for hosts</p><h1>Send another host a card</h1><p>Holiday cards, welcome cards for new hosts, and thank-yous for referrals or your cleaning team. Pick a message, add your name, then download it or send it as a link.</p></section>
+  <section class="cm">
+    <div class="ctl">
+      <fieldset><legend>Message</legend><div class="msgs" id="msgs"></div>
+        <label style="margin-top:.4rem"><span>Or write your own</span><textarea id="custom" rows="2" maxlength="140" placeholder="Your own message"></textarea></label></fieldset>
+      <label><span>From</span><input id="from" type="text" maxlength="40" placeholder="Your name or cabin"></label>
+      <fieldset><legend>Photo</legend><div class="ph" id="photos"></div><input type="file" id="file" accept="image/*" hidden></fieldset>
+      <fieldset><legend>Style</legend><div class="seg" id="styles"></div></fieldset>
+      <fieldset><legend>Size</legend><div class="seg" id="sizes"></div></fieldset>
+    </div>
+    <div class="pv">
+      <canvas id="cv" width="1080" height="1080" aria-label="Card preview"></canvas>
+      <div class="acts"><button class="btn btn-ember" id="dl" type="button">Download</button><button class="btn" id="sh" type="button">Share</button></div>
+      <div class="lnkbox"><label class="sr" for="url">Card link</label><input id="url" type="text" readonly><button class="btn btn-sm" id="cp" type="button">Copy link</button></div>
+      <p class="hint" id="hint">Send the link by text or Messenger. It opens the card, and they can make one of their own.</p>
+    </div>
+  </section>
+</main>
+<script src="cards.js"></script>
+<script>
+(function(){
+  const C = window.CARDS, cv = document.getElementById('cv');
+  const st = {m:0, custom:'', from:'', photo:'hero', photoImg:null, style:'classic', size:'square', base:''};
+  const base = location.href.split('?')[0].replace(/[^/]*$/, '');
+  const seg = (id, obj, key) => { const el = document.getElementById(id); el.innerHTML = Object.entries(obj).map(([k,v])=>`<button type="button" data-k="${k}" aria-pressed="${st[key]===k}">${Array.isArray(v)?v[2]:v}</button>`).join(''); el.querySelectorAll('button').forEach(b=> b.addEventListener('click', ()=>{ st[key] = b.dataset.k; el.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed', x===b)); go(); })); };
+  document.getElementById('msgs').innerHTML = C.MSGS.map((m,i)=>`<button type="button" data-i="${i}" aria-pressed="${i===0}">${m}</button>`).join('');
+  document.querySelectorAll('#msgs button').forEach(b=> b.addEventListener('click', ()=>{ st.m = +b.dataset.i; st.custom = ''; document.getElementById('custom').value = ''; document.querySelectorAll('#msgs button').forEach(x=>x.setAttribute('aria-pressed', x===b)); go(); }));
+  const ph = document.getElementById('photos');
+  ph.innerHTML = Object.entries(C.PHOTOS).map(([k,v])=>`<button type="button" data-k="${k}" aria-pressed="${k==='hero'}" title="${v}"><img src="img/${k}.webp" alt="${v}"></button>`).join('') + '<button type="button" class="up" data-k="up" aria-pressed="false">Your photo</button>';
+  ph.querySelectorAll('button').forEach(b=> b.addEventListener('click', ()=>{ if (b.dataset.k === 'up') { document.getElementById('file').click(); return; } st.photo = b.dataset.k; st.photoImg = null; ph.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed', x===b)); go(); }));
+  document.getElementById('file').addEventListener('change', e=>{ const f = e.target.files[0]; if (!f) return; const i = new Image(); i.onload = ()=>{ st.photoImg = i; ph.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed', x.dataset.k==='up')); go(); }; i.src = URL.createObjectURL(f); });
+  seg('styles', C.STYLES, 'style'); seg('sizes', C.SIZES, 'size');
+  document.getElementById('custom').addEventListener('input', e=>{ st.custom = e.target.value; document.querySelectorAll('#msgs button').forEach(x=>x.setAttribute('aria-pressed', !st.custom && +x.dataset.i===st.m)); go(); });
+  document.getElementById('from').addEventListener('input', e=>{ st.from = e.target.value; go(); });
+  let t; function go(){ clearTimeout(t); t = setTimeout(async ()=>{ st.base = base; await C.draw(cv, st); const u = C.link(base, st); document.getElementById('url').value = u; document.getElementById('hint').textContent = st.photoImg ? 'Your own photo stays on your device, so the link uses the misty-ridges photo. Download the image to send it with your photo.' : 'Send the link by text or Messenger. It opens the card, and they can make one of their own.'; }, 60); }
+  const name = () => `smokies-card-${st.size}.jpg`;
+  document.getElementById('dl').addEventListener('click', ()=> C.save(cv, name()));
+  document.getElementById('sh').addEventListener('click', async ()=>{ const ok = await C.share(cv, name(), 'A card for you: ' + document.getElementById('url').value, document.getElementById('url').value); if (!ok) C.save(cv, name()); });
+  document.getElementById('cp').addEventListener('click', async ()=>{ const el = document.getElementById('url'); try { await navigator.clipboard.writeText(el.value); } catch(e){ el.select(); try{document.execCommand('copy');}catch(_){} } document.getElementById('cp').textContent = 'Copied'; setTimeout(()=> document.getElementById('cp').textContent = 'Copy link', 2000); });
+  go();
+})();
+</script>
+</body>
+</html>

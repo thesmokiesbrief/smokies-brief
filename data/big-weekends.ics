@@ -1,0 +1,294 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Smokies big weekend alerts//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Smokies big weekend alerts
+X-WR-CALDESC:A reminder 30 days before every big weekend in Gatlinburg\, Pigeon Forge and Sevierville.
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:2026-12-04-yama-con-anime-and-gaming-convention@thesmokiesbrief.com
+DTSTAMP:20261117T123047Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:Price check: Yama-Con anime and gaming convention in 30 days
+DESCRIPTION:Yama-Con anime and gaming convention\, Dec 4–6 (LeConte Center
+ ). Check your nightly rate and minimum stay for those dates before they b
+ ook up. Average nightly rate in Dec last year: $699.\nMore: https://thesm
+ okiesbrief.com/#events
+URL:https://www.pigeonforge.com/area/leconte-center/events/
+BEGIN:VALARM
+TRIGGER:PT9H
+ACTION:DISPLAY
+DESCRIPTION:Price check: Yama-Con anime and gaming convention
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-28-strength-to-stand-december-conference@thesmokiesbrief.com
+DTSTAMP:20261117T123047Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:Price check: Strength to Stand December Conference in 30 days
+DESCRIPTION:Strength to Stand December Conference\, Dec 28–30 (Pigeon Forg
+ e). Check your nightly rate and minimum stay for those dates before they 
+ book up. Average nightly rate in Dec last year: $699.\nMore: https://thes
+ mokiesbrief.com/#events
+URL:https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=202
+ 6-06-20
+BEGIN:VALARM
+TRIGGER:PT9H
+ACTION:DISPLAY
+DESCRIPTION:Price check: Strength to Stand December Conference
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-31-new-year-s-eve-celebration-and-fireworks-at-the-island@thes
+ mokiesbrief.com
+DTSTAMP:20261117T123047Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:Price check: New Year's Eve celebration and fireworks at The Islan
+ d in 30 days
+DESCRIPTION:New Year's Eve celebration and fireworks at The Island\, Dec 3
+ 1 (Pigeon Forge). Check your nightly rate and minimum stay for those date
+ s before they book up. Average nightly rate in Dec last year: $699.\nMore
+ : https://thesmokiesbrief.com/#events
+URL:https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=202
+ 6-06-20
+BEGIN:VALARM
+TRIGGER:PT9H
+ACTION:DISPLAY
+DESCRIPTION:Price check: New Year's Eve celebration and fireworks at The I
+ sland
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-04-wilderness-wildlife-week@thesmokiesbrief.com
+DTSTAMP:20261117T123047Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:Price check: Wilderness Wildlife Week in 30 days
+DESCRIPTION:Wilderness Wildlife Week\, Jan 4–7 (LeConte Center). Check you
+ r nightly rate and minimum stay for those dates before they book up. Aver
+ age nightly rate in Jan last year: $548.\nMore: https://thesmokiesbrief.c
+ om/#events
+URL:https://www.pigeonforge.com/area/leconte-center/events/
+BEGIN:VALARM
+TRIGGER:PT9H
+ACTION:DISPLAY
+DESCRIPTION:Price check: Wilderness Wildlife Week
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-16-strength-to-stand-january-conference@thesmokiesbrief.com
+DTSTAMP:20261117T123047Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:Price check: Strength to Stand January Conference in 30 days
+DESCRIPTION:Strength to Stand January Conference\, Jan 16–18 (Pigeon Forge
+ ). Check your nightly rate and minimum stay for those dates before they b
+ ook up. Average nightly rate in Jan last year: $548.\nMore: https://thesm
+ okiesbrief.com/#events
+URL:https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=202
+ 6-06-20
+BEGIN:VALARM
+TRIGGER:PT9H
+ACTION:DISPLAY
+DESCRIPTION:Price check: Strength to Stand January Conference
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-16-martin-luther-king-jr-day-weekend@thesmokiesbrief.com
+DTSTAMP:20261117T123047Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:Price check: Martin Luther King Jr. Day weekend in 30 days
+DESCRIPTION:Martin Luther King Jr. Day weekend\, Jan 16–18 (Holiday weeken
+ d). Check your nightly rate and minimum stay for those dates before they 
+ book up. Average nightly rate in Jan last year: $548.\nMore: https://thes
+ mokiesbrief.com/#events
+URL:https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/
+BEGIN:VALARM
+TRIGGER:PT9H
+ACTION:DISPLAY
+DESCRIPTION:Price check: Martin Luther King Jr. Day weekend
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-22-resurrection-youth-conference@thesmokiesbrief.com
+DTSTAMP:20261117T123047Z
+DTSTART;VALUE=DATE:20261223
+DTEND;VALUE=DATE:20261224
+SUMMARY:Price check: Resurrection Youth Conference in 30 days
+DESCRIPTION:Resurrection Youth Conference\, Jan 22–24 (Pigeon Forge). Chec
+ k your nightly rate and minimum stay for those dates before they book up.
+  Average nightly rate in Jan last year: $548.\nMore: https://thesmokiesbr
+ ief.com/#events
+URL:https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=202
+ 6-06-20
+BEGIN:VALARM
+TRIGGER:PT9H
+ACTION:DISPLAY
+DESCRIPTION:Price check: Resurrection Youth Conference
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-04-smoky-mountain-jubilee@thesmokiesbrief.com
+DTSTAMP:20261117T123047Z
+DTSTART;VALUE=DATE:20270105
+DTEND;VALUE=DATE:20270106
+SUMMARY:Price check: Smoky Mountain Jubilee in 30 days
+DESCRIPTION:Smoky Mountain Jubilee\, Feb 4–5 (Pigeon Forge). Check your ni
+ ghtly rate and minimum stay for those dates before they book up. Average 
+ nightly rate in Feb last year: $516.\nMore: https://thesmokiesbrief.com/#
+ events
+URL:https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=202
+ 6-06-20
+BEGIN:VALARM
+TRIGGER:PT9H
+ACTION:DISPLAY
+DESCRIPTION:Price check: Smoky Mountain Jubilee
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-11-make-it-count-spectacular-gymnastics-meet@thesmokiesbrief.c
+ om
+DTSTAMP:20261117T123047Z
+DTSTART;VALUE=DATE:20270112
+DTEND;VALUE=DATE:20270113
+SUMMARY:Price check: Make It Count Spectacular gymnastics meet in 30 days
+DESCRIPTION:Make It Count Spectacular gymnastics meet\, Feb 11–15 (Pigeon 
+ Forge). Check your nightly rate and minimum stay for those dates before t
+ hey book up. Average nightly rate in Feb last year: $516.\nMore: https://
+ thesmokiesbrief.com/#events
+URL:https://www.mypigeonforge.com/calendar/list/page/7/?tribe-bar-date=202
+ 6-06-20
+BEGIN:VALARM
+TRIGGER:PT9H
+ACTION:DISPLAY
+DESCRIPTION:Price check: Make It Count Spectacular gymnastics meet
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-13-presidents-day-weekend@thesmokiesbrief.com
+DTSTAMP:20261117T123047Z
+DTSTART;VALUE=DATE:20270114
+DTEND;VALUE=DATE:20270115
+SUMMARY:Price check: Presidents' Day weekend in 30 days
+DESCRIPTION:Presidents' Day weekend\, Feb 13–15 (Holiday weekend). Check y
+ our nightly rate and minimum stay for those dates before they book up. Av
+ erage nightly rate in Feb last year: $516.\nMore: https://thesmokiesbrief
+ .com/#events
+URL:https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/
+BEGIN:VALARM
+TRIGGER:PT9H
+ACTION:DISPLAY
+DESCRIPTION:Price check: Presidents' Day weekend
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-11-dollywood-opens-its-i-will-always-love-you-festival@thesmok
+ iesbrief.com
+DTSTAMP:20261117T123047Z
+DTSTART;VALUE=DATE:20270209
+DTEND;VALUE=DATE:20270210
+SUMMARY:Price check: Dollywood opens its I Will Always Love You Festival i
+ n 30 days
+DESCRIPTION:Dollywood opens its I Will Always Love You Festival\, Mar 11 (
+ Dollywood). Check your nightly rate and minimum stay for those dates befo
+ re they book up. Average nightly rate in Mar last year: $577.\nMore: http
+ s://thesmokiesbrief.com/#events
+URL:https://www.mypigeonforge.com/events/dollywood/
+BEGIN:VALARM
+TRIGGER:PT9H
+ACTION:DISPLAY
+DESCRIPTION:Price check: Dollywood opens its I Will Always Love You Festiv
+ al
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-26-easter-weekend@thesmokiesbrief.com
+DTSTAMP:20261117T123047Z
+DTSTART;VALUE=DATE:20270224
+DTEND;VALUE=DATE:20270225
+SUMMARY:Price check: Easter weekend in 30 days
+DESCRIPTION:Easter weekend\, Mar 26–28 (Holiday weekend). Check your night
+ ly rate and minimum stay for those dates before they book up. Average nig
+ htly rate in Mar last year: $577.\nMore: https://thesmokiesbrief.com/#eve
+ nts
+URL:https://thesmokiesbrief.com/#events
+BEGIN:VALARM
+TRIGGER:PT9H
+ACTION:DISPLAY
+DESCRIPTION:Price check: Easter weekend
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-08-corvette-expo@thesmokiesbrief.com
+DTSTAMP:20261117T123047Z
+DTSTART;VALUE=DATE:20270309
+DTEND;VALUE=DATE:20270310
+SUMMARY:Price check: Corvette Expo in 30 days
+DESCRIPTION:Corvette Expo\, Apr 8–10 (LeConte Center). Check your nightly 
+ rate and minimum stay for those dates before they book up. Average nightl
+ y rate in Apr last year: $542.\nMore: https://thesmokiesbrief.com/#events
+URL:https://www.pigeonforge.com/area/leconte-center/events/
+BEGIN:VALARM
+TRIGGER:PT9H
+ACTION:DISPLAY
+DESCRIPTION:Price check: Corvette Expo
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-07-dollywood-s-flower-food-festival-opens@thesmokiesbrief.com
+DTSTAMP:20261117T123047Z
+DTSTART;VALUE=DATE:20270407
+DTEND;VALUE=DATE:20270408
+SUMMARY:Price check: Dollywood's Flower & Food Festival opens in 30 days
+DESCRIPTION:Dollywood's Flower & Food Festival opens\, May 7 (Dollywood). 
+ Check your nightly rate and minimum stay for those dates before they book
+  up. Average nightly rate in May last year: $545.\nMore: https://thesmoki
+ esbrief.com/#events
+URL:https://www.mypigeonforge.com/events/dollywood/
+BEGIN:VALARM
+TRIGGER:PT9H
+ACTION:DISPLAY
+DESCRIPTION:Price check: Dollywood's Flower & Food Festival opens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-20-spring-rod-run-new-may-dates-for-2027@thesmokiesbrief.com
+DTSTAMP:20261117T123047Z
+DTSTART;VALUE=DATE:20270420
+DTEND;VALUE=DATE:20270421
+SUMMARY:Price check: Spring Rod Run in 30 days
+DESCRIPTION:Spring Rod Run (new May dates for 2027)\, May 20–22 (LeConte C
+ enter). Check your nightly rate and minimum stay for those dates before t
+ hey book up. Average nightly rate in May last year: $545.\nMore: https://
+ thesmokiesbrief.com/#events
+URL:https://www.pigeonforge.com/area/leconte-center/events/
+BEGIN:VALARM
+TRIGGER:PT9H
+ACTION:DISPLAY
+DESCRIPTION:Price check: Spring Rod Run
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-29-memorial-day-weekend@thesmokiesbrief.com
+DTSTAMP:20261117T123047Z
+DTSTART;VALUE=DATE:20270429
+DTEND;VALUE=DATE:20270430
+SUMMARY:Price check: Memorial Day weekend in 30 days
+DESCRIPTION:Memorial Day weekend\, May 29–31 (Holiday weekend). Check your
+  nightly rate and minimum stay for those dates before they book up. Avera
+ ge nightly rate in May last year: $545.\nMore: https://thesmokiesbrief.co
+ m/#events
+URL:https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/
+BEGIN:VALARM
+TRIGGER:PT9H
+ACTION:DISPLAY
+DESCRIPTION:Price check: Memorial Day weekend
+END:VALARM
+END:VEVENT
+END:VCALENDAR
