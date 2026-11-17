@@ -62,7 +62,10 @@ function page({ file, title, desc, crumbs, body, ld = [] }) {
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}">
-<meta property="og:image" content="${SITE}img/hero.webp">
+<meta property="og:image" content="${SITE}img/share-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Smokies Brief: Smokies cabin news, every morning">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">${JSON.stringify(graph)}</script>
