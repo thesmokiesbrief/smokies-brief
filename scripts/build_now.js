@@ -16,7 +16,7 @@ const src = fs.readFileSync(file, 'utf8'), K = load(src), N = K.now;
 async function get(url) {
   for (let i = 0; i < 3; i++) {
     try {
-      const r = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'application/geo+json, application/json' }, signal: AbortSignal.timeout(20000) });
+      const r = await fetch(url, { headers: { 'User-Agent': UA, Accept: url.includes('api.weather.gov') ? 'application/geo+json' : 'application/json' }, signal: AbortSignal.timeout(20000) });
       if (r.ok) return await r.json();
       console.log(`${r.status} from ${url.split('?')[0]}`);
     } catch (e) { console.log(`${e.name} ${(e.cause && e.cause.code) || e.message} from ${url.split('?')[0]}`); }
