@@ -1,0 +1,132 @@
+{
+ "checked": "2026-11-17T17:31:46.146Z",
+ "towns": {
+  "gatlinburg": {
+   "cls": "ok",
+   "status": "No rental items on agendas since Oct 20 · zoning item on the Nov 17 agenda",
+   "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3848/Gatlinburg/f1ddf9b8-33d6-4c5b-87db-872b971aea22/11-17-26-City-Commission-Agenda.pdf?disposition=inline",
+   "src": "Latest agenda →",
+   "checked": "2026-11-17T17:31:46.146Z",
+   "agendas": [
+    {
+     "date": "2026-11-17",
+     "title": "City Commission agenda",
+     "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3848/Gatlinburg/f1ddf9b8-33d6-4c5b-87db-872b971aea22/11-17-26-City-Commission-Agenda.pdf?disposition=inline",
+     "str": "",
+     "zoning": 3
+    },
+    {
+     "date": "2026-10-20",
+     "title": "City Commission agenda",
+     "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3848/Gatlinburg/557b0734-b3d3-461f-b453-d19e96947521/10-20-26-City-Commission-Agenda.pdf?disposition=inline",
+     "str": "",
+     "zoning": 1
+    }
+   ]
+  },
+  "pigeonforge": {
+   "cls": "ok",
+   "status": "No rental items on agendas since Oct 12",
+   "url": "https://pigeonforgetn.portal.civicclerk.com/event/2092/files/agenda/1130",
+   "src": "Latest agenda →",
+   "checked": "2026-11-17T17:31:46.146Z",
+   "agendas": [
+    {
+     "date": "2026-10-27",
+     "title": "Pigeon Forge Regional Planning Commission and Board of Zoning Appeals",
+     "url": "https://pigeonforgetn.portal.civicclerk.com/event/2092/files/agenda/1130",
+     "str": "",
+     "zoning": 0
+    },
+    {
+     "date": "2026-10-26",
+     "title": "City Commission Meeting",
+     "url": "https://pigeonforgetn.portal.civicclerk.com/event/2090/files/agenda/1135",
+     "str": "",
+     "zoning": 0
+    },
+    {
+     "date": "2026-10-26",
+     "title": "City Commission Work Session",
+     "url": "https://pigeonforgetn.portal.civicclerk.com/event/2088/files/agenda/1133",
+     "str": "",
+     "zoning": 0
+    },
+    {
+     "date": "2026-10-12",
+     "title": "Public Hearing & City Commission Meeting",
+     "url": "https://pigeonforgetn.portal.civicclerk.com/event/2091/files/agenda/1127",
+     "str": "",
+     "zoning": 4
+    }
+   ]
+  },
+  "sevierville": {
+   "cls": "ok",
+   "status": "No rental items on agendas since Oct 19 · zoning item on the Nov 5 agenda",
+   "url": "https://www.seviervilletn.org/AgendaCenter/ViewFile/Agenda/_11162026-120",
+   "src": "Latest agenda →",
+   "checked": "2026-11-17T17:31:46.146Z",
+   "agendas": [
+    {
+     "date": "2026-11-16",
+     "title": "Board of Mayor and Aldermen Meeting Agenda",
+     "url": "https://www.seviervilletn.org/AgendaCenter/ViewFile/Agenda/_11162026-120",
+     "str": "",
+     "zoning": 0
+    },
+    {
+     "date": "2026-11-05",
+     "title": "&thinsp;&mdash;&thinsp;Amended Nov 3, 2026 11:06 AM Planning and BZA Commission Meeting Agenda Download&nbsp;&#9660; Agenda Previous Versions",
+     "url": "https://www.seviervilletn.org/AgendaCenter/ViewFile/Agenda/_11052026-118",
+     "str": "",
+     "zoning": 2
+    },
+    {
+     "date": "2026-11-02",
+     "title": "Board of Mayor and Aldermen Meeting Agenda",
+     "url": "https://www.seviervilletn.org/AgendaCenter/ViewFile/Agenda/_11022026-116",
+     "str": "",
+     "zoning": 5
+    },
+    {
+     "date": "2026-11-02",
+     "title": "Addendum to BMA Agenda for 11/02/2026 Meeting",
+     "url": "https://www.seviervilletn.org/AgendaCenter/ViewFile/Agenda/_11022026-117",
+     "str": "",
+     "zoning": 0
+    },
+    {
+     "date": "2026-10-19",
+     "title": "Board of Mayor and Aldermen Meeting Agenda",
+     "url": "https://www.seviervilletn.org/AgendaCenter/ViewFile/Agenda/_10192026-115",
+     "str": "",
+     "zoning": 5
+    }
+   ]
+  },
+  "county": {
+   "cls": "ok",
+   "status": "No rental items on agendas since Nov 16 · zoning item on the Nov 16 agenda",
+   "url": "https://www.seviercountytn.gov/FINAL%20AGENDA%2011.16.2026.pdf",
+   "src": "Latest agenda →",
+   "checked": "2026-11-17T17:31:46.146Z",
+   "agendas": [
+    {
+     "date": "2026-11-16",
+     "title": "County Commission agenda",
+     "url": "https://www.seviercountytn.gov/FINAL%20AGENDA%2011.16.2026.pdf",
+     "str": "",
+     "zoning": 12
+    }
+   ]
+  },
+  "tennessee": {
+   "cls": "ok",
+   "status": "Legislature out of session until Jan 12",
+   "url": "https://wapp.capitol.tn.gov/apps/billsearch/BillSearchAdvanced.aspx",
+   "src": "Bill search →",
+   "checked": "2026-11-17T17:31:46.146Z"
+  }
+ }
+}

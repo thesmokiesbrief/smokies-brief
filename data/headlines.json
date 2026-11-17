@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T16:51:58.805Z",
+ "updated": "2026-11-17T17:32:40.221Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -9,11 +9,22 @@
  ],
  "top": [
   "https://www.wate.com/investigations/english-mountian-poa-dispute/",
+  "https://www.wbir.com/article/life/heartwarming/smoky-mountains-inspire-east-tennessee-authors-christmas-story/51-7d1200ee-79fc-4914-89a1-fd0f34d01336",
   "https://fox17.com/news/local/dollywood-fans-fly-from-florida-to-smoky-mountain-christmas-on-themed-allegiant-trips",
   "https://www.wvlt.tv/2026/11/17/ground-stop-sparks-thanksgiving-travel-concerns/",
   "https://smokies.live/2026/11/16/pigeon-forge-kicks-off-winterfest-season-with-holiday-market-lights-and-family-fun/"
  ],
  "items": [
+  {
+   "t": "Tiny home community in Sevierville adds guided cave tours to guest experience",
+   "u": "https://www.wbir.com/article/news/local/sevierville-sevier/tiny-home-community-adds-guided-cave-tours-guest-experience/51-af4568b1-b6dd-40c7-aa73-cf1061b85c2e",
+   "d": "2026-11-17",
+   "at": "2026-11-17T17:10:50.000Z",
+   "src": "WBIR",
+   "tag": "Sevierville",
+   "w": 2,
+   "dek": "Guests at Sojourn Lodging can now explore a cave system discovered beneath the property, complete with wildlife and unique limestone formations."
+  },
   {
    "t": "Dollywood fans fly from Florida to Smoky Mountain Christmas on themed Allegiant trips",
    "u": "https://fox17.com/news/local/dollywood-fans-fly-from-florida-to-smoky-mountain-christmas-on-themed-allegiant-trips",

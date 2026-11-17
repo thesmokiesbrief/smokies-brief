@@ -96,6 +96,16 @@ const clip = (s, n) => { s = String(s || '').replace(/\s+/g, ' ').trim(); return
     set.parkChecked = now.toISOString();
   }
 
+  // "This week" number boxes (Monday email, share card, weekly post): last year's rate and occupancy for this
+  // month, plus the next two big draws. Rebuilt every run so they never go stale.
+  const FULL = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const SH = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const mi = +today.slice(5, 7) - 1, R = K.rates, week = [];
+  if (R && R.adr) week.push([`$${R.adr[mi]}`, `Average nightly rate here last ${FULL[mi]}`], [`${Math.round(R.occ[mi])}%`, `Average occupancy here last ${FULL[mi]}`]);
+  (K.events || []).filter(e => (e.c === 'big' || e.c === 'fest') && e.d >= today).sort((a, b) => a.d.localeCompare(b.d)).slice(0, 4 - week.length)
+    .forEach(e => week.push([`${SH[+e.d.slice(5, 7) - 1]} ${+e.d.slice(8, 10)}`, clip(e.t.replace(/\s*\([^)]*\)/g, ''), 60)]));
+  if (week.length) set.week = week;
+
   // dated notes expire on their own
   if (N.roadsSoon && N.roadsSoonUntil && today > N.roadsSoonUntil) set.roadsSoon = '';
   if (N.busyDays && N.busyDaysUntil && today > N.busyDaysUntil) set.busyDays = '';
@@ -104,7 +114,7 @@ const clip = (s, n) => { s = String(s || '').replace(/\s+/g, ' ').trim(); return
   let out = src.replace(/^  updated: .*,$/m, `  updated: ${JSON.stringify(updated)},`).replace(/^  today: .*,$/m, `  today: ${JSON.stringify(today)},`);
   for (const [k, v] of Object.entries(set)) {
     const line = `    ${k}: ${JSON.stringify(v)},`;
-    const multi = new RegExp(`^    ${k}: \\[\\n[\\s\\S]*?\\n    \\],$`, 'm'), single = new RegExp(`^    ${k}: .*,$`, 'm');
+    const multi = new RegExp(`^    ${k}: \\[\\n[\\s\\S]*?\\n    \\],$`, 'm'), single = new RegExp(`^    ${k}: .*$`, 'm');
     if (multi.test(out)) out = out.replace(multi, line);
     else if (single.test(out)) out = out.replace(single, line);
     else out = out.replace(/^  now: \{$/m, `  now: {\n${line}`);

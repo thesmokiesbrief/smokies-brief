@@ -1,5 +1,6 @@
 # Rebuilds the public feeds every morning at 5:30 a.m. Eastern. No AI.
 #   content.js             – "Right now" snapshot: forecast, weather alerts, park closures, today's date
+#   data/rules.json        – Rules Watch: city and county agendas read for short-term rental items
 #   data/events.json       – Smokies events for partner sites
 #   data/attractions.json  – guest-facing Dollywood seasons, deals, tips and attraction cards
 #   data/big-weekends.*    – alert dates 30 days before each big weekend, plus a calendar feed
@@ -34,6 +35,10 @@ jobs:
         env:
           NPS_API_KEY: ${{ secrets.NPS_API_KEY }}
         run: node scripts/build_now.js || echo "Right now refresh failed; keeping the last snapshot."
+      - name: Rules Watch (reads city and county agendas)
+        run: |
+          command -v pdftotext >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils)
+          node scripts/build_rules.js || echo "Rules Watch check failed; keeping yesterday's results."
       - name: Build feeds
         run: |
           node scripts/build_events_feed.js
@@ -54,7 +59,7 @@ jobs:
         run: |
           git config user.name "smokies-brief-bot"
           git config user.email "bot@thesmokiesbrief.com"
-          git add content.js data/events.json data/attractions.json data/big-weekends.json data/big-weekends.ics data/alerts-sent.json data/unsub-done.json
+          git add content.js index.html data/rules.json data/events.json data/attractions.json data/big-weekends.json data/big-weekends.ics data/alerts-sent.json data/unsub-done.json
           git commit -m "Daily feeds for $(date +%F)" || echo "No changes"
           git pull --rebase -X theirs origin main
           git push

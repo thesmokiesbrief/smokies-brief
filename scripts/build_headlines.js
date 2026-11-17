@@ -117,15 +117,16 @@ function parse(xml, S, now) {
   items.forEach(x => { x.w = W[x.tag] || (TOWN.some(([n]) => n === x.tag) ? 2 : 1); });
   const decay = x => (T - dayN(x.d)) * (x.tag === 'Weather' ? 3 : 1);
   const score = x => x.w * 2 - decay(x) + (x.dek ? 1 : 0) + (/^(WATE|WVLT|WBIR|Smokies\.LIVE|National Park Service)$/.test(x.src) ? 1 : 0);
-  const top = [];
-  for (const x of [...fresh].sort((a, b) => score(b) - score(a) || b.at.localeCompare(a.at))) {
-    if (top.length === 4) break;
-    if (top.length === 0 && !x.dek) continue; // the lead needs a summary line
-    top.push(x);
-  }
-  const topKeys = new Set(top.map(x => key(x.u)));
-  const sameAsBefore = JSON.stringify({ top: store.top, items: store.items }) === JSON.stringify({ top: top.map(x => x.u), items });
-  if (!sameAsBefore) fs.writeFileSync(storePath, JSON.stringify({ updated: now.toISOString(), sources: [...new Set(SOURCES.map(s => s.src))], top: top.map(x => x.u), items }, null, 1) + '\n');
+  const ranked = [...fresh].sort((a, b) => score(b) - score(a) || b.at.localeCompare(a.at));
+  // this week's lead (needs a summary line), then the News section's four top stories, then the 60-second Brief
+  const lead = ranked.find(x => x.dek);
+  const rest = ranked.filter(x => x !== lead);
+  const top = rest.slice(0, 4);
+  const withDek = top.findIndex(x => x.dek); if (withDek > 0) top.unshift(top.splice(withDek, 1)[0]); // big card gets a summary when one exists
+  const brief = rest.filter(x => !top.includes(x)).slice(0, 5);
+  const topKeys = new Set([lead, ...top, ...brief].filter(Boolean).map(x => key(x.u)));
+  const sameAsBefore = JSON.stringify({ top: store.top, items: store.items }) === JSON.stringify({ top: [lead, ...top].filter(Boolean).map(x => x.u), items });
+  if (!sameAsBefore) fs.writeFileSync(storePath, JSON.stringify({ updated: now.toISOString(), sources: [...new Set(SOURCES.map(s => s.src))], top: [lead, ...top].filter(Boolean).map(x => x.u), items }, null, 1) + '\n');
   const list = items.filter(x => !topKeys.has(key(x.u))).slice(0, LIST_N);
 
   const A = x => `href="${esc(x.u)}" target="_blank" rel="noopener"`;
@@ -133,13 +134,48 @@ function parse(xml, S, now) {
   if (top.length >= 2) {
     const [L, ...side] = top;
     topHtml = `<div class="top-stories">
-      <a class="ts-lead" ${A(L)}><p class="tag">${esc(L.tag)}</p><h3>${esc(L.t)}</h3><p class="dek">${esc(L.dek)}</p><p class="meta">${esc(L.src)} · ${md(L.d)}</p></a>
+      <a class="ts-lead" ${A(L)}><p class="tag">${esc(L.tag)}</p><h3>${esc(L.t)}</h3>${L.dek ? `<p class="dek">${esc(L.dek)}</p>` : ''}<p class="meta">${esc(L.src)} · ${md(L.d)}</p></a>
       <div class="ts-side">
 ${side.map(x => `        <a class="ts" ${A(x)}><p class="tag">${esc(x.tag)}</p><h3>${esc(x.t)}</h3><p class="meta">${esc(x.src)} · ${md(x.d)}</p></a>`).join('\n')}
       </div>
     </div>`;
   }
   const listHtml = list.map(x => `        <li><a ${A(x)} data-date="${x.d}"><span class="hl-meta"><span class="hl-tag">${esc(x.tag)}</span><time datetime="${x.d}">${md(x.d)}</time></span><span class="hl-t">${esc(x.t)}</span><span class="hl-src">${esc(x.src)}</span></a></li>`).join('\n');
+
+  // Most covered this week: group stories about the same thing (3+ shared key words), rank by how many stories
+  const STOP = new Set('with from after that this will have their about over into more what know year years east tennessee county city park says said were been than they them when where which while your just also still could would should first last next week weekend today tonight here there make makes made back amid ahead news'.split(' '));
+  const kw = t => new Set(t.toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(w => w.length > 3 && !STOP.has(w)));
+  const pool = fresh.map(x => ({ x, k: kw(x.t + ' ' + x.dek.slice(0, 100)) }));
+  const groups = [];
+  for (const p of pool) {
+    const g = groups.find(g => g.some(q => { let n = 0; p.k.forEach(w => q.k.has(w) && n++); return n >= 3; }));
+    g ? g.push(p) : groups.push([p]);
+  }
+  const covered = groups.map(g => { const xs = g.map(p => p.x).sort((a, b) => score(b) - score(a)); return { x: xs[0], n: xs.length, srcs: [...new Set(xs.map(y => y.src))] }; })
+    .filter(g => g.x !== lead).sort((a, b) => b.n - a.n || score(b.x) - score(a.x)).slice(0, 3);
+  const and = a => a.length < 3 ? a.join(' and ') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1];
+  const noiseHtml = `    <div class="sec-head sec-head-light">
+      <h2 class="sec-title">Most covered this week</h2>
+      <p class="sec-note"><span class="upd upd-light">Every 2 hours</span> The stories local outlets are reporting the most</p>
+    </div>
+    <div class="noise-grid">
+${covered.map(g => { const h = Math.min(3, g.n); return `      <a class="noise-item" ${A(g.x)}>
+        <span class="heat" aria-label="${g.n} ${g.n === 1 ? 'story' : 'stories'} this week">${'<i></i>'.repeat(h)}</span>
+        <p class="tag tag-light">${esc(g.x.tag)}</p>
+        <h3>${esc(g.x.t)}</h3>
+        ${g.x.dek ? `<p class="dek">${esc(clip(g.x.dek, 140))}</p>` : ''}
+        <p class="meta">${g.n > 1 ? `${g.n} stories · ${esc(and(g.srcs))}` : `${esc(g.x.src)} · ${md(g.x.d)}`}</p>
+      </a>`; }).join('\n')}
+    </div>`;
+
+  const issue = Math.max(1, Math.floor((dayN(today) - dayN('2026-11-16')) / 7) + 1); // issue 1 = week of Mon, Nov 16, 2026
+  const leadHtml = lead ? `    <article class="week-lead">
+      <p class="kicker">This week's lead · Issue ${String(issue).padStart(2, '0')}</p>
+      <h2>${esc(lead.t)}</h2>
+      <p>${esc(lead.dek)}</p>
+      <a class="btn" ${A(lead)}>Read it at ${esc(lead.src)}</a>
+    </article>` : '';
+  const briefHtml = brief.map(x => `        <li><p><a ${A(x)}><strong>${esc(x.tag)}.</strong> ${esc(x.t)}</a></p></li>`).join('\n');
 
   let html = fs.readFileSync(indexPath, 'utf8');
   const swap = (name, body) => {
@@ -148,7 +184,11 @@ ${side.map(x => `        <a class="ts" ${A(x)}><p class="tag">${esc(x.tag)}</p><
     html = html.replace(re, `$1\n${body}\n    $2`);
   };
   if (topHtml) swap('TOPSTORIES', '    ' + topHtml);
+  if (leadHtml) swap('LEAD', leadHtml);
+  if (brief.length >= 3) swap('BRIEF60', briefHtml);
+  if (covered.length >= 3) swap('NOISE', noiseHtml);
   if (list.length >= 4) swap('HEADLINES', listHtml);
   fs.writeFileSync(indexPath, html);
+  console.log(`lead: ${lead ? lead.t.slice(0, 60) : 'none'}\nbrief: ${brief.map(x => x.t.slice(0, 40)).join(' | ')}\ncovered: ${covered.map(g => g.n + 'x ' + g.x.t.slice(0, 40)).join(' | ')}`);
   console.log(`top: ${top.map(x => x.tag + ': ' + x.t.slice(0, 50)).join(' | ')}`);
 })().catch(e => { console.error(e.message); process.exit(1); });
