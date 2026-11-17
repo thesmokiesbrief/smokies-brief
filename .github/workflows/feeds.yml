@@ -15,6 +15,11 @@ on:
 permissions:
   contents: write
 
+# Feeds and posts both save files, so they take turns instead of racing.
+concurrency:
+  group: repo-writes
+  cancel-in-progress: false
+
 jobs:
   feeds:
     runs-on: ubuntu-latest
@@ -40,4 +45,5 @@ jobs:
           git config user.email "bot@thesmokiesbrief.com"
           git add data/events.json data/attractions.json data/big-weekends.json data/big-weekends.ics data/alerts-sent.json 2>/dev/null || git add data/events.json data/attractions.json data/big-weekends.json data/big-weekends.ics
           git commit -m "Daily feeds for $(date +%F)" || echo "No changes"
+          git pull --rebase -X theirs origin main
           git push
