@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T19:39:46.563Z",
+ "updated": "2026-11-18T21:30:58.446Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -12,9 +12,39 @@
   "https://smokies.live/2026/11/17/sun-country-airlines-to-launch-nonstop-flights-from-knoxville-to-chicago-in-2027/",
   "https://fox17.com/news/local/dollywood-fans-fly-from-florida-to-smoky-mountain-christmas-on-themed-allegiant-trips",
   "https://www.wvlt.tv/2026/11/17/ground-stop-sparks-thanksgiving-travel-concerns/",
-  "https://www.wvlt.tv/2026/11/18/gamechanger-public-safety-sevierville-police-launch-drone-program-help-meet-emergency-response-demand/"
+  "https://www.wvlt.tv/2026/11/18/fire-pigeon-forge-motel-under-investigation-fire-department-says/"
  ],
  "items": [
+  {
+   "t": "Fire at Pigeon Forge motel under investigation, fire department says",
+   "u": "https://www.wvlt.tv/2026/11/18/fire-pigeon-forge-motel-under-investigation-fire-department-says/",
+   "d": "2026-11-18",
+   "at": "2026-11-18T20:53:55.000Z",
+   "src": "WVLT",
+   "tag": "Safety",
+   "w": 5,
+   "dek": "The fire was contained to a single room on the motel’s first floor."
+  },
+  {
+   "t": "Sevierville Police becomes latest agency to utilize drones for emergency response",
+   "u": "https://www.wate.com/news/sevier-county-news/sevierville-police-drone-first-responder-program/",
+   "d": "2026-11-18",
+   "at": "2026-11-18T20:32:31.000Z",
+   "src": "WATE",
+   "tag": "Safety",
+   "w": 5,
+   "dek": "If you call 911 in Sevierville, the first responder at the scene may be a drone, with the Sevierville Police Department announcing Wednesday that it is now using drones to help first responders in emergencies. The…"
+  },
+  {
+   "t": "Fire damages room at River Chase Motel in Pigeon Forge",
+   "u": "https://smokies.live/2026/11/18/fire-damages-room-at-river-chase-motel-in-pigeon-forge/",
+   "d": "2026-11-18",
+   "at": "2026-11-18T20:03:05.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Pigeon Forge",
+   "w": 2,
+   "dek": "Firefighters quickly contained the blaze to one first-floor room; no injuries were reported […] The post Fire damages room at River Chase Motel in Pigeon Forge appeared first on Smokies Live ."
+  },
   {
    "t": "Sevierville Police Department launches drone first responder program",
    "u": "https://www.wbir.com/article/news/local/sevierville-sevier/sevierville-police-department-drone-first-responder-program/51-2477685b-dd0f-4018-b3a5-3a2677a8be2b",
