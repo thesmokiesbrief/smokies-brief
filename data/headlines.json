@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T21:30:58.446Z",
+ "updated": "2026-11-18T23:28:17.760Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -9,12 +9,42 @@
  ],
  "top": [
   "https://www.wvlt.tv/2026/11/18/icon-chicago-deep-dish-pizza-open-first-tennessee-shop-pigeon-forge/",
+  "https://smokies.live/2026/11/18/mark-ezell-to-continue-as-tennessee-tourism-commissioner-under-gov-elect-marsha-blackburn/",
   "https://smokies.live/2026/11/17/sun-country-airlines-to-launch-nonstop-flights-from-knoxville-to-chicago-in-2027/",
   "https://fox17.com/news/local/dollywood-fans-fly-from-florida-to-smoky-mountain-christmas-on-themed-allegiant-trips",
-  "https://www.wvlt.tv/2026/11/17/ground-stop-sparks-thanksgiving-travel-concerns/",
-  "https://www.wvlt.tv/2026/11/18/fire-pigeon-forge-motel-under-investigation-fire-department-says/"
+  "https://www.wvlt.tv/2026/11/17/ground-stop-sparks-thanksgiving-travel-concerns/"
  ],
  "items": [
+  {
+   "t": "Great Smoky Mountains National Park to add 638-acre tract of land",
+   "u": "https://www.wbir.com/article/sports/outdoors/great-smoky-mountains-national-park-to-add-638-acre-tract-of-land/51-d478c9bf-0f04-4442-b1ba-1c2ddbeacc8b",
+   "d": "2026-11-18",
+   "at": "2026-11-18T23:11:33.000Z",
+   "src": "WBIR",
+   "tag": "Park",
+   "w": 5,
+   "dek": "The Foothills Land Conservancy purchased the property and is working to transfer it to the National Park Service."
+  },
+  {
+   "t": "Mark Ezell to continue as Tennessee tourism commissioner under Gov.-elect Marsha Blackburn",
+   "u": "https://smokies.live/2026/11/18/mark-ezell-to-continue-as-tennessee-tourism-commissioner-under-gov-elect-marsha-blackburn/",
+   "d": "2026-11-18",
+   "at": "2026-11-18T23:09:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Tourism",
+   "w": 7,
+   "dek": "Ezell says he is honored to continue leading statewide tourism efforts and build […] The post Mark Ezell to continue as Tennessee tourism commissioner under Gov.-elect Marsha Blackburn appeared first on Smokies Live ."
+  },
+  {
+   "t": "Wilderness at the Smokies welcomes winter with Winter Wilderland",
+   "u": "https://smokies.live/2026/11/18/wilderness-at-the-smokies-welcomes-winter-with-winter-wilderland/",
+   "d": "2026-11-18",
+   "at": "2026-11-18T21:42:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Local",
+   "w": 1,
+   "dek": "Ice skating, visits with Santa, s’mores and new interactive activities bring holiday fun […] The post Wilderness at the Smokies welcomes winter with Winter Wilderland appeared first on Smokies Live ."
+  },
   {
    "t": "Fire at Pigeon Forge motel under investigation, fire department says",
    "u": "https://www.wvlt.tv/2026/11/18/fire-pigeon-forge-motel-under-investigation-fire-department-says/",
