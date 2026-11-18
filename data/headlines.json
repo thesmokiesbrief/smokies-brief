@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T05:40:37.771Z",
+ "updated": "2026-11-18T19:39:46.563Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -8,13 +8,43 @@
   "National Park Service"
  ],
  "top": [
+  "https://www.wvlt.tv/2026/11/18/icon-chicago-deep-dish-pizza-open-first-tennessee-shop-pigeon-forge/",
   "https://smokies.live/2026/11/17/sun-country-airlines-to-launch-nonstop-flights-from-knoxville-to-chicago-in-2027/",
-  "https://smokies.live/2026/11/13/faa-issues-nationwide-ground-stop-after-equipment-outage-knoxville-flights-delayed/",
   "https://fox17.com/news/local/dollywood-fans-fly-from-florida-to-smoky-mountain-christmas-on-themed-allegiant-trips",
   "https://www.wvlt.tv/2026/11/17/ground-stop-sparks-thanksgiving-travel-concerns/",
-  "https://smokies.live/2026/11/12/dollywood-and-allegiant-team-up-for-first-of-its-kind-fan-flights-from-orlando-to-the-smokies/"
+  "https://www.wvlt.tv/2026/11/18/gamechanger-public-safety-sevierville-police-launch-drone-program-help-meet-emergency-response-demand/"
  ],
  "items": [
+  {
+   "t": "Sevierville Police Department launches drone first responder program",
+   "u": "https://www.wbir.com/article/news/local/sevierville-sevier/sevierville-police-department-drone-first-responder-program/51-2477685b-dd0f-4018-b3a5-3a2677a8be2b",
+   "d": "2026-11-18",
+   "at": "2026-11-18T19:33:47.000Z",
+   "src": "WBIR",
+   "tag": "Sevierville",
+   "w": 2,
+   "dek": "SPD said the initiative represents a major step forward in modernizing emergency response and protecting the community."
+  },
+  {
+   "t": "‘Gamechanger in public safety’ | Sevierville police launch drone program to help meet emergency response demand",
+   "u": "https://www.wvlt.tv/2026/11/18/gamechanger-public-safety-sevierville-police-launch-drone-program-help-meet-emergency-response-demand/",
+   "d": "2026-11-18",
+   "at": "2026-11-18T19:26:19.000Z",
+   "src": "WVLT",
+   "tag": "Safety",
+   "w": 5,
+   "dek": "It becomes the second East Tennessee department in as many days to announce its Drone as First Responder program."
+  },
+  {
+   "t": "Icon of Chicago deep dish pizza to open first Tennessee shop in Pigeon Forge",
+   "u": "https://www.wvlt.tv/2026/11/18/icon-chicago-deep-dish-pizza-open-first-tennessee-shop-pigeon-forge/",
+   "d": "2026-11-18",
+   "at": "2026-11-18T18:25:59.000Z",
+   "src": "WVLT",
+   "tag": "New Supply",
+   "w": 8,
+   "dek": "One of Chicago’s most famous deep dish pizza joints is preparing to set up shop in East Tennessee."
+  },
   {
    "t": "Tennessee earns D+ for preterm births as LeConte Medical Center plans Cocke County clinic",
    "u": "https://www.wvlt.tv/2026/11/18/tennessee-earns-d-preterm-births-leconte-medical-center-plans-cocke-county-clinic/",
