@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T15:36:57.765Z",
+ "updated": "2026-11-19T17:34:12.786Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -11,10 +11,30 @@
   "https://www.wvlt.tv/2026/11/18/icon-chicago-deep-dish-pizza-open-first-tennessee-shop-pigeon-forge/",
   "https://smokies.live/2026/11/18/signs-for-potential-for-heavy-rain-across-the-southeast-during-thanksgiving/",
   "https://smokies.live/2026/11/18/mark-ezell-to-continue-as-tennessee-tourism-commissioner-under-gov-elect-marsha-blackburn/",
-  "https://smokies.live/2026/11/17/sun-country-airlines-to-launch-nonstop-flights-from-knoxville-to-chicago-in-2027/",
-  "https://fox17.com/news/local/dollywood-fans-fly-from-florida-to-smoky-mountain-christmas-on-themed-allegiant-trips"
+  "https://smokies.live/2026/11/19/traffic-alert-rolling-roadblocks-possible-on-i-75-near-emory-road/",
+  "https://smokies.live/2026/11/17/sun-country-airlines-to-launch-nonstop-flights-from-knoxville-to-chicago-in-2027/"
  ],
  "items": [
+  {
+   "t": "Traffic alert: Rolling roadblocks possible on I-75 near Emory Road",
+   "u": "https://smokies.live/2026/11/19/traffic-alert-rolling-roadblocks-possible-on-i-75-near-emory-road/",
+   "d": "2026-11-19",
+   "at": "2026-11-19T17:31:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Roads",
+   "w": 6,
+   "dek": "Blasting activities and ongoing construction could cause delays near Exit 112 in Knox […] The post Traffic alert: Rolling roadblocks possible on I-75 near Emory Road appeared first on Smokies Live ."
+  },
+  {
+   "t": "Rural Metro Fire conducting prescribed burn in East Knox County",
+   "u": "https://www.wbir.com/article/news/local/knoxville/rural-metro-fire-conducting-prescribed-burn-east-knox-county/51-dbb0576d-a1f2-45c7-8af9-ccfb2db713a3",
+   "d": "2026-11-19",
+   "at": "2026-11-19T15:51:46.000Z",
+   "src": "WBIR",
+   "tag": "Local",
+   "w": 1,
+   "dek": "Officials with Rural Metro Fire said they are assisting the Tennessee Department of Environment and Conservation at Seven Island State Birding Park in Kodak."
+  },
   {
    "t": "Pigeon Forge kicks off Winterfest with holiday celebration along Riverwalk",
    "u": "https://smokies.live/2026/11/19/pigeon-forge-kicks-off-winterfest-with-holiday-celebration-along-riverwalk/",
