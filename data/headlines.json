@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T23:28:17.760Z",
+ "updated": "2026-11-19T01:55:36.397Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -9,12 +9,32 @@
  ],
  "top": [
   "https://www.wvlt.tv/2026/11/18/icon-chicago-deep-dish-pizza-open-first-tennessee-shop-pigeon-forge/",
+  "https://smokies.live/2026/11/18/signs-for-potential-for-heavy-rain-across-the-southeast-during-thanksgiving/",
   "https://smokies.live/2026/11/18/mark-ezell-to-continue-as-tennessee-tourism-commissioner-under-gov-elect-marsha-blackburn/",
   "https://smokies.live/2026/11/17/sun-country-airlines-to-launch-nonstop-flights-from-knoxville-to-chicago-in-2027/",
-  "https://fox17.com/news/local/dollywood-fans-fly-from-florida-to-smoky-mountain-christmas-on-themed-allegiant-trips",
-  "https://www.wvlt.tv/2026/11/17/ground-stop-sparks-thanksgiving-travel-concerns/"
+  "https://fox17.com/news/local/dollywood-fans-fly-from-florida-to-smoky-mountain-christmas-on-themed-allegiant-trips"
  ],
  "items": [
+  {
+   "t": "Nearly 10 years after Gatlinburg wildfires, Alamo Steakhouse continues family legacy",
+   "u": "https://www.wbir.com/article/money/business/small-business/nearly-10-years-after-gatlinburg-wildfires-alamo-steakhouse-continues-family-legacy/51-7f2bd5f8-a3c6-451d-9299-52a1fd922a07",
+   "d": "2026-11-18",
+   "at": "2026-11-19T00:32:36.000Z",
+   "src": "WBIR",
+   "tag": "Safety",
+   "w": 5,
+   "dek": "A decade after the 2016 wildfires destroyed Alamo Steakhouse in Gatlinburg, the Johnson family reflected on rebuilding and keeping its legacy alive."
+  },
+  {
+   "t": "Signs for Potential for Heavy Rain Across the Southeast During Thanksgiving",
+   "u": "https://smokies.live/2026/11/18/signs-for-potential-for-heavy-rain-across-the-southeast-during-thanksgiving/",
+   "d": "2026-11-18",
+   "at": "2026-11-18T23:30:12.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Tourism",
+   "w": 7,
+   "dek": "Extended-range outlook highlights Nov. 26-27 as a period to watch for the Tennessee […] The post Signs for Potential for Heavy Rain Across the Southeast During Thanksgiving appeared first on Smokies Live ."
+  },
   {
    "t": "Great Smoky Mountains National Park to add 638-acre tract of land",
    "u": "https://www.wbir.com/article/sports/outdoors/great-smoky-mountains-national-park-to-add-638-acre-tract-of-land/51-d478c9bf-0f04-4442-b1ba-1c2ddbeacc8b",
