@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T21:28:17.515Z",
+ "updated": "2026-11-19T23:23:55.404Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -12,9 +12,39 @@
   "https://smokies.live/2026/11/19/pisgah-visitor-center-shifts-to-winter-operating-hours/",
   "https://smokies.live/2026/11/18/signs-for-potential-for-heavy-rain-across-the-southeast-during-thanksgiving/",
   "https://smokies.live/2026/11/18/mark-ezell-to-continue-as-tennessee-tourism-commissioner-under-gov-elect-marsha-blackburn/",
-  "https://smokies.live/2026/11/19/traffic-alert-rolling-roadblocks-possible-on-i-75-near-emory-road/"
+  "https://smokies.live/2026/11/19/traffic-alert-nightly-lane-closures-possible-on-us-411-in-sevier-county/"
  ],
  "items": [
+  {
+   "t": "Cooking with Kyle: Southern-Style Baked Mac and Cheese",
+   "u": "https://smokies.live/2026/11/19/cooking-with-kyle-southern-style-baked-mac-and-cheese/",
+   "d": "2026-11-19",
+   "at": "2026-11-19T23:04:16.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Local",
+   "w": 1,
+   "dek": "A big pan of cheesy, homemade comfort food that’s perfect for Thanksgiving, Christmas […] The post Cooking with Kyle: Southern-Style Baked Mac and Cheese appeared first on Smokies Live ."
+  },
+  {
+   "t": "Popular Smokies hiking trail renovated and reopened",
+   "u": "https://www.wbir.com/article/sports/outdoors/smokies-hiking-bullhead-trail-renovated-and-reopened/51-5c0e2ff4-255f-4c64-9e68-e337668f52fd",
+   "d": "2026-11-19",
+   "at": "2026-11-19T22:25:58.000Z",
+   "src": "WBIR",
+   "tag": "Park",
+   "w": 5,
+   "dek": "The Smokies' Bullhead Trail reopens after a major rehabilitation funded by Friends of the Smokies, restoring safety and accessibility to the fire-damaged path."
+  },
+  {
+   "t": "Traffic alert: Nightly lane closures possible on US 411 in Sevier County",
+   "u": "https://smokies.live/2026/11/19/traffic-alert-nightly-lane-closures-possible-on-us-411-in-sevier-county/",
+   "d": "2026-11-19",
+   "at": "2026-11-19T21:44:15.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Roads",
+   "w": 6,
+   "dek": "Roadwork between Veterans Boulevard and Robert Henson Road could cause overnight delays. SEVIER […] The post Traffic alert: Nightly lane closures possible on US 411 in Sevier County appeared first on Smokies Live ."
+  },
   {
    "t": "Dolly Parton Posthumously Receives Thea Catalyst Award",
    "u": "https://smokies.live/2026/11/19/dolly-parton-posthumously-receives-thea-catalyst-award/",
@@ -54,6 +84,16 @@
    "tag": "Roads",
    "w": 6,
    "dek": "Blasting activities and ongoing construction could cause delays near Exit 112 in Knox […] The post Traffic alert: Rolling roadblocks possible on I-75 near Emory Road appeared first on Smokies Live ."
+  },
+  {
+   "t": "Great Smoky Mountains National Park Reopens Rehabilitated Bullhead Trail",
+   "u": "https://www.nps.gov/grsm/learn/news/great-smoky-mountains-national-park-reopens-rehabilitated-bullhead-trail.htm",
+   "d": "2026-11-19",
+   "at": "2026-11-19T16:59:00.000Z",
+   "src": "National Park Service",
+   "tag": "Park",
+   "w": 5,
+   "dek": "Great Smoky Mountains National Park has reopened Bullhead Trail following a two-year rehabilitation project supported by Friends of the Smokies. The project improved drainage, restored trail conditions and enhanced…"
   },
   {
    "t": "Rural Metro Fire conducting prescribed burn in East Knox County",
