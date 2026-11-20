@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T01:52:54.002Z",
+ "updated": "2026-11-20T05:39:53.107Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -12,9 +12,29 @@
   "https://smokies.live/2026/11/19/pisgah-visitor-center-shifts-to-winter-operating-hours/",
   "https://smokies.live/2026/11/18/signs-for-potential-for-heavy-rain-across-the-southeast-during-thanksgiving/",
   "https://smokies.live/2026/11/18/mark-ezell-to-continue-as-tennessee-tourism-commissioner-under-gov-elect-marsha-blackburn/",
-  "https://smokies.live/2026/11/19/traffic-alert-nightly-lane-closures-possible-on-us-411-in-sevier-county/"
+  "https://www.wate.com/news/sevier-county-news/sevierville-intersection-closure-detours/"
  ],
  "items": [
+  {
+   "t": "Sevierville intersection closure to cause traffic delays starting Nov. 22",
+   "u": "https://www.wate.com/news/sevier-county-news/sevierville-intersection-closure-detours/",
+   "d": "2026-11-19",
+   "at": "2026-11-20T04:08:13.000Z",
+   "src": "WATE",
+   "tag": "Roads",
+   "w": 6,
+   "dek": "Drivers in Sevierville should be aware of upcoming road work that will reroute some through traffic. The Sevierville Public Works Department announced that the intersection of Pittman Center Road and Old Newport Highway…"
+  },
+  {
+   "t": "Bullhead Trail reopens in the Smokies after two-year rehabilitation project",
+   "u": "https://www.wvlt.tv/2026/11/20/bullhead-trail-reopens-smokies-after-two-year-rehabilitation-project/",
+   "d": "2026-11-19",
+   "at": "2026-11-20T03:44:53.000Z",
+   "src": "WVLT",
+   "tag": "Park",
+   "w": 5,
+   "dek": "Work on the trail began in May 2025."
+  },
   {
    "t": "Bullhead Trail to Mount Le Conte reopens after two years of improvement work",
    "u": "https://www.wate.com/news/smoky-mountains/bullhead-trail-reopens-smokies/",
