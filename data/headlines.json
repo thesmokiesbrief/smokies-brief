@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T13:54:02.099Z",
+ "updated": "2026-11-20T15:35:33.421Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -10,11 +10,41 @@
  "top": [
   "https://www.wvlt.tv/2026/11/18/icon-chicago-deep-dish-pizza-open-first-tennessee-shop-pigeon-forge/",
   "https://smokies.live/2026/11/19/pisgah-visitor-center-shifts-to-winter-operating-hours/",
-  "https://smokies.live/2026/11/18/signs-for-potential-for-heavy-rain-across-the-southeast-during-thanksgiving/",
-  "https://smokies.live/2026/11/18/mark-ezell-to-continue-as-tennessee-tourism-commissioner-under-gov-elect-marsha-blackburn/",
-  "https://www.wate.com/news/sevier-county-news/sevierville-intersection-closure-detours/"
+  "https://www.wate.com/news/sevier-county-news/gatlinburg-fire-permits-suspended/",
+  "https://www.wvlt.tv/2026/11/20/high-fire-danger-sevier-county-prompts-burning-warning-violations-could-bring-penalties/",
+  "https://smokies.live/2026/11/18/signs-for-potential-for-heavy-rain-across-the-southeast-during-thanksgiving/"
  ],
  "items": [
+  {
+   "t": "Ripley’s Aquarium offers free admission for some Sevier County children and holiday savings",
+   "u": "https://smokies.live/2026/11/20/ripleys-aquarium-offers-free-admission-for-some-sevier-county-children-and-holiday-savings/",
+   "d": "2026-11-20",
+   "at": "2026-11-20T15:25:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Events",
+   "w": 4,
+   "dek": "Children 8 and younger who live in Sevier County can visit free with […] The post Ripley’s Aquarium offers free admission for some Sevier County children and holiday savings appeared first on Smokies Live ."
+  },
+  {
+   "t": "Burn permits suspended in Gatlinburg amid high fire danger",
+   "u": "https://www.wate.com/news/sevier-county-news/gatlinburg-fire-permits-suspended/",
+   "d": "2026-11-20",
+   "at": "2026-11-20T15:08:49.000Z",
+   "src": "WATE",
+   "tag": "Weather",
+   "w": 6,
+   "dek": "With a High Fire Danger designation placed on Sevier County through at least Sunday, the Gatlinburg Fire Department said all burn permits in the city are suspended until conditions improve. On Friday, Gatlinburg Fire…"
+  },
+  {
+   "t": "High fire danger in Sevier County prompts burning warning; violations could bring penalties",
+   "u": "https://www.wvlt.tv/2026/11/20/high-fire-danger-sevier-county-prompts-burning-warning-violations-could-bring-penalties/",
+   "d": "2026-11-20",
+   "at": "2026-11-20T14:56:37.000Z",
+   "src": "WVLT",
+   "tag": "Weather",
+   "w": 6,
+   "dek": "A hold of burn permits in Sevier County has been issued and violations could bring penalties."
+  },
   {
    "t": "Country Tonite Brings Christmas Spectacular to Pigeon Forge",
    "u": "https://smokies.live/2026/11/20/country-tonite-brings-christmas-spectacular-to-pigeon-forge/",
@@ -814,16 +844,6 @@
    "tag": "Roads",
    "w": 6,
    "dek": "A partial closure of Cades Cove Loop Road in Great Smoky Mountains National Park is scheduled for Monday, October 26, due to tree work."
-  },
-  {
-   "t": "Historic church, cemeteries among East Tennessee sites receiving new recognition",
-   "u": "https://www.wate.com/news/tennessee/tn-landmarks-added-historic-registers/",
-   "d": "2026-10-21",
-   "at": "2026-10-21T14:49:23.000Z",
-   "src": "WATE",
-   "tag": "Local",
-   "w": 1,
-   "dek": "Several East Tennessee landmarks and communities were added to historical registers, while others received federal grant funding for restoration projects and planning efforts."
   }
  ]
 }
