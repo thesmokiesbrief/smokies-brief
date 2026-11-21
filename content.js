@@ -1,17 +1,17 @@
 // The "now" snapshot, "today" and "updated" are refreshed by scripts/build_now.js every morning and every hour.
 window.CONTENT = {
-  updated: "Fri, Nov 20, 6:28 a.m.",
-  today: "2026-11-20",
+  updated: "Sat, Nov 21, 6:20 a.m.",
+  today: "2026-11-21",
   // today's snapshot used by the check-in builder, guest sheet and share cards (rebuilt by the morning job)
   now: {
-    week: [["$601","Average nightly rate here last November"],["46%","Average occupancy here last November"],["Nov 20","Ober Mountain opens skiing, snowboarding and tubing"],["Nov 21","The Island Winterfest kickoff: free concert and tree…"]],
-    wxChecked: "2026-11-20T11:28:17.529Z",
-    parkChecked: "2026-11-20T11:28:17.529Z",
+    week: [["$601","Average nightly rate here last November"],["46%","Average occupancy here last November"],["Nov 21","The Island Winterfest kickoff: free concert and tree…"],["Nov 24","Gatlinburg Festival of Trees"]],
+    wxChecked: "2026-11-21T11:20:30.905Z",
+    parkChecked: "2026-11-21T11:20:30.905Z",
     park: [{"cat":"Park Closure","title":"Seasonal road closures","text":"Heintooga Ridge Road, Parson Branch Road, and Rich Mountain Road are closed for the season.","road":"Heintooga Ridge Road, Parson Branch Road, and Rich Mountain Road are closed for the season.","date":"2026-11-10","url":"https://www.nps.gov/grsm/planyourvisit/seasonalroads.htm"},{"cat":"Park Closure","title":"Park Headquarters Road is closed","text":"Park Headquarters Road is closed due to rehabilitation work on the Sugarlands water and wastewater systems.","road":"Park Headquarters Road is closed due to rehabilitation work on the Sugarlands water and wastewater systems.","date":"2026-06-26","url":"https://www.nps.gov/grsm/planyourvisit/conditions.htm"},{"cat":"Park Closure","title":"Straight Fork and the one-way section of Balsam Mountain Road closed","text":"Straight Fork and the one-way section of Balsam Mountain Road (Heintooga Round-Bottom Road) are closed.","road":"Straight Fork and the one-way section of Balsam Mountain Road (Heintooga Round-Bottom Road) are closed.","date":"2025-11-12","url":"https://www.nps.gov/grsm/planyourvisit/seasonalroads.htm"},{"cat":"Information","title":"Most visitors need a parking tag","text":"All vehicles parking for longer than 15 minutes require a parking tag. Three tag durations are available for purchase for all vehicle sizes and types: Daily ($5), Weekly ($15), or Annual ($40).","road":"","date":"2024-02-08","url":"https://www.nps.gov/grsm/planyourvisit/fees.htm"}],
     wxAlerts: [],
-    weatherChecked: "2026-11-20T11:28:17.529Z",
+    weatherChecked: "2026-11-21T11:20:30.905Z",
     weatherSrc: "NWS",
-    weather: [["Today",70,"Partly Sunny",1,"2026-11-20"],["Tonight",39,"Mostly Cloudy",0,"2026-11-20"],["Saturday",70,"Partly Sunny",1,"2026-11-21"],["Saturday Night",42,"Partly Cloudy",0,"2026-11-21"],["Sunday",68,"Sunny",1,"2026-11-22"],["Sunday Night",50,"Partly Cloudy then Slight Chance Rain Showers",0,"2026-11-22"],["Monday",61,"Chance Rain Showers",1,"2026-11-23"],["Monday Night",41,"Mostly Cloudy",0,"2026-11-23"]],
+    weather: [["Today",68,"Mostly Cloudy",1,"2026-11-21"],["Tonight",50,"Chance Rain Showers",0,"2026-11-21"],["Sunday",66,"Chance Rain Showers then Partly Sunny",1,"2026-11-22"],["Sunday Night",50,"Partly Cloudy",0,"2026-11-22"],["Monday",64,"Chance Rain Showers",1,"2026-11-23"],["Monday Night",43,"Slight Chance Rain Showers then Mostly Cloudy",0,"2026-11-23"],["Tuesday",59,"Partly Sunny",1,"2026-11-24"],["Tuesday Night",41,"Mostly Cloudy",0,"2026-11-24"]],
     roads: ["Heintooga Ridge Road, Parson Branch Road, and Rich Mountain Road are closed for the season.","Park Headquarters Road is closed due to rehabilitation work on the Sugarlands water and wastewater systems.","Straight Fork and the one-way section of Balsam Mountain Road (Heintooga Round-Bottom Road) are closed."],
     roadsSoon: "Kuwohi Road, Roaring Fork Motor Nature Trail and Little Greenbrier Road close for the season on Nov 29.",
     roadsSoonUntil: "2026-11-29",
