@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T01:53:13.140Z",
+ "updated": "2026-11-21T03:29:22.440Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -11,10 +11,20 @@
   "https://www.wvlt.tv/2026/11/20/ober-mountain-opens-ski-season-after-weeks-snowmaking-temperatures-continue-run-warm/",
   "https://www.wvlt.tv/2026/11/18/icon-chicago-deep-dish-pizza-open-first-tennessee-shop-pigeon-forge/",
   "https://smokies.live/2026/11/19/pisgah-visitor-center-shifts-to-winter-operating-hours/",
-  "https://www.wate.com/news/sevier-county-news/gatlinburg-fire-permits-suspended/",
-  "https://www.wvlt.tv/2026/11/20/high-fire-danger-sevier-county-prompts-burning-warning-violations-could-bring-penalties/"
+  "https://smokies.live/2026/11/20/caney-creek-lane-wildfire-reaches-1000-acres-in-greene-county/",
+  "https://www.wate.com/news/sevier-county-news/gatlinburg-fire-permits-suspended/"
  ],
  "items": [
+  {
+   "t": "Caney Creek Lane wildfire reaches 1,000 acres in Greene County",
+   "u": "https://smokies.live/2026/11/20/caney-creek-lane-wildfire-reaches-1000-acres-in-greene-county/",
+   "d": "2026-11-20",
+   "at": "2026-11-21T03:21:08.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Roads",
+   "w": 6,
+   "dek": "The fire has grown by an average of 333 acres per day over […] The post Caney Creek Lane wildfire reaches 1,000 acres in Greene County appeared first on Smokies Live ."
+  },
   {
    "t": "How a Gatlinburg homeowner turned into a 'garden hose firefighter'",
    "u": "https://www.wbir.com/article/news/local/sevierville-sevier/how-a-gatlinburg-homeowner-turned-into-a-garden-hose-firefighter/51-79a02331-706a-4ae1-901d-c93172b6f1f9",
