@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T23:26:37.844Z",
+ "updated": "2026-11-21T01:53:13.140Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -15,6 +15,26 @@
   "https://www.wvlt.tv/2026/11/20/high-fire-danger-sevier-county-prompts-burning-warning-violations-could-bring-penalties/"
  ],
  "items": [
+  {
+   "t": "How a Gatlinburg homeowner turned into a 'garden hose firefighter'",
+   "u": "https://www.wbir.com/article/news/local/sevierville-sevier/how-a-gatlinburg-homeowner-turned-into-a-garden-hose-firefighter/51-79a02331-706a-4ae1-901d-c93172b6f1f9",
+   "d": "2026-11-20",
+   "at": "2026-11-20T23:51:27.000Z",
+   "src": "WBIR",
+   "tag": "Safety",
+   "w": 5,
+   "dek": "During the historic 2016 wildfires, Steve Ogle spent an entire night protecting his homestead from flames using nothing but garden hoses."
+  },
+  {
+   "t": "Gatlinburg rebuilds public works complex after 2016 wildfires",
+   "u": "https://www.wbir.com/article/news/community/gatlinburg-rebuilds-public-works-complex/51-8103a791-4244-4584-ac9e-f1106b9efc02",
+   "d": "2026-11-20",
+   "at": "2026-11-20T23:39:04.000Z",
+   "src": "WBIR",
+   "tag": "Safety",
+   "w": 5,
+   "dek": "Ten years after the 2016 wildfires, Gatlinburg has transformed its public works complex with a $15 million investment in renovations and new facilities."
+  },
   {
    "t": "Ober Gatlinburg opens ski season after weeks of snowmaking as temperatures continue to run warm",
    "u": "https://www.wvlt.tv/2026/11/20/ober-mountain-opens-ski-season-after-weeks-snowmaking-temperatures-continue-run-warm/",
