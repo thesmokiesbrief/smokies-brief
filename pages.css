@@ -92,3 +92,9 @@
   .pg-table.num small{display:block;margin-left:0}
   .pg-table.num th,.pg-table.num td{padding:.6rem .55rem}
 }
+
+/* social icons */
+.pg-social{display:flex;align-items:center;gap:.6rem;margin-top:0}
+.pg-social span{font-size:var(--text-xs);letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--ink-3)}
+.pg-social a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);color:var(--ink)}
+.pg-social a:hover{border-color:var(--ember-d);color:var(--ember-d)}

@@ -1006,3 +1006,9 @@ button,input,select{font:inherit;color:inherit}
   .sub{flex-direction:column;align-items:stretch}
   .sub-phone{width:min(230px,70vw);margin:var(--s4) auto 0}
 }
+
+/* social icons */
+.foot-social{display:flex;align-items:center;gap:.6rem;margin-top:1rem}
+.foot-social span{font-size:var(--text-xs);letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.foot-social a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid currentColor;color:var(--paper);transition:background .15s,color .15s}
+.foot-social a:hover{background:var(--paper);color:var(--ink)}
