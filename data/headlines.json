@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T21:29:24.581Z",
+ "updated": "2026-11-23T23:29:43.034Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -8,13 +8,53 @@
   "National Park Service"
  ],
  "top": [
+  "https://www.wvlt.tv/2026/11/23/pigeon-forge-revenue-up-through-september-thanksgiving-week-begins/",
   "https://smokies.live/2026/11/23/thanksgiving-travel-brings-rain-and-cooler-temperatures-to-the-smokies/",
   "https://www.wvlt.tv/2026/11/20/ober-mountain-opens-ski-season-after-weeks-snowmaking-temperatures-continue-run-warm/",
   "https://www.wvlt.tv/2026/11/18/icon-chicago-deep-dish-pizza-open-first-tennessee-shop-pigeon-forge/",
-  "https://www.wbir.com/article/news/community/10-years-later-remembering-the-2016-gatlinburg-wildfire/51-6b7c5df0-88ba-45af-b022-d69f60f127a4",
-  "https://smokies.live/2026/11/19/pisgah-visitor-center-shifts-to-winter-operating-hours/"
+  "https://www.wate.com/news/sevier-county-news/sevier-county-wildfire-memorial/"
  ],
  "items": [
+  {
+   "t": "Pigeon Forge revenue up through September as Thanksgiving week begins",
+   "u": "https://www.wvlt.tv/2026/11/23/pigeon-forge-revenue-up-through-september-thanksgiving-week-begins/",
+   "d": "2026-11-23",
+   "at": "2026-11-23T22:49:35.000Z",
+   "src": "WVLT",
+   "tag": "The Numbers",
+   "w": 9,
+   "dek": "Pigeon Forge business revenue is up 3% through September, according to preliminary city data, as the city heads into Thanksgiving week."
+  },
+  {
+   "t": "Gatlinburg’s Fantasy of Lights Christmas Parade set to celebrate another season downtown",
+   "u": "https://www.wvlt.tv/2026/11/23/gatlinburgs-fantasy-lights-christmas-parade-set-celebrate-another-season-downtown/",
+   "d": "2026-11-23",
+   "at": "2026-11-23T22:33:56.000Z",
+   "src": "WVLT",
+   "tag": "Events",
+   "w": 4,
+   "dek": "The event will take place Friday, Dec. 4, 2026, at 7:30 p.m. in downtown Gatlinburg."
+  },
+  {
+   "t": "Memorial ceremony in Sevier County to mark 10 years since wildfire tragedy",
+   "u": "https://www.wate.com/news/sevier-county-news/sevier-county-wildfire-memorial/",
+   "d": "2026-11-23",
+   "at": "2026-11-23T21:55:57.000Z",
+   "src": "WATE",
+   "tag": "Safety",
+   "w": 5,
+   "dek": "Local officials in Sevier County and members of the public will commemorate the 10 years since the deadly Chimney Tops 2 Fire. The Chimney Tops 2 Fire was the largest of the wildfires that broke out in the Great Smoky…"
+  },
+  {
+   "t": "‘Gatlinburg: A Decade of Healing’ to showcase mountain resilience 10 years after wildfires",
+   "u": "https://www.wvlt.tv/2026/11/23/gatlinburg-decade-healing-showcase-mountain-resilience-10-years-after-wildfires/",
+   "d": "2026-11-23",
+   "at": "2026-11-23T21:52:16.000Z",
+   "src": "WVLT",
+   "tag": "Safety",
+   "w": 5,
+   "dek": "“Gatlinburg: A Decade of Healing” will air at 7 p.m. on WVLT and stream on WVLT+."
+  },
   {
    "t": "Thanksgiving travel brings rain and cooler temperatures to the Smokies",
    "u": "https://smokies.live/2026/11/23/thanksgiving-travel-brings-rain-and-cooler-temperatures-to-the-smokies/",
