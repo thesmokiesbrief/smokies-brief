@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T21:24:23.263Z",
+ "updated": "2026-11-23T08:09:01.284Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -10,11 +10,21 @@
  "top": [
   "https://www.wvlt.tv/2026/11/20/ober-mountain-opens-ski-season-after-weeks-snowmaking-temperatures-continue-run-warm/",
   "https://www.wvlt.tv/2026/11/18/icon-chicago-deep-dish-pizza-open-first-tennessee-shop-pigeon-forge/",
+  "https://www.wbir.com/article/news/community/10-years-later-remembering-the-2016-gatlinburg-wildfire/51-6b7c5df0-88ba-45af-b022-d69f60f127a4",
   "https://smokies.live/2026/11/19/pisgah-visitor-center-shifts-to-winter-operating-hours/",
-  "https://smokies.live/2026/11/20/caney-creek-lane-wildfire-reaches-1000-acres-in-greene-county/",
-  "https://smokies.live/2026/11/18/signs-for-potential-for-heavy-rain-across-the-southeast-during-thanksgiving/"
+  "https://smokies.live/2026/11/20/caney-creek-lane-wildfire-reaches-1000-acres-in-greene-county/"
  ],
  "items": [
+  {
+   "t": "10 Years Later: Remembering the 2016 Gatlinburg Wildfires",
+   "u": "https://www.wbir.com/article/news/community/10-years-later-remembering-the-2016-gatlinburg-wildfire/51-6b7c5df0-88ba-45af-b022-d69f60f127a4",
+   "d": "2026-11-23",
+   "at": "2026-11-23T07:19:18.000Z",
+   "src": "WBIR",
+   "tag": "Safety",
+   "w": 5,
+   "dek": "Ten years after devastating wildfires burned parts of the Great Smoky Mountains, the memories remain vivid for survivors."
+  },
   {
    "t": "The Island in Pigeon Forge to kick off Winterfest with Christmas tree lighting",
    "u": "https://smokies.live/2026/11/21/the-island-in-pigeon-forge-to-kick-off-winterfest-with-christmas-tree-lighting/",
