@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T08:09:01.284Z",
+ "updated": "2026-11-23T21:29:24.581Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -8,13 +8,23 @@
   "National Park Service"
  ],
  "top": [
+  "https://smokies.live/2026/11/23/thanksgiving-travel-brings-rain-and-cooler-temperatures-to-the-smokies/",
   "https://www.wvlt.tv/2026/11/20/ober-mountain-opens-ski-season-after-weeks-snowmaking-temperatures-continue-run-warm/",
   "https://www.wvlt.tv/2026/11/18/icon-chicago-deep-dish-pizza-open-first-tennessee-shop-pigeon-forge/",
   "https://www.wbir.com/article/news/community/10-years-later-remembering-the-2016-gatlinburg-wildfire/51-6b7c5df0-88ba-45af-b022-d69f60f127a4",
-  "https://smokies.live/2026/11/19/pisgah-visitor-center-shifts-to-winter-operating-hours/",
-  "https://smokies.live/2026/11/20/caney-creek-lane-wildfire-reaches-1000-acres-in-greene-county/"
+  "https://smokies.live/2026/11/19/pisgah-visitor-center-shifts-to-winter-operating-hours/"
  ],
  "items": [
+  {
+   "t": "Thanksgiving travel brings rain and cooler temperatures to the Smokies",
+   "u": "https://smokies.live/2026/11/23/thanksgiving-travel-brings-rain-and-cooler-temperatures-to-the-smokies/",
+   "d": "2026-11-23",
+   "at": "2026-11-23T21:19:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Tourism",
+   "w": 7,
+   "dek": "Showers are expected Wednesday night into Thanksgiving Day, while early Black Friday shoppers […] The post Thanksgiving travel brings rain and cooler temperatures to the Smokies appeared first on Smokies Live ."
+  },
   {
    "t": "10 Years Later: Remembering the 2016 Gatlinburg Wildfires",
    "u": "https://www.wbir.com/article/news/community/10-years-later-remembering-the-2016-gatlinburg-wildfire/51-6b7c5df0-88ba-45af-b022-d69f60f127a4",
