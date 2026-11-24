@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T23:29:43.034Z",
+ "updated": "2026-11-24T01:56:40.532Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -11,8 +11,8 @@
   "https://www.wvlt.tv/2026/11/23/pigeon-forge-revenue-up-through-september-thanksgiving-week-begins/",
   "https://smokies.live/2026/11/23/thanksgiving-travel-brings-rain-and-cooler-temperatures-to-the-smokies/",
   "https://www.wvlt.tv/2026/11/20/ober-mountain-opens-ski-season-after-weeks-snowmaking-temperatures-continue-run-warm/",
-  "https://www.wvlt.tv/2026/11/18/icon-chicago-deep-dish-pizza-open-first-tennessee-shop-pigeon-forge/",
-  "https://www.wate.com/news/sevier-county-news/sevier-county-wildfire-memorial/"
+  "https://smokies.live/2026/11/23/lane-closure-planned-on-main-street-in-downtown-canton/",
+  "https://www.wvlt.tv/2026/11/18/icon-chicago-deep-dish-pizza-open-first-tennessee-shop-pigeon-forge/"
  ],
  "items": [
   {
@@ -64,6 +64,16 @@
    "tag": "Tourism",
    "w": 7,
    "dek": "Showers are expected Wednesday night into Thanksgiving Day, while early Black Friday shoppers […] The post Thanksgiving travel brings rain and cooler temperatures to the Smokies appeared first on Smokies Live ."
+  },
+  {
+   "t": "Lane closure planned on Main Street in downtown Canton",
+   "u": "https://smokies.live/2026/11/23/lane-closure-planned-on-main-street-in-downtown-canton/",
+   "d": "2026-11-23",
+   "at": "2026-11-23T14:55:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Roads",
+   "w": 6,
+   "dek": "Crews will install a large water tap for the new Canton Police Department, […] The post Lane closure planned on Main Street in downtown Canton appeared first on Smokies Live ."
   },
   {
    "t": "10 Years Later: Remembering the 2016 Gatlinburg Wildfires",
