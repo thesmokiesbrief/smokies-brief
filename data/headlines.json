@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T21:34:01.847Z",
+ "updated": "2026-11-24T23:28:51.790Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -10,11 +10,51 @@
  "top": [
   "https://www.wvlt.tv/2026/11/23/pigeon-forge-revenue-up-through-september-thanksgiving-week-begins/",
   "https://smokies.live/2026/11/23/thanksgiving-travel-brings-rain-and-cooler-temperatures-to-the-smokies/",
+  "https://smokies.live/2026/11/24/wind-advisory-issued-for-smokies-parts-of-east-tennessee/",
   "https://www.wvlt.tv/2026/11/20/ober-mountain-opens-ski-season-after-weeks-snowmaking-temperatures-continue-run-warm/",
-  "https://smokies.live/2026/11/23/lane-closure-planned-on-main-street-in-downtown-canton/",
-  "https://www.wvlt.tv/2026/11/18/icon-chicago-deep-dish-pizza-open-first-tennessee-shop-pigeon-forge/"
+  "https://smokies.live/2026/11/23/lane-closure-planned-on-main-street-in-downtown-canton/"
  ],
  "items": [
+  {
+   "t": "Pigeon Forge's 'Country Tonite Theatre' to close after 30 seasons; owner cites leadership changes",
+   "u": "https://www.wbir.com/article/news/entertainment-news/pigeon-forges-country-tonite-theatre-close-30-seasons-owner-cites-leadership-changes/51-83a85f95-fa78-49cb-a9b4-6406c7aee644",
+   "d": "2026-11-24",
+   "at": "2026-11-24T23:03:01.000Z",
+   "src": "WBIR",
+   "tag": "Pigeon Forge",
+   "w": 2,
+   "dek": "In an announcement on Saturday, leaders said they decided to conclude operations at the end of the year rather than transition to new management."
+  },
+  {
+   "t": "2016 Gatlinburg wildfire survivor looks back while visiting memorial",
+   "u": "https://www.wbir.com/article/news/local/sevierville-sevier/2016-gatlinburg-wildfire-survivor-looks-back-while-visiting-memorial/51-8999ab97-1568-4fe3-b3e5-225a2f53bf6f",
+   "d": "2026-11-24",
+   "at": "2026-11-24T23:02:49.000Z",
+   "src": "WBIR",
+   "tag": "Safety",
+   "w": 5,
+   "dek": "A Gathering of Remembrance for wildfire victims is planned for Saturday at 10 a.m. at Mynatt Park."
+  },
+  {
+   "t": "Wind advisory issued for Smokies, parts of East Tennessee",
+   "u": "https://smokies.live/2026/11/24/wind-advisory-issued-for-smokies-parts-of-east-tennessee/",
+   "d": "2026-11-24",
+   "at": "2026-11-24T22:19:55.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Weather",
+   "w": 6,
+   "dek": "Wind gusts could reach 55 mph, with localized gusts up to 65 mph […] The post Wind advisory issued for Smokies, parts of East Tennessee appeared first on Smokies Live ."
+  },
+  {
+   "t": "Former Sevier County utility president pleads guilty to misappropriating funds, falsifying gambling debts",
+   "u": "https://www.wvlt.tv/2026/11/24/former-sevier-county-utility-president-pleads-guilty-misappropriating-funds-falsifying-gambling-debts/",
+   "d": "2026-11-24",
+   "at": "2026-11-24T21:36:24.000Z",
+   "src": "WVLT",
+   "tag": "Sevier County",
+   "w": 2,
+   "dek": "Investigators said Ballard used a kickback scheme with an electrical company and had district employees work on personal projects."
+  },
   {
    "t": "Knoxville to kick off holiday season with Celebration of Lights Nov. 27",
    "u": "https://smokies.live/2026/11/24/knoxville-to-kick-off-holiday-season-with-celebration-of-lights-nov-27/",
