@@ -1,26 +1,7 @@
 {
- "updated": "2026-11-24T11:26:13.685Z",
+ "updated": "2026-11-25T11:31:14.648Z",
  "lead_days": 30,
  "alerts": [
-  {
-   "id": "2026-12-04-yama-con-anime-and-gaming-convention",
-   "title": "Yama-Con anime and gaming convention",
-   "short": "Yama-Con anime and gaming convention",
-   "start": "2026-12-04",
-   "end": "2026-12-06",
-   "dates": "Dec 4–6",
-   "place": "LeConte Center",
-   "kind": "conv",
-   "url": "https://www.pigeonforge.com/area/leconte-center/events/",
-   "alert_on": "2026-11-04",
-   "month": "Dec",
-   "market": {
-    "adr": 699,
-    "occ": 50,
-    "season": "High",
-    "period": "Oct 2025 – Sep 2026"
-   }
-  },
   {
    "id": "2026-12-28-strength-to-stand-december-conference",
    "title": "Strength to Stand December Conference",
