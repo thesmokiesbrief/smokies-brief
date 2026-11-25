@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T11:35:55.890Z",
+ "updated": "2026-11-25T13:56:52.830Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -9,12 +9,22 @@
  ],
  "top": [
   "https://www.wvlt.tv/2026/11/23/pigeon-forge-revenue-up-through-september-thanksgiving-week-begins/",
+  "https://smokies.live/2026/11/25/holidays-on-ice-returns-to-downtown-knoxville-nov-27/",
   "https://smokies.live/2026/11/25/winter-weather-creates-hazardous-conditions-along-blue-ridge-parkway/",
   "https://smokies.live/2026/11/23/thanksgiving-travel-brings-rain-and-cooler-temperatures-to-the-smokies/",
-  "https://www.wvlt.tv/2026/11/20/ober-mountain-opens-ski-season-after-weeks-snowmaking-temperatures-continue-run-warm/",
-  "https://smokies.live/2026/11/23/lane-closure-planned-on-main-street-in-downtown-canton/"
+  "https://www.wvlt.tv/2026/11/20/ober-mountain-opens-ski-season-after-weeks-snowmaking-temperatures-continue-run-warm/"
  ],
  "items": [
+  {
+   "t": "Holidays on Ice returns to downtown Knoxville Nov. 27",
+   "u": "https://smokies.live/2026/11/25/holidays-on-ice-returns-to-downtown-knoxville-nov-27/",
+   "d": "2026-11-25",
+   "at": "2026-11-25T13:20:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Weather",
+   "w": 6,
+   "dek": "The outdoor ice rink in Market Square will remain open through Jan. 3, […] The post Holidays on Ice returns to downtown Knoxville Nov. 27 appeared first on Smokies Live ."
+  },
   {
    "t": "Winter weather creates hazardous conditions along Blue Ridge Parkway",
    "u": "https://smokies.live/2026/11/25/winter-weather-creates-hazardous-conditions-along-blue-ridge-parkway/",
@@ -1054,16 +1064,6 @@
    "tag": "Local",
    "w": 1,
    "dek": "Democrat Kristi Burke is challenging incumbent Republican Representative Diana Harshbarger for Tennessee's 1st Congressional District seat in the upcoming November 3 election."
-  },
-  {
-   "t": "Sevier County teacher returns to school at 35, earns two degrees, inspires students",
-   "u": "https://www.wate.com/news/sevier-county-news/sevier-county-teacher-inspires-students/",
-   "d": "2026-10-26",
-   "at": "2026-10-26T11:58:45.000Z",
-   "src": "WATE",
-   "tag": "Sevier County",
-   "w": 2,
-   "dek": "A Sevier County teacher who returned to college at 35 is using her own experience to show students it is never too late to pursue their dreams. Brittany Atchison teaches fifth-grade science at Northview Intermediate…"
   }
  ]
 }
