@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T05:37:43.749Z",
+ "updated": "2026-11-25T11:35:55.890Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -9,12 +9,22 @@
  ],
  "top": [
   "https://www.wvlt.tv/2026/11/23/pigeon-forge-revenue-up-through-september-thanksgiving-week-begins/",
+  "https://smokies.live/2026/11/25/winter-weather-creates-hazardous-conditions-along-blue-ridge-parkway/",
   "https://smokies.live/2026/11/23/thanksgiving-travel-brings-rain-and-cooler-temperatures-to-the-smokies/",
   "https://www.wvlt.tv/2026/11/20/ober-mountain-opens-ski-season-after-weeks-snowmaking-temperatures-continue-run-warm/",
-  "https://smokies.live/2026/11/23/lane-closure-planned-on-main-street-in-downtown-canton/",
-  "https://www.wbir.com/article/news/community/gatlinburg-property-sales-reviewed-10-years-after-historic-2016-wildfires/51-24129b42-fb62-4786-a204-17c1462ff226"
+  "https://smokies.live/2026/11/23/lane-closure-planned-on-main-street-in-downtown-canton/"
  ],
  "items": [
+  {
+   "t": "Winter weather creates hazardous conditions along Blue Ridge Parkway",
+   "u": "https://smokies.live/2026/11/25/winter-weather-creates-hazardous-conditions-along-blue-ridge-parkway/",
+   "d": "2026-11-25",
+   "at": "2026-11-25T11:05:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Roads",
+   "w": 6,
+   "dek": "Park officials urge visitors to check road conditions before traveling as snow, ice […] The post Winter weather creates hazardous conditions along Blue Ridge Parkway appeared first on Smokies Live ."
+  },
   {
    "t": "Gatlinburg property sales reviewed 10 years after historic 2016 wildfires",
    "u": "https://www.wbir.com/article/news/community/gatlinburg-property-sales-reviewed-10-years-after-historic-2016-wildfires/51-24129b42-fb62-4786-a204-17c1462ff226",
