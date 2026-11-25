@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T15:39:35.730Z",
+ "updated": "2026-11-25T21:37:58.967Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -15,6 +15,36 @@
   "https://www.wvlt.tv/2026/11/20/ober-mountain-opens-ski-season-after-weeks-snowmaking-temperatures-continue-run-warm/"
  ],
  "items": [
+  {
+   "t": "Downtown Maryville Holiday Market adds vendors for Nov. 28 event",
+   "u": "https://smokies.live/2026/11/25/downtown-maryville-holiday-market-adds-vendors-for-nov-28-event/",
+   "d": "2026-11-25",
+   "at": "2026-11-25T21:02:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Events",
+   "w": 4,
+   "dek": "The market will feature local makers, food vendors, handmade gifts and more at […] The post Downtown Maryville Holiday Market adds vendors for Nov. 28 event appeared first on Smokies Live ."
+  },
+  {
+   "t": "10 years after losing their home in the Gatlinburg wildfires, couple continues to give back",
+   "u": "https://www.wvlt.tv/2026/11/25/10-years-after-losing-their-home-gatlinburg-wildfires-couple-continues-give-back/",
+   "d": "2026-11-25",
+   "at": "2026-11-25T20:36:21.000Z",
+   "src": "WVLT",
+   "tag": "Safety",
+   "w": 5,
+   "dek": "Ten years after losing their home in the Gatlinburg wildfires, Shawn and Lynette Waite continue to give back to others, inspired by the generosity they received following the disaster."
+  },
+  {
+   "t": "Innkeeper reflects on loss of Buckberry Lodge 10 years after Gatlinburg wildfires",
+   "u": "https://www.wate.com/news/local-news/gatlinburg-wildfires/smoky-mountains-wildfires-anniversary/",
+   "d": "2026-11-25",
+   "at": "2026-11-25T20:22:31.000Z",
+   "src": "WATE",
+   "tag": "Safety",
+   "w": 5,
+   "dek": "This week marks the 10th anniversary of The Great Smoky Mountains wildfires, the deadliest in Tennessee history. The fires had unforgettable impact on Sevier County residents and business owners, including for one…"
+  },
   {
    "t": "Country Cascades brings holiday fun indoors with Jingle Jangle Christmas",
    "u": "https://smokies.live/2026/11/25/country-cascades-brings-holiday-fun-indoors-with-jingle-jangle-christmas/",
@@ -1064,16 +1094,6 @@
    "tag": "Owners",
    "w": 1,
    "dek": ""
-  },
-  {
-   "t": "Meet the candidates running to represent Tennessee's 1st Congressional District",
-   "u": "https://www.wate.com/news/election-news/harshbarger-burke-tennessee-congressional-race/",
-   "d": "2026-10-26",
-   "at": "2026-10-26T21:20:00.000Z",
-   "src": "WATE",
-   "tag": "Local",
-   "w": 1,
-   "dek": "Democrat Kristi Burke is challenging incumbent Republican Representative Diana Harshbarger for Tennessee's 1st Congressional District seat in the upcoming November 3 election."
   }
  ]
 }
