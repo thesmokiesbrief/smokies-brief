@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T15:39:02.360Z",
+ "updated": "2026-11-26T19:43:44.855Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -10,11 +10,31 @@
  "top": [
   "https://www.wvlt.tv/2026/11/23/pigeon-forge-revenue-up-through-september-thanksgiving-week-begins/",
   "https://smokies.live/2026/11/26/snow-expected-to-return-to-the-smoky-mountains-as-colder-air-moves-in-for-thanksgiving/",
+  "https://smokies.live/2026/11/26/great-smoky-mountains-national-park-to-close-newfound-gap-road-kuwohi-road-thursday-night/",
   "https://smokies.live/2026/11/25/winter-weather-creates-hazardous-conditions-along-blue-ridge-parkway/",
-  "https://smokies.live/2026/11/23/thanksgiving-travel-brings-rain-and-cooler-temperatures-to-the-smokies/",
-  "https://www.wvlt.tv/2026/11/20/ober-mountain-opens-ski-season-after-weeks-snowmaking-temperatures-continue-run-warm/"
+  "https://smokies.live/2026/11/23/thanksgiving-travel-brings-rain-and-cooler-temperatures-to-the-smokies/"
  ],
  "items": [
+  {
+   "t": "Gatlinburg Wine Trail offers Black Friday savings on holiday wines and ciders",
+   "u": "https://smokies.live/2026/11/26/gatlinburg-wine-trail-offers-black-friday-savings-on-holiday-wines-and-ciders/",
+   "d": "2026-11-26",
+   "at": "2026-11-26T19:30:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Events",
+   "w": 4,
+   "dek": "Shoppers can save 30% on wines and ciders, including seasonal flavors inspired by […] The post Gatlinburg Wine Trail offers Black Friday savings on holiday wines and ciders appeared first on Smokies Live ."
+  },
+  {
+   "t": "Great Smoky Mountains National Park to close Newfound Gap Road, Kuwohi Road Thursday night",
+   "u": "https://smokies.live/2026/11/26/great-smoky-mountains-national-park-to-close-newfound-gap-road-kuwohi-road-thursday-night/",
+   "d": "2026-11-26",
+   "at": "2026-11-26T18:25:49.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Roads",
+   "w": 6,
+   "dek": "Closures are being implemented ahead of forecast hazardous weather conditions, affecting two major […] The post Great Smoky Mountains National Park to close Newfound Gap Road, Kuwohi Road Thursday night appeared first on…"
+  },
   {
    "t": "Covenant Health earns national digital health recognition",
    "u": "https://smokies.live/2026/11/26/covenant-health-earns-national-digital-health-recognition/",
