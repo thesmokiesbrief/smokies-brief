@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T05:37:51.771Z",
+ "updated": "2026-11-26T11:31:21.190Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -9,12 +9,32 @@
  ],
  "top": [
   "https://www.wvlt.tv/2026/11/23/pigeon-forge-revenue-up-through-september-thanksgiving-week-begins/",
+  "https://smokies.live/2026/11/26/snow-expected-to-return-to-the-smoky-mountains-as-colder-air-moves-in-for-thanksgiving/",
   "https://smokies.live/2026/11/25/winter-weather-creates-hazardous-conditions-along-blue-ridge-parkway/",
   "https://smokies.live/2026/11/23/thanksgiving-travel-brings-rain-and-cooler-temperatures-to-the-smokies/",
-  "https://www.wvlt.tv/2026/11/20/ober-mountain-opens-ski-season-after-weeks-snowmaking-temperatures-continue-run-warm/",
-  "https://www.wvlt.tv/2026/11/25/gatlinburgs-mayor-lost-his-home-2016-wildfires-decade-later-he-reflects-recovery/"
+  "https://www.wvlt.tv/2026/11/20/ober-mountain-opens-ski-season-after-weeks-snowmaking-temperatures-continue-run-warm/"
  ],
  "items": [
+  {
+   "t": "Demolition begins on Townsend River Front Park project",
+   "u": "https://smokies.live/2026/11/26/demolition-begins-on-townsend-river-front-park-project/",
+   "d": "2026-11-26",
+   "at": "2026-11-26T11:23:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Local",
+   "w": 1,
+   "dek": "The first phase of renovations is underway as the town plans a new […] The post Demolition begins on Townsend River Front Park project appeared first on Smokies Live ."
+  },
+  {
+   "t": "Snow expected to return to the Smoky Mountains as colder air moves in for Thanksgiving",
+   "u": "https://smokies.live/2026/11/26/snow-expected-to-return-to-the-smoky-mountains-as-colder-air-moves-in-for-thanksgiving/",
+   "d": "2026-11-26",
+   "at": "2026-11-26T10:58:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Tourism",
+   "w": 7,
+   "dek": "Rain will transition to snow across higher elevations Thursday evening into Friday, with […] The post Snow expected to return to the Smoky Mountains as colder air moves in for Thanksgiving appeared first on Smokies Live…"
+  },
   {
    "t": "Gatlinburg’s mayor lost his home in the 2016 wildfires. A decade later, he reflects on recovery",
    "u": "https://www.wvlt.tv/2026/11/25/gatlinburgs-mayor-lost-his-home-2016-wildfires-decade-later-he-reflects-recovery/",
