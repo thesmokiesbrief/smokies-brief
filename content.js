@@ -1,17 +1,17 @@
 // The "now" snapshot, "today" and "updated" are refreshed by scripts/build_now.js every morning and every hour.
 window.CONTENT = {
-  updated: "Wed, Nov 25, 6:30 a.m.",
-  today: "2026-11-25",
+  updated: "Thu, Nov 26, 6:28 a.m.",
+  today: "2026-11-26",
   // today's snapshot used by the check-in builder, guest sheet and share cards (rebuilt by the morning job)
   now: {
     week: [["$601","Average nightly rate here last November"],["46%","Average occupancy here last November"],["Nov 26","Thanksgiving Day"],["Nov 27","Mountain Mile Christmas Market"]],
-    wxChecked: "2026-11-25T11:30:38.743Z",
-    parkChecked: "2026-11-25T11:30:38.743Z",
+    wxChecked: "2026-11-26T11:28:03.180Z",
+    parkChecked: "2026-11-26T11:28:03.180Z",
     park: [{"cat":"Park Closure","title":"Seasonal road closures","text":"Heintooga Ridge Road, Parson Branch Road, and Rich Mountain Road are closed for the season.","road":"Heintooga Ridge Road, Parson Branch Road, and Rich Mountain Road are closed for the season.","date":"2026-11-10","url":"https://www.nps.gov/grsm/planyourvisit/seasonalroads.htm"},{"cat":"Park Closure","title":"Park Headquarters Road is closed","text":"Park Headquarters Road is closed due to rehabilitation work on the Sugarlands water and wastewater systems.","road":"Park Headquarters Road is closed due to rehabilitation work on the Sugarlands water and wastewater systems.","date":"2026-06-26","url":"https://www.nps.gov/grsm/planyourvisit/conditions.htm"},{"cat":"Park Closure","title":"Straight Fork and the one-way section of Balsam Mountain Road closed","text":"Straight Fork and the one-way section of Balsam Mountain Road (Heintooga Round-Bottom Road) are closed.","road":"Straight Fork and the one-way section of Balsam Mountain Road (Heintooga Round-Bottom Road) are closed.","date":"2025-11-12","url":"https://www.nps.gov/grsm/planyourvisit/seasonalroads.htm"},{"cat":"Information","title":"Most visitors need a parking tag","text":"All vehicles parking for longer than 15 minutes require a parking tag. Three tag durations are available for purchase for all vehicle sizes and types: Daily ($5), Weekly ($15), or Annual ($40).","road":"","date":"2024-02-08","url":"https://www.nps.gov/grsm/planyourvisit/fees.htm"}],
-    wxAlerts: [{"event":"Wind Advisory","until":"2026-11-26T10:00","text":"Wind Advisory issued November 24 at 10:44PM EST until November 26 at 10:00AM EST by NWS Morristown TN"}],
-    weatherChecked: "2026-11-25T11:30:38.743Z",
+    wxAlerts: [{"event":"Wind Advisory","until":"2026-11-27T13:00","text":"Wind Advisory issued November 25 at 11:04PM EST until November 27 at 1:00PM EST by NWS Morristown TN"},{"event":"Wind Advisory","until":"2026-11-26T10:00","text":"Wind Advisory issued November 25 at 11:04PM EST until November 26 at 10:00AM EST by NWS Morristown TN"}],
+    weatherChecked: "2026-11-26T11:28:03.180Z",
     weatherSrc: "NWS",
-    weather: [["Today",59,"Mostly Cloudy then Chance Rain Showers",1,"2026-11-25"],["Tonight",44,"Rain Showers",0,"2026-11-25"],["Thanksgiving Day",53,"Rain Showers",1,"2026-11-26"],["Thursday Night",33,"Rain And Snow Showers Likely",0,"2026-11-26"],["Friday",43,"Snow Showers Likely then Slight Chance Rain Showers",1,"2026-11-27"],["Friday Night",32,"Mostly Cloudy",0,"2026-11-27"],["Saturday",57,"Sunny",1,"2026-11-28"],["Saturday Night",37,"Partly Cloudy",0,"2026-11-28"]],
+    weather: [["Thanksgiving Day",53,"Light Rain",1,"2026-11-26"],["Tonight",34,"Chance Light Rain then Chance Rain And Snow Showers",0,"2026-11-26"],["Friday",43,"Chance Rain And Snow Showers",1,"2026-11-27"],["Friday Night",30,"Mostly Cloudy",0,"2026-11-27"],["Saturday",58,"Sunny",1,"2026-11-28"],["Saturday Night",38,"Partly Cloudy",0,"2026-11-28"],["Sunday",61,"Partly Sunny then Rain Showers Likely",1,"2026-11-29"],["Sunday Night",40,"Rain Showers",0,"2026-11-29"]],
     roads: ["Heintooga Ridge Road, Parson Branch Road, and Rich Mountain Road are closed for the season.","Park Headquarters Road is closed due to rehabilitation work on the Sugarlands water and wastewater systems.","Straight Fork and the one-way section of Balsam Mountain Road (Heintooga Round-Bottom Road) are closed."],
     roadsSoon: "Kuwohi Road, Roaring Fork Motor Nature Trail and Little Greenbrier Road close for the season on Nov 29.",
     roadsSoonUntil: "2026-11-29",
