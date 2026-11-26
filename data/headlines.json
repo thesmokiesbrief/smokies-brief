@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T13:56:55.709Z",
+ "updated": "2026-11-26T15:39:02.360Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -15,6 +15,16 @@
   "https://www.wvlt.tv/2026/11/20/ober-mountain-opens-ski-season-after-weeks-snowmaking-temperatures-continue-run-warm/"
  ],
  "items": [
+  {
+   "t": "Covenant Health earns national digital health recognition",
+   "u": "https://smokies.live/2026/11/26/covenant-health-earns-national-digital-health-recognition/",
+   "d": "2026-11-26",
+   "at": "2026-11-26T15:10:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Local",
+   "w": 1,
+   "dek": "East Tennessee health system receives Level 8 Acute and Level 9 Ambulatory designations […] The post Covenant Health earns national digital health recognition appeared first on Smokies Live ."
+  },
   {
    "t": "Demolition begins on Townsend River Front Park project",
    "u": "https://smokies.live/2026/11/26/demolition-begins-on-townsend-river-front-park-project/",
@@ -1124,16 +1134,6 @@
    "tag": "Jobs",
    "w": 3,
    "dek": ""
-  },
-  {
-   "t": "When can Sevier County residents get $5 admission to Dollywood",
-   "u": "https://www.wate.com/news/sevier-county-news/dollywoods-smoky-mountain-christmas-sevier-county-days-2026/",
-   "d": "2026-10-27",
-   "at": "2026-10-27T14:45:51.000Z",
-   "src": "WATE",
-   "tag": "Attractions",
-   "w": 3,
-   "dek": "Dollywood is bringing back its Sevier County Days promotion, giving those who live and work in the county a chance to experience the Smoky Mountain Christmas while donating to local nonprofits. On Tuesday, Dollywood…"
   }
  ]
 }
