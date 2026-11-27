@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T21:33:43.714Z",
+ "updated": "2026-11-27T23:30:23.323Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -12,9 +12,19 @@
   "https://www.wvlt.tv/2026/11/23/pigeon-forge-revenue-up-through-september-thanksgiving-week-begins/",
   "https://smokies.live/2026/11/26/black-friday-bass-tournament-planned-for-douglas-lake-on-thanksgiving-weekend/",
   "https://smokies.live/2026/11/26/snow-expected-to-return-to-the-smoky-mountains-as-colder-air-moves-in-for-thanksgiving/",
-  "https://smokies.live/2026/11/26/great-smoky-mountains-national-park-to-close-newfound-gap-road-kuwohi-road-thursday-night/"
+  "https://smokies.live/2026/11/27/high-wind-watch-issued-for-smoky-mountains-with-gusts-potentially-reaching-65-mph-sunday/"
  ],
  "items": [
+  {
+   "t": "High Wind Watch issued for Smoky Mountains with gusts potentially reaching 65 mph Sunday",
+   "u": "https://smokies.live/2026/11/27/high-wind-watch-issued-for-smoky-mountains-with-gusts-potentially-reaching-65-mph-sunday/",
+   "d": "2026-11-27",
+   "at": "2026-11-27T22:03:54.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Weather",
+   "w": 6,
+   "dek": "Damaging winds could bring down trees and power lines, cause widespread power outages […] The post High Wind Watch issued for Smoky Mountains with gusts potentially reaching 65 mph Sunday appeared first on Smokies Live ."
+  },
   {
    "t": "Effects the 2016 wildfires had on wildlife in the Smokies",
    "u": "https://www.wbir.com/article/tech/science/environment/effects-the-2016-wildfires-had-on-wildlife-in-the-smokies/51-bf1ef0bd-13d8-4d22-bb72-6ffbaba120b1",
