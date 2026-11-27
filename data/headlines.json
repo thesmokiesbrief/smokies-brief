@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T21:30:00.799Z",
+ "updated": "2026-11-27T01:59:28.584Z",
  "sources": [
   "WATE",
   "WVLT",
@@ -9,10 +9,10 @@
  ],
  "top": [
   "https://www.wvlt.tv/2026/11/23/pigeon-forge-revenue-up-through-september-thanksgiving-week-begins/",
+  "https://smokies.live/2026/11/26/black-friday-bass-tournament-planned-for-douglas-lake-on-thanksgiving-weekend/",
   "https://smokies.live/2026/11/26/snow-expected-to-return-to-the-smoky-mountains-as-colder-air-moves-in-for-thanksgiving/",
   "https://smokies.live/2026/11/26/great-smoky-mountains-national-park-to-close-newfound-gap-road-kuwohi-road-thursday-night/",
-  "https://smokies.live/2026/11/25/winter-weather-creates-hazardous-conditions-along-blue-ridge-parkway/",
-  "https://smokies.live/2026/11/23/thanksgiving-travel-brings-rain-and-cooler-temperatures-to-the-smokies/"
+  "https://smokies.live/2026/11/25/winter-weather-creates-hazardous-conditions-along-blue-ridge-parkway/"
  ],
  "items": [
   {
@@ -54,6 +54,16 @@
    "tag": "Local",
    "w": 1,
    "dek": "East Tennessee health system receives Level 8 Acute and Level 9 Ambulatory designations […] The post Covenant Health earns national digital health recognition appeared first on Smokies Live ."
+  },
+  {
+   "t": "Black Friday bass tournament planned for Douglas Lake on Thanksgiving weekend",
+   "u": "https://smokies.live/2026/11/26/black-friday-bass-tournament-planned-for-douglas-lake-on-thanksgiving-weekend/",
+   "d": "2026-11-26",
+   "at": "2026-11-26T13:30:00.000Z",
+   "src": "Smokies.LIVE",
+   "tag": "Tourism",
+   "w": 7,
+   "dek": "Anglers will compete Nov. 27 at Dandridge Bridge, with an $80 entry fee […] The post Black Friday bass tournament planned for Douglas Lake on Thanksgiving weekend appeared first on Smokies Live ."
   },
   {
    "t": "Demolition begins on Townsend River Front Park project",
