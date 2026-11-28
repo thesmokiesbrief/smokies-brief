@@ -122,6 +122,12 @@ function watchBox(key, name) {
   <p class="pg-note">We read every ${esc(name)} meeting agenda each morning and flag short-term rental items. Last checked ${esc(checkedOn(w) || '')}.</p>
 </section>`;
 }
+// One disclosed feeder link (AgainStay SEO-03, row F-01). Sevier County page only, after the answer.
+const AGAINSTAY = `<section class="pg-sec">
+  <h2>Want someone to look at your cabin?</h2>
+  <p>We also run Againstay. If you'd like us to look at your cabin, here's <a href="https://againstay.com/cabin-inspection?src=smokiesbrief">what our checkup covers</a>.</p>
+  <p class="pg-note">Disclosure: Againstay is our family's cabin management business, run by the same family that publishes The Smokies Brief.</p>
+</section>`;
 const areas = FACTS.areas;
 for (const a of areas) {
   const body = `<header class="pg-head">
@@ -147,7 +153,7 @@ ${watchBox(a.watch, a.name)}
   <h2>Sources</h2>
   <ul class="srcs">${a.sources.map(([n, u]) => `<li>${ext(u, esc(n))}</li>`).join('')}</ul>
   <p class="pg-note">This page is a plain-language summary, not legal advice. Rules change, so confirm with the office before you buy, build or apply.</p>
-</section>
+</section>${a.slug === 'sevier-county' ? '\n' + AGAINSTAY : ''}
 <section class="pg-sec">
   <h2>Rules in other parts of Sevier County</h2>
   <ul class="pg-links">${areas.filter(b => b !== a).map(b => `<li><a href="/rules/${b.slug}.html"><b>${esc(b.short)}</b><span>${esc(b.permit)}</span></a></li>`).join('')}</ul>
